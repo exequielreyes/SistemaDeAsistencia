@@ -22,4 +22,8 @@
     Private Sub bGuardar_Click(sender As Object, e As EventArgs) Handles bGuardar.Click
         SaveFileDialog1.ShowDialog()
     End Sub
+
+    Private Sub btnEmail_Click(sender As Object, e As EventArgs) Handles btnEmail.Click
+        FormEmail.ShowDialog()
+    End Sub
 End Class

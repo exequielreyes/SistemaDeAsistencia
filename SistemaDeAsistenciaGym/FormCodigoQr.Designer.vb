@@ -24,9 +24,9 @@ Partial Class FormCodigoQr
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.bGuardar = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnEmail = New System.Windows.Forms.Button()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -52,15 +52,6 @@ Partial Class FormCodigoQr
         Me.bGuardar.Text = "Guardar QR"
         Me.bGuardar.UseVisualStyleBackColor = True
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(53, 43)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(209, 181)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
-        Me.PictureBox1.TabIndex = 27
-        Me.PictureBox1.TabStop = False
-        '
         'btnEmail
         '
         Me.btnEmail.Location = New System.Drawing.Point(195, 298)
@@ -74,6 +65,15 @@ Partial Class FormCodigoQr
         '
         Me.SaveFileDialog1.FileName = "Nombre.Png"
         Me.SaveFileDialog1.Filter = "PNG Image |*.png"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(53, 43)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(209, 181)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox1.TabIndex = 27
+        Me.PictureBox1.TabStop = False
         '
         'FormCodigoQr
         '

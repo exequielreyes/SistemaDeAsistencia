@@ -94,12 +94,19 @@
     <Compile Include="FormCodigoQr.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormEmail.Designer.vb">
+      <DependentUpon>FormEmail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormEmail.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormRegistro.Designer.vb">
       <DependentUpon>FormRegistro.vb</DependentUpon>
     </Compile>
     <Compile Include="FormRegistro.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ModEmail.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -122,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCodigoQr.resx">
       <DependentUpon>FormCodigoQr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmail.resx">
+      <DependentUpon>FormEmail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistro.resx">
       <DependentUpon>FormRegistro.vb</DependentUpon>
