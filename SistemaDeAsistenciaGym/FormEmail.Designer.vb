@@ -32,10 +32,10 @@ Partial Class FormEmail
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TbPara = New System.Windows.Forms.TextBox()
         Me.TbAsunto = New System.Windows.Forms.TextBox()
-        Me.PbArchivo = New System.Windows.Forms.PictureBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.PbArchivo = New System.Windows.Forms.PictureBox()
         CType(Me.PbArchivo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -53,7 +53,7 @@ Partial Class FormEmail
         'btnAdjuntarArchivo
         '
         Me.btnAdjuntarArchivo.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnAdjuntarArchivo.Location = New System.Drawing.Point(107, 149)
+        Me.btnAdjuntarArchivo.Location = New System.Drawing.Point(107, 152)
         Me.btnAdjuntarArchivo.Name = "btnAdjuntarArchivo"
         Me.btnAdjuntarArchivo.Size = New System.Drawing.Size(36, 23)
         Me.btnAdjuntarArchivo.TabIndex = 65
@@ -72,7 +72,7 @@ Partial Class FormEmail
         '
         'Tbrutaarchivo
         '
-        Me.Tbrutaarchivo.Location = New System.Drawing.Point(381, 165)
+        Me.Tbrutaarchivo.Location = New System.Drawing.Point(288, 165)
         Me.Tbrutaarchivo.Name = "Tbrutaarchivo"
         Me.Tbrutaarchivo.Size = New System.Drawing.Size(100, 20)
         Me.Tbrutaarchivo.TabIndex = 62
@@ -84,7 +84,7 @@ Partial Class FormEmail
         Me.CBMotivo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.CBMotivo.FormattingEnabled = True
         Me.CBMotivo.Items.AddRange(New Object() {"[Notificacion]", "[Importante]", "[Urgente]"})
-        Me.CBMotivo.Location = New System.Drawing.Point(116, 86)
+        Me.CBMotivo.Location = New System.Drawing.Point(116, 49)
         Me.CBMotivo.Name = "CBMotivo"
         Me.CBMotivo.Size = New System.Drawing.Size(122, 28)
         Me.CBMotivo.TabIndex = 61
@@ -95,7 +95,7 @@ Partial Class FormEmail
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label5.Location = New System.Drawing.Point(51, 89)
+        Me.Label5.Location = New System.Drawing.Point(52, 52)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(59, 20)
         Me.Label5.TabIndex = 60
@@ -117,7 +117,7 @@ Partial Class FormEmail
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label2.Location = New System.Drawing.Point(46, 55)
+        Me.Label2.Location = New System.Drawing.Point(46, 86)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(64, 20)
         Me.Label2.TabIndex = 58
@@ -136,20 +136,10 @@ Partial Class FormEmail
         '
         Me.TbAsunto.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TbAsunto.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.TbAsunto.Location = New System.Drawing.Point(116, 52)
+        Me.TbAsunto.Location = New System.Drawing.Point(116, 83)
         Me.TbAsunto.Name = "TbAsunto"
         Me.TbAsunto.Size = New System.Drawing.Size(178, 26)
         Me.TbAsunto.TabIndex = 56
-        '
-        'PbArchivo
-        '
-        Me.PbArchivo.Location = New System.Drawing.Point(152, 126)
-        Me.PbArchivo.Name = "PbArchivo"
-        Me.PbArchivo.Size = New System.Drawing.Size(83, 46)
-        Me.PbArchivo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PbArchivo.TabIndex = 63
-        Me.PbArchivo.TabStop = False
-        Me.PbArchivo.Visible = False
         '
         'RichTextBox1
         '
@@ -171,6 +161,17 @@ Partial Class FormEmail
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'PbArchivo
+        '
+        Me.PbArchivo.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.logo
+        Me.PbArchivo.Location = New System.Drawing.Point(163, 126)
+        Me.PbArchivo.Name = "PbArchivo"
+        Me.PbArchivo.Size = New System.Drawing.Size(59, 46)
+        Me.PbArchivo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbArchivo.TabIndex = 63
+        Me.PbArchivo.TabStop = False
+        Me.PbArchivo.Visible = False
         '
         'FormEmail
         '
