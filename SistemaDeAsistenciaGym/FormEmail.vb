@@ -2,7 +2,7 @@
 Public Class FormEmail
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        enviarCorreo(CBMotivo.Text, "softwaresbe@gmail.com", "Hola1234!", RichTextBox1.Text, TbAsunto.Text, TbPara.Text, Tbrutaarchivo.Text)
+        enviarCorreo(CBMotivo.Text, "pilatesgym21@gmail.com", "alumnos1234", RichTextBox1.Text, TbAsunto.Text, TbPara.Text, Tbrutaarchivo.Text)
     End Sub
     Private Sub btnAdjuntarArchivo_Click(sender As Object, e As EventArgs) Handles btnAdjuntarArchivo.Click
         Try
