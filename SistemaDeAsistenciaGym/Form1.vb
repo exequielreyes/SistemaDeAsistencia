@@ -1,5 +1,5 @@
-﻿Public Class Form1
-    Private Sub Button1_Click(sender As Object, e As EventArgs) 
+﻿Imports MySql.Data.MySqlClient
 
-    End Sub
+Public Class Form1
+
 End Class
