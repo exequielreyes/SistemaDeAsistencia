@@ -73,3 +73,5 @@ C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\Siste
 C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.exe
 C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.xml
 C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.pdb
+C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\bin\Debug\MessagingToolkit.QRCode.dll
+C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormCodigoQr.resources

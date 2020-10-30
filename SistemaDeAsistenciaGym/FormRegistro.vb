@@ -38,9 +38,13 @@
         btnBorrar.Enabled = False
         btnCancelar.Enabled = True
         btnGuardar.Enabled = True
-        Btnqr.Enabled = False
+        Btnqr.Enabled = True
     End Sub
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         cancelar()
+    End Sub
+
+    Private Sub Btnqr_Click(sender As Object, e As EventArgs) Handles Btnqr.Click
+        FormCodigoQr.Show()
     End Sub
 End Class
