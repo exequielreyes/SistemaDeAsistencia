@@ -21,6 +21,15 @@
             tbEmail.Enabled = False
         End If
     End Sub
+    Sub cancelar()
+        activarTextBox(False)
+        btnNuevo.Enabled = True
+        btnEditar.Enabled = True
+        btnGuardar.Enabled = False
+        btnBorrar.Enabled = True
+        btnCancelar.Enabled = False
+
+    End Sub
 
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
@@ -30,5 +39,8 @@
         btnCancelar.Enabled = True
         btnGuardar.Enabled = True
         Btnqr.Enabled = False
+    End Sub
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        cancelar()
     End Sub
 End Class
