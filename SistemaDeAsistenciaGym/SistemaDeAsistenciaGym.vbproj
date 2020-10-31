@@ -81,11 +81,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConexionDB.vb" />
-    <Compile Include="Form1.vb">
+    <Compile Include="FormAsistencia.Designer.vb">
+      <DependentUpon>FormAsistencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAsistencia.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="FormInicial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInicial.Designer.vb">
+      <DependentUpon>FormInicial.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCodigoQr.Designer.vb">
@@ -124,8 +130,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="FormAsistencia.resx">
+      <DependentUpon>FormAsistencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInicial.resx">
+      <DependentUpon>FormInicial.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCodigoQr.resx">
       <DependentUpon>FormCodigoQr.vb</DependentUpon>
