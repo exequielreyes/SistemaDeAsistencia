@@ -2,7 +2,7 @@
 
 Public Class FormInicial
     Private Sub btnRegistro_Click(sender As Object, e As EventArgs) Handles btnRegistro.Click
-        FormRegistro.ShowDialog()
+        FormRegistro.Show()
 
 
     End Sub

@@ -63,7 +63,6 @@ C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\Siste
 C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\bin\Debug\MySql.Data.xml
 C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.vbprojAssemblyReference.cache
-C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.Form1.resources
 C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormRegistro.resources
 C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.Resources.resources
 C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.vbproj.GenerateResource.cache
@@ -93,3 +92,15 @@ E:\UNIVERSIDAD\Github\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\Siste
 E:\UNIVERSIDAD\Github\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormEmail.resources
 E:\UNIVERSIDAD\Github\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormRegistro.resources
 E:\UNIVERSIDAD\Github\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormFoto.resources
+C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\bin\Debug\AForge.dll
+C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\bin\Debug\AForge.Imaging.dll
+C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\bin\Debug\AForge.Math.dll
+C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\bin\Debug\AForge.Controls.xml
+C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\bin\Debug\AForge.Video.xml
+C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\bin\Debug\AForge.xml
+C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\bin\Debug\AForge.Imaging.xml
+C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\bin\Debug\AForge.Math.xml
+C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormAsistencia.resources
+C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormFoto.resources
+C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormInicial.resources
