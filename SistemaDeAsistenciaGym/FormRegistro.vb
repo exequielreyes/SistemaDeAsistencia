@@ -1,4 +1,6 @@
 ﻿Public Class FormRegistro
+
+
     Sub activarTextBox(ByVal activo As Boolean)
         If activo = True Then
 
@@ -47,4 +49,18 @@
     Private Sub Btnqr_Click(sender As Object, e As EventArgs) Handles Btnqr.Click
         FormCodigoQr.Show()
     End Sub
+
+    Private Sub FormRegistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        FormInicial.Hide()
+
+
+    End Sub
+
+    Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
+        FormInicial.Show()
+        Me.Hide()
+
+    End Sub
+
+
 End Class

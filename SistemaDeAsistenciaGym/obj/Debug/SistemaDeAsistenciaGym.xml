@@ -32,6 +32,11 @@ SistemaDeAsistenciaGym
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.logo">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.Logo0">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
