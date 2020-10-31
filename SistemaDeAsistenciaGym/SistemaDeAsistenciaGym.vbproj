@@ -61,7 +61,7 @@
       <HintPath>C:\Program Files (x86)\AForge.NET\Framework\Release\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
     <Reference Include="BarcodeLib.BarcodeReader">
-      <HintPath>..\..\..\Prog 2\Librerias\Lector\Lector\LibreriasQR\BarcodeLib_NETBarcodeReader_Trial\BarcodeLib.BarcodeReader.dll</HintPath>
+      <HintPath>..\..\..\..\Lector\LibreriasQR\BarcodeLib_NETBarcodeReader_Trial\BarcodeLib.BarcodeReader.dll</HintPath>
     </Reference>
     <Reference Include="MessagingToolkit.QRCode">
       <HintPath>..\..\..\..\QR generador\MessagingToolkit.QRCode.dll</HintPath>

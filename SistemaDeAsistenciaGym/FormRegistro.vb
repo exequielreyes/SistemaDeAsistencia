@@ -62,7 +62,7 @@
 
     End Sub
 
-    Private Sub pbFoto_Click(sender As Object, e As EventArgs) Handles pbFoto.Click
+    Private Sub pbFoto_Click(sender As Object, e As EventArgs) Handles pbFoto1.Click
         FormFoto.Show()
 
     End Sub

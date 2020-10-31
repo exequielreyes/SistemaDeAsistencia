@@ -53,6 +53,7 @@ Public Class FormFoto
 
     Private Sub Capturar()
         vspFoto.BackgroundImage = pbFoto.Image
+        'pbFoto = FormRegistro.PictureBox1
         Me.Close()
     End Sub
 

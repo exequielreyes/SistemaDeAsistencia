@@ -31,12 +31,14 @@ Partial Class FormFoto
         Me.btnDetener = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.pbFoto = New System.Windows.Forms.PictureBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.pbFoto, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'vspFoto
         '
-        Me.vspFoto.Location = New System.Drawing.Point(6, 75)
+        Me.vspFoto.Location = New System.Drawing.Point(0, 0)
         Me.vspFoto.Name = "vspFoto"
         Me.vspFoto.Size = New System.Drawing.Size(666, 361)
         Me.vspFoto.TabIndex = 0
@@ -89,27 +91,36 @@ Partial Class FormFoto
         '
         'pbFoto
         '
-        Me.pbFoto.Location = New System.Drawing.Point(6, 75)
+        Me.pbFoto.Location = New System.Drawing.Point(0, 0)
         Me.pbFoto.Name = "pbFoto"
         Me.pbFoto.Size = New System.Drawing.Size(666, 361)
         Me.pbFoto.TabIndex = 5
         Me.pbFoto.TabStop = False
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.pbFoto)
+        Me.Panel1.Controls.Add(Me.vspFoto)
+        Me.Panel1.Location = New System.Drawing.Point(6, 75)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(666, 361)
+        Me.Panel1.TabIndex = 6
         '
         'FormFoto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 482)
-        Me.Controls.Add(Me.pbFoto)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnDetener)
         Me.Controls.Add(Me.btnIniciar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.btnTomar)
-        Me.Controls.Add(Me.vspFoto)
         Me.Name = "FormFoto"
         Me.Text = "FormFoto"
         CType(Me.pbFoto, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -123,4 +134,5 @@ Partial Class FormFoto
     Friend WithEvents btnDetener As Button
     Friend WithEvents Timer1 As Timer
     Friend WithEvents pbFoto As PictureBox
+    Friend WithEvents Panel1 As Panel
 End Class

@@ -33,6 +33,9 @@ Partial Class FormAsistencia
         Me.btnVolver = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
+        'Timer1
+        '
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
