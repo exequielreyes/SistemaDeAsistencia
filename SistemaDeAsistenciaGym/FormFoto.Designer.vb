@@ -30,6 +30,8 @@ Partial Class FormFoto
         Me.btnIniciar = New System.Windows.Forms.Button()
         Me.btnDetener = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.pbFoto = New System.Windows.Forms.PictureBox()
+        CType(Me.pbFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'vspFoto
@@ -85,11 +87,20 @@ Partial Class FormFoto
         Me.btnDetener.Text = "Detener"
         Me.btnDetener.UseVisualStyleBackColor = True
         '
+        'pbFoto
+        '
+        Me.pbFoto.Location = New System.Drawing.Point(6, 75)
+        Me.pbFoto.Name = "pbFoto"
+        Me.pbFoto.Size = New System.Drawing.Size(666, 361)
+        Me.pbFoto.TabIndex = 5
+        Me.pbFoto.TabStop = False
+        '
         'FormFoto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(684, 482)
+        Me.Controls.Add(Me.pbFoto)
         Me.Controls.Add(Me.btnDetener)
         Me.Controls.Add(Me.btnIniciar)
         Me.Controls.Add(Me.Label1)
@@ -98,6 +109,7 @@ Partial Class FormFoto
         Me.Controls.Add(Me.vspFoto)
         Me.Name = "FormFoto"
         Me.Text = "FormFoto"
+        CType(Me.pbFoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -110,4 +122,5 @@ Partial Class FormFoto
     Friend WithEvents btnIniciar As Button
     Friend WithEvents btnDetener As Button
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents pbFoto As PictureBox
 End Class
