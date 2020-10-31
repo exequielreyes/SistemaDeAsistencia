@@ -28,7 +28,7 @@ Partial Class FormAsistencia
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.btnIniciar = New System.Windows.Forms.Button()
         Me.btnDetener = New System.Windows.Forms.Button()
-        Me.VideoSourcePlayer1 = New AForge.Controls.VideoSourcePlayer()
+        Me.vspQR = New AForge.Controls.VideoSourcePlayer()
         Me.lbAlumno = New System.Windows.Forms.ListBox()
         Me.btnVolver = New System.Windows.Forms.Button()
         Me.SuspendLayout()
@@ -68,14 +68,14 @@ Partial Class FormAsistencia
         Me.btnDetener.Text = "Detener"
         Me.btnDetener.UseVisualStyleBackColor = True
         '
-        'VideoSourcePlayer1
+        'vspQR
         '
-        Me.VideoSourcePlayer1.Location = New System.Drawing.Point(36, 90)
-        Me.VideoSourcePlayer1.Name = "VideoSourcePlayer1"
-        Me.VideoSourcePlayer1.Size = New System.Drawing.Size(480, 322)
-        Me.VideoSourcePlayer1.TabIndex = 3
-        Me.VideoSourcePlayer1.Text = "VideoSourcePlayer1"
-        Me.VideoSourcePlayer1.VideoSource = Nothing
+        Me.vspQR.Location = New System.Drawing.Point(36, 90)
+        Me.vspQR.Name = "vspQR"
+        Me.vspQR.Size = New System.Drawing.Size(480, 322)
+        Me.vspQR.TabIndex = 3
+        Me.vspQR.Text = "VideoSourcePlayer1"
+        Me.vspQR.VideoSource = Nothing
         '
         'lbAlumno
         '
@@ -101,7 +101,7 @@ Partial Class FormAsistencia
         Me.ClientSize = New System.Drawing.Size(712, 451)
         Me.Controls.Add(Me.btnVolver)
         Me.Controls.Add(Me.lbAlumno)
-        Me.Controls.Add(Me.VideoSourcePlayer1)
+        Me.Controls.Add(Me.vspQR)
         Me.Controls.Add(Me.btnDetener)
         Me.Controls.Add(Me.btnIniciar)
         Me.Controls.Add(Me.ComboBox1)
@@ -119,7 +119,7 @@ Partial Class FormAsistencia
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents btnIniciar As Button
     Friend WithEvents btnDetener As Button
-    Friend WithEvents VideoSourcePlayer1 As AForge.Controls.VideoSourcePlayer
+    Friend WithEvents vspQR As AForge.Controls.VideoSourcePlayer
     Friend WithEvents lbAlumno As ListBox
     Friend WithEvents btnVolver As Button
 End Class

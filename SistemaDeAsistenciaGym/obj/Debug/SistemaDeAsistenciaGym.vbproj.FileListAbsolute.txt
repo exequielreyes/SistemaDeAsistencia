@@ -92,3 +92,4 @@ E:\UNIVERSIDAD\Github\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\Siste
 E:\UNIVERSIDAD\Github\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormCodigoQr.resources
 E:\UNIVERSIDAD\Github\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormEmail.resources
 E:\UNIVERSIDAD\Github\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormRegistro.resources
+E:\UNIVERSIDAD\Github\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormFoto.resources

@@ -99,6 +99,12 @@
     <Compile Include="FormAsistencia.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormFoto.Designer.vb">
+      <DependentUpon>FormFoto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormFoto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormInicial.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FormAsistencia.resx">
       <DependentUpon>FormAsistencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFoto.resx">
+      <DependentUpon>FormFoto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicial.resx">
       <DependentUpon>FormInicial.vb</DependentUpon>

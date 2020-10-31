@@ -85,6 +85,7 @@ Partial Class FormInicial
         Me.Controls.Add(Me.btnVentas)
         Me.Controls.Add(Me.btnAsistencia)
         Me.Controls.Add(Me.btnRegistro)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "FormInicial"
         Me.Text = "Form1"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
