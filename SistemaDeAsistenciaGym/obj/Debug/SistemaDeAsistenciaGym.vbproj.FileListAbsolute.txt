@@ -105,3 +105,4 @@ C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\Siste
 C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormFoto.resources
 C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormInicial.resources
 C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\bin\Debug\BarcodeLib.BarcodeReader.dll
+C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormCamaraWeb.resources

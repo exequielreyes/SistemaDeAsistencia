@@ -64,6 +64,8 @@
 
     Private Sub pbFoto_Click(sender As Object, e As EventArgs) Handles pbFoto1.Click
         FormFoto.Show()
-
+        'FormFoto.pbFoto.Image = pbFoto1.Image
     End Sub
+
+
 End Class
