@@ -52,8 +52,7 @@
 
     Private Sub FormRegistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FormInicial.Hide()
-
-
+        'FormFoto.pbFoto.Image = pbFoto1.Image
     End Sub
 
     Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
@@ -62,10 +61,14 @@
 
     End Sub
 
-    Private Sub pbFoto_Click(sender As Object, e As EventArgs) Handles pbFoto1.Click
+
+
+    Private Sub pbFoto1_Click(sender As Object, e As EventArgs) Handles pbFoto1.Click
         FormFoto.Show()
         'FormFoto.pbFoto.Image = pbFoto1.Image
     End Sub
+
+
 
 
 End Class

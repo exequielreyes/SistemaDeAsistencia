@@ -22,12 +22,11 @@ Partial Class FormRegistro
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormRegistro))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormRegistro))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.pbFoto1 = New System.Windows.Forms.PictureBox()
         Me.tbEmail = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tbDni = New System.Windows.Forms.TextBox()
@@ -54,11 +53,12 @@ Partial Class FormRegistro
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.tbBuscar = New System.Windows.Forms.TextBox()
         Me.btnVolver = New System.Windows.Forms.Button()
+        Me.pbFoto1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.pbFoto1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvListado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbFoto1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -92,18 +92,6 @@ Partial Class FormRegistro
         Me.GroupBox2.TabIndex = 10
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos del Alumno"
-        '
-        'pbFoto1
-        '
-        Me.pbFoto1.BackgroundImage = CType(resources.GetObject("pbFoto1.BackgroundImage"), System.Drawing.Image)
-        Me.pbFoto1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbFoto1.InitialImage = Nothing
-        Me.pbFoto1.Location = New System.Drawing.Point(556, 21)
-        Me.pbFoto1.Name = "pbFoto1"
-        Me.pbFoto1.Size = New System.Drawing.Size(209, 182)
-        Me.pbFoto1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbFoto1.TabIndex = 48
-        Me.pbFoto1.TabStop = False
         '
         'tbEmail
         '
@@ -456,6 +444,18 @@ Partial Class FormRegistro
         Me.btnVolver.Text = "Volver"
         Me.btnVolver.UseVisualStyleBackColor = False
         '
+        'pbFoto1
+        '
+        Me.pbFoto1.BackgroundImage = CType(resources.GetObject("pbFoto1.BackgroundImage"), System.Drawing.Image)
+        Me.pbFoto1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbFoto1.InitialImage = Nothing
+        Me.pbFoto1.Location = New System.Drawing.Point(553, 35)
+        Me.pbFoto1.Name = "pbFoto1"
+        Me.pbFoto1.Size = New System.Drawing.Size(220, 188)
+        Me.pbFoto1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbFoto1.TabIndex = 48
+        Me.pbFoto1.TabStop = False
+        '
         'FormRegistro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -469,11 +469,11 @@ Partial Class FormRegistro
         Me.Text = "FormRegistro"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.pbFoto1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgvListado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbFoto1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -502,8 +502,8 @@ Partial Class FormRegistro
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents tbBuscar As TextBox
-    Private WithEvents pbFoto1 As PictureBox
     Friend WithEvents dgvListado As DataGridView
     Friend WithEvents cbBuscarCampo As ComboBox
     Friend WithEvents btnVolver As Button
+    Private WithEvents pbFoto1 As PictureBox
 End Class

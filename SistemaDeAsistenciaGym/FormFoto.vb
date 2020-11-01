@@ -29,6 +29,7 @@ Public Class FormFoto
         FormCamaraWeb.CapturarCliente()
         FormCamaraWeb.ClosePreviewWindow()
         cmdcamara.Enabled = True
+
     End Sub
 
     Private Sub FormFoto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -36,6 +37,14 @@ Public Class FormFoto
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+
+
+        pbFoto.Image.Clone()
+
+
+
+
 
         'Dim secondForm = New FormRegistro()
         'secondForm.Controls.Add(pbFoto)
