@@ -1,6 +1,5 @@
 ﻿Public Class FormRegistro
 
-
     Sub activarTextBox(ByVal activo As Boolean)
         If activo = True Then
 
@@ -33,7 +32,6 @@
 
     End Sub
 
-
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         activarTextBox(True)
         btnEditar.Enabled = False
@@ -52,23 +50,15 @@
 
     Private Sub FormRegistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FormInicial.Hide()
-        'FormFoto.pbFoto.Image = pbFoto1.Image
     End Sub
 
     Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
         FormInicial.Show()
         Me.Hide()
-
     End Sub
-
-
 
     Private Sub pbFoto1_Click(sender As Object, e As EventArgs) Handles pbFoto1.Click
         FormFoto.Show()
-        'FormFoto.pbFoto.Image = pbFoto1.Image
     End Sub
-
-
-
 
 End Class

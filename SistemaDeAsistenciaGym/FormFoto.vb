@@ -37,15 +37,6 @@ Public Class FormFoto
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-
-
-        pbFoto.Image.Clone()
-
-
-
-
-
         'Dim secondForm = New FormRegistro()
         'secondForm.Controls.Add(pbFoto)
 
