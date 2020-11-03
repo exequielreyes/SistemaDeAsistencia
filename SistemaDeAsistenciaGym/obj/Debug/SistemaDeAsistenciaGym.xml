@@ -22,7 +22,27 @@ SistemaDeAsistenciaGym
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.alacarte">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.asistencia">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.button_cancel">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.Cancel24">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.client">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -38,6 +58,11 @@ SistemaDeAsistenciaGym
 </summary>
 </member>
 <member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.Logo0">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.menu">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
