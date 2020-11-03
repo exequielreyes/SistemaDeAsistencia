@@ -193,4 +193,28 @@ Public Class FormRegistro
 
         End Try
     End Sub
+
+    Private Sub cbMeses_SelectedIndexChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub rbSemanaCuatro_CheckedChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub rbsemanaTres_CheckedChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub RbsemanaDos_CheckedChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub dgvListado2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListado2.CellContentClick
+
+    End Sub
 End Class
