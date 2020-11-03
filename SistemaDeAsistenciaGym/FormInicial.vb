@@ -1,6 +1,13 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class FormInicial
+    Public Property alumnoDataAdapter As New MySqlDataAdapter
+    'Public Property turnoDataAdapter As New MySqlDataAdapter
+    Public Property erbpilatesDataSet As New DataSet
+    Private Sub FormInicial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        erbpilatesDataSet.Tables.Add("alumno")
+        'erbpilatesDataSet.Tables.Add("turno")
+    End Sub
     Private Sub btnRegistro_Click(sender As Object, e As EventArgs) Handles btnRegistro.Click
         FormRegistro.Show()
 

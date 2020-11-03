@@ -22,11 +22,12 @@ Partial Class FormRegistro
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormRegistro))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.pbFoto1 = New System.Windows.Forms.PictureBox()
         Me.tbEmail = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.tbDni = New System.Windows.Forms.TextBox()
@@ -53,16 +54,15 @@ Partial Class FormRegistro
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.tbBuscar = New System.Windows.Forms.TextBox()
         Me.btnVolver = New System.Windows.Forms.Button()
-        Me.pbFoto1 = New System.Windows.Forms.PictureBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.pbFoto1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvListado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbFoto1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.SuspendLayout()
@@ -97,6 +97,18 @@ Partial Class FormRegistro
         Me.GroupBox2.Size = New System.Drawing.Size(914, 248)
         Me.GroupBox2.TabIndex = 10
         Me.GroupBox2.TabStop = False
+        '
+        'pbFoto1
+        '
+        Me.pbFoto1.BackgroundImage = CType(resources.GetObject("pbFoto1.BackgroundImage"), System.Drawing.Image)
+        Me.pbFoto1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbFoto1.InitialImage = Nothing
+        Me.pbFoto1.Location = New System.Drawing.Point(553, 35)
+        Me.pbFoto1.Name = "pbFoto1"
+        Me.pbFoto1.Size = New System.Drawing.Size(220, 188)
+        Me.pbFoto1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbFoto1.TabIndex = 48
+        Me.pbFoto1.TabStop = False
         '
         'tbEmail
         '
@@ -385,14 +397,14 @@ Partial Class FormRegistro
         Me.dgvListado.BackgroundColor = System.Drawing.Color.DarkSlateGray
         Me.dgvListado.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvListado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListado.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvListado.ColumnHeadersHeight = 25
         Me.dgvListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvListado.EnableHeadersVisualStyles = False
@@ -402,20 +414,20 @@ Partial Class FormRegistro
         Me.dgvListado.Name = "dgvListado"
         Me.dgvListado.ReadOnly = True
         Me.dgvListado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListado.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
-        Me.dgvListado.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListado.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvListado.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvListado.Size = New System.Drawing.Size(914, 193)
         Me.dgvListado.TabIndex = 6
@@ -449,18 +461,6 @@ Partial Class FormRegistro
         Me.btnVolver.Text = "Volver"
         Me.btnVolver.UseVisualStyleBackColor = False
         '
-        'pbFoto1
-        '
-        Me.pbFoto1.BackgroundImage = CType(resources.GetObject("pbFoto1.BackgroundImage"), System.Drawing.Image)
-        Me.pbFoto1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbFoto1.InitialImage = Nothing
-        Me.pbFoto1.Location = New System.Drawing.Point(553, 35)
-        Me.pbFoto1.Name = "pbFoto1"
-        Me.pbFoto1.Size = New System.Drawing.Size(220, 188)
-        Me.pbFoto1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbFoto1.TabIndex = 48
-        Me.pbFoto1.TabStop = False
-        '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
@@ -487,20 +487,20 @@ Partial Class FormRegistro
         '
         'TabPage2
         '
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(920, 514)
+        Me.TabPage2.Size = New System.Drawing.Size(920, 511)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Turno"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'TabPage3
         '
-        Me.TabPage3.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 25)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(920, 514)
+        Me.TabPage3.Size = New System.Drawing.Size(920, 511)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Historia Clinica"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -517,11 +517,11 @@ Partial Class FormRegistro
         Me.Text = "FormRegistro"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.pbFoto1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgvListado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbFoto1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.ResumeLayout(False)

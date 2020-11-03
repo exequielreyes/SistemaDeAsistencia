@@ -5,7 +5,7 @@ Module ConexionDB
 
     Public Sub conectarse()
         Try
-            miConexion.ConnectionString = "server=localhost;database=pilatesgym;user=root;password=;"
+            miConexion.ConnectionString = "server=localhost;database=erbpilates;user=root;password=;"
             miConexion.Open()
 
         Catch ex As Exception
