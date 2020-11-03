@@ -77,6 +77,22 @@ Public Class FormRegistro
         dgvListado.Columns(8).Visible = False
         dgvListado.Columns(9).Visible = False
         dgvListado.ClearSelection()
+
+        'desconectarse()
+
+
+        'conectarse()
+        FormInicial.erbpilatesDataSet.Tables("capacidad").Clear()
+        FormInicial.capacidadDataAdapter.SelectCommand = New MySqlCommand("SELECT capacidad.total as 'Total', capacidad.cantidad as 'Cantidad', alumno.nombre as 'Nombre', alumno.apellido as 'Apellido' FROM capacidad  INNER JOIN alumno on capacidad.Alumno_id_alumno = alumno.id_alumno ", conexion)
+        'INNER Join capacidad ON capacidad.id_alumno = alumnos.id_alumno "
+        FormInicial.capacidadDataAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey
+        FormInicial.capacidadDataAdapter.Fill(FormInicial.erbpilatesDataSet.Tables("capacidad"))
+        vista = FormInicial.erbpilatesDataSet.Tables("capacidad").DefaultView
+        dgvListado2.DataSource = vista
+        'dgvListado2.Columns(0).Visible = False
+
+        dgvListado2.ClearSelection()
+
         desconectarse()
     End Sub
 
@@ -101,7 +117,7 @@ Public Class FormRegistro
 
     End Sub
     Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs) Handles tbBuscar.TextChanged
-        vista.RowFilter = cbBuscarCampo.Text & " LIKE '" + tbBuscar.Text + "%'"
+        vista.RowFilter = cbBuscarCampo.Text & " Like '" + tbBuscar.Text + "%'"
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
