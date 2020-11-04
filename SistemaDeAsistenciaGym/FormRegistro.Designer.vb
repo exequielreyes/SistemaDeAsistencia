@@ -101,6 +101,18 @@ Partial Class FormRegistro
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.pbFoto1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -113,6 +125,7 @@ Partial Class FormRegistro
         CType(Me.dgvListado2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         CType(Me.dgvListado3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage4.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox2
@@ -855,9 +868,9 @@ Partial Class FormRegistro
         Me.Label11.ForeColor = System.Drawing.SystemColors.Highlight
         Me.Label11.Location = New System.Drawing.Point(8, 22)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(152, 25)
+        Me.Label11.Size = New System.Drawing.Size(164, 25)
         Me.Label11.TabIndex = 59
-        Me.Label11.Text = "Datos Clinico"
+        Me.Label11.Text = "Datos Clínicos"
         '
         'Label13
         '
@@ -931,7 +944,7 @@ Partial Class FormRegistro
         Me.cbCardiaco.Name = "cbCardiaco"
         Me.cbCardiaco.Size = New System.Drawing.Size(90, 20)
         Me.cbCardiaco.TabIndex = 51
-        Me.cbCardiaco.Text = "Cardiaco"
+        Me.cbCardiaco.Text = "Cardíaca"
         Me.cbCardiaco.UseVisualStyleBackColor = True
         '
         'cbLesiones
@@ -1041,10 +1054,22 @@ Partial Class FormRegistro
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(111, 25)
         Me.Label8.TabIndex = 45
-        Me.Label8.Text = "Patologia"
+        Me.Label8.Text = "Patología"
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.CheckBox5)
+        Me.TabPage4.Controls.Add(Me.CheckBox4)
+        Me.TabPage4.Controls.Add(Me.CheckBox3)
+        Me.TabPage4.Controls.Add(Me.CheckBox2)
+        Me.TabPage4.Controls.Add(Me.CheckBox1)
+        Me.TabPage4.Controls.Add(Me.Label25)
+        Me.TabPage4.Controls.Add(Me.Label21)
+        Me.TabPage4.Controls.Add(Me.Label20)
+        Me.TabPage4.Controls.Add(Me.Label16)
+        Me.TabPage4.Controls.Add(Me.ComboBox3)
+        Me.TabPage4.Controls.Add(Me.ComboBox2)
+        Me.TabPage4.Controls.Add(Me.ComboBox1)
         Me.TabPage4.Location = New System.Drawing.Point(4, 25)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
@@ -1052,6 +1077,128 @@ Partial Class FormRegistro
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Rutinas"
         Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Piernas", "Bíceps", "Tríceps", "Espalda", "Pecho", "Elongación", "Pelota", "Abdominales"})
+        Me.ComboBox1.Location = New System.Drawing.Point(21, 81)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(184, 24)
+        Me.ComboBox1.TabIndex = 0
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Piernas", "Bíceps", "Tríceps", "Espalda", "Pecho", "Elongación", "Pelota", "Abdominales"})
+        Me.ComboBox2.Location = New System.Drawing.Point(21, 145)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(184, 24)
+        Me.ComboBox2.TabIndex = 0
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Items.AddRange(New Object() {"Piernas", "Bíceps", "Tríceps", "Espalda", "Pecho", "Elongación", "Pelota", "Abdominales"})
+        Me.ComboBox3.Location = New System.Drawing.Point(21, 210)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(184, 24)
+        Me.ComboBox3.TabIndex = 0
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Enabled = False
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label16.Location = New System.Drawing.Point(16, 13)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(92, 25)
+        Me.Label16.TabIndex = 60
+        Me.Label16.Text = "Rutinas"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label20.Location = New System.Drawing.Point(18, 62)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(267, 16)
+        Me.Label20.TabIndex = 61
+        Me.Label20.Text = "Seleccione grupo muscular a trabajar"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label21.Location = New System.Drawing.Point(18, 126)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(267, 16)
+        Me.Label21.TabIndex = 62
+        Me.Label21.Text = "Seleccione grupo muscular a trabajar"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label25.Location = New System.Drawing.Point(18, 191)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(267, 16)
+        Me.Label25.TabIndex = 63
+        Me.Label25.Text = "Seleccione grupo muscular a trabajar"
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(430, 85)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(104, 20)
+        Me.CheckBox1.TabIndex = 64
+        Me.CheckBox1.Text = "CheckBox1"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(583, 85)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(104, 20)
+        Me.CheckBox2.TabIndex = 64
+        Me.CheckBox2.Text = "CheckBox1"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Location = New System.Drawing.Point(743, 85)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(104, 20)
+        Me.CheckBox3.TabIndex = 64
+        Me.CheckBox3.Text = "CheckBox1"
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'CheckBox4
+        '
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.Location = New System.Drawing.Point(430, 149)
+        Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(104, 20)
+        Me.CheckBox4.TabIndex = 64
+        Me.CheckBox4.Text = "CheckBox1"
+        Me.CheckBox4.UseVisualStyleBackColor = True
+        '
+        'CheckBox5
+        '
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Location = New System.Drawing.Point(583, 147)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(104, 20)
+        Me.CheckBox5.TabIndex = 64
+        Me.CheckBox5.Text = "CheckBox1"
+        Me.CheckBox5.UseVisualStyleBackColor = True
         '
         'FormRegistro
         '
@@ -1079,6 +1226,8 @@ Partial Class FormRegistro
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         CType(Me.dgvListado3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1152,4 +1301,16 @@ Partial Class FormRegistro
     Friend WithEvents cbOtros As CheckBox
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents cbHora As ComboBox
+    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents CheckBox5 As CheckBox
+    Friend WithEvents CheckBox4 As CheckBox
+    Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label20 As Label
 End Class

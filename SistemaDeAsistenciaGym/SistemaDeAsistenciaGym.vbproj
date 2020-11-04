@@ -75,6 +75,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -108,6 +109,12 @@
     <Compile Include="FormCamaraWeb.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormEjercicio.Designer.vb">
+      <DependentUpon>FormEjercicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormEjercicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormFoto.Designer.vb">
       <DependentUpon>FormFoto.vb</DependentUpon>
     </Compile>
@@ -139,6 +146,12 @@
     <Compile Include="FormRegistro.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormRutina.Designer.vb">
+      <DependentUpon>FormRutina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormRutina.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ModEmail.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -163,6 +176,9 @@
     <EmbeddedResource Include="FormCamaraWeb.resx">
       <DependentUpon>FormCamaraWeb.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEjercicio.resx">
+      <DependentUpon>FormEjercicio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormFoto.resx">
       <DependentUpon>FormFoto.vb</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistro.resx">
       <DependentUpon>FormRegistro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRutina.resx">
+      <DependentUpon>FormRutina.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
