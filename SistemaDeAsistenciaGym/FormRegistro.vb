@@ -66,6 +66,7 @@ Public Class FormRegistro
         FormFoto.Show()
     End Sub
     Public Sub CargaInicial()
+        '-------Alumno----------'
         conectarse()
         FormInicial.erbpilatesDataSet.Tables("Alumno").Clear()
         FormInicial.alumnoDataAdapter.SelectCommand = New MySqlCommand("SELECT * FROM alumno", conexion)
@@ -78,20 +79,30 @@ Public Class FormRegistro
         dgvListado.Columns(9).Visible = False
         dgvListado.ClearSelection()
 
-        'desconectarse()
 
+        '-------Capacidad y turno----------'
 
-        'conectarse()
         FormInicial.erbpilatesDataSet.Tables("capacidad").Clear()
-        FormInicial.capacidadDataAdapter.SelectCommand = New MySqlCommand("SELECT capacidad.total as 'Total', capacidad.cantidad as 'Cantidad', alumno.nombre as 'Nombre', alumno.apellido as 'Apellido' FROM capacidad  INNER JOIN alumno on capacidad.Alumno_id_alumno = alumno.id_alumno ", conexion)
-        'INNER Join capacidad ON capacidad.id_alumno = alumnos.id_alumno "
+        FormInicial.capacidadDataAdapter.SelectCommand = New MySqlCommand("SELECT capacidad.total as 'Total', capacidad.cantidad as 'Cantidad', DATE_FORMAT(turno.dia, '%W-%M-%Y') as 'Dia' , turno.hora FROM capacidad  INNER JOIN turno on capacidad.Turno_idTurno = turno.idTurno ", conexion)
         FormInicial.capacidadDataAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey
         FormInicial.capacidadDataAdapter.Fill(FormInicial.erbpilatesDataSet.Tables("capacidad"))
         vista = FormInicial.erbpilatesDataSet.Tables("capacidad").DefaultView
         dgvListado2.DataSource = vista
-        'dgvListado2.Columns(0).Visible = False
-
         dgvListado2.ClearSelection()
+
+
+        '------Historia clinica y patologia-------'
+        FormInicial.erbpilatesDataSet.Tables("Patologias").Clear()
+        FormInicial.patologiasDataAdapter.SelectCommand = New MySqlCommand("SELECT  patologias.cardiacas as 'Cardiacas' , patologias.lesiones_recientes as 'Lesiones recientes', patologias.columna as 'Columna',patologias.otros as 'Otros', patologias.detalles as 'Detalles', historia_clinica.altura_cm as 'Altura(cm)',historia_clinica.peso as 'Peso', historia_clinica.grupo_sanguineo as 'Grupo sanguineo' FROM patologias INNER JOIN historia_clinica on patologias.idHistoria =historia_clinica.idHistoria_Clinica  ", conexion)
+        FormInicial.patologiasDataAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey
+        FormInicial.patologiasDataAdapter.Fill(FormInicial.erbpilatesDataSet.Tables("Patologias"))
+        vista = FormInicial.erbpilatesDataSet.Tables("Patologias").DefaultView
+        dgvListado3.DataSource = vista
+        dgvListado.Columns(0).Visible = False
+        dgvListado3.ClearSelection()
+
+
+
 
         desconectarse()
     End Sub
@@ -210,7 +221,88 @@ Public Class FormRegistro
         End Try
     End Sub
 
-    Private Sub dgvListado2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListado2.CellContentClick
+    Private Sub btnGuardar2_Click(sender As Object, e As EventArgs) Handles btnGuardar2.Click
+        'Dim fila As DataRow
+        'Dim consulta As String
 
+        'Try
+        '    If accion = True Then
+        '        '1. Crear una nueva fila'
+        '        fila = FormInicial.erbpilatesDataSet.Tables("capacidad").NewRow
+
+        '        '2. Rellenar la fila con información
+        '        fila("total") = lblTotal.Text
+        '        fila("cantidad") = RbsemanaDos.Text & rbsemanaTres.Text & rbSemanaCuatro.Text
+        '        fila("dia") = dtpFechaInicio
+        '        fila("hora") = cbHora.Text
+
+        '        '3. Agregar fila a la tabla del DataSet
+        '        FormInicial.erbpilatesDataSet.Tables("capacidad").Rows.Add(fila)
+
+        '4. Crear Comando para agregar a la BD la fila nueva
+
+        'Fijar bien esto
+        'consulta = "INSERT INTO capacidad (idTurno , total , cantidad ) VALUES ( idTurno , total , cantidad)"
+
+        'FormInicial.capacidadDataAdapter.InsertCommand = New MySqlCommand(consulta, conexion)
+
+        'FormInicial.capacidadDataAdapter.InsertCommand.Parameters.Add("idTurno")
+
+
+        '        '5. Guardar los cambios en la base de datos
+        '        FormInicial.alumnoDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("alumno"))
+
+        '        '6. Actualiza la tabla del formulario listado de clientes
+        '        CargaInicial()
+
+        '        'Limpiamos los textbox para poder cargar otro cliente            
+        '        tbNombre.Text = ""
+        '        tbApellido.Text = ""
+        '        tbDni.Text = ""
+        '        tbEdad.Text = ""
+        '        tbDireccion.Text = ""
+        '        tbTelefono.Text = ""
+        '        tbEmail.Text = ""
+
+        '    Else
+        '        '1. Seleccionar fila a editar
+        '        fila = FormInicial.erbpilatesDataSet.Tables("alumno").Rows.Find(idFila)
+
+
+
+        '        '2. Rellenar la fila con información   
+        '        fila("Nombre") = tbNombre.Text
+        '        fila("apellido") = tbApellido.Text
+        '        fila("dni") = tbDni.Text
+        '        fila("edad") = tbEdad.Text
+        '        fila("direccion") = tbDireccion.Text
+        '        fila("telefono") = tbTelefono.Text
+        '        fila("email") = tbEmail.Text
+
+
+        '        '3. Crear Comando para modificar la fila en la BD
+
+        '        consulta = "UPDATE alumno SET nombre=@nom, apellido=@ape, dni=@dni ,edad=@ed, direccion =@dir, telefono=@tel, email =@em WHERE id_alumno=@id"
+        '        FormInicial.alumnoDataAdapter.UpdateCommand = New MySqlCommand(consulta, conexion)
+        '        FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 45, "nombre")
+        '        FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@ape", MySqlDbType.VarChar, 45, "apellido")
+        '        FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@dni", MySqlDbType.Int32, 0, "dni")
+        '        FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@ed", MySqlDbType.Int32, 0, "edad")
+        '        FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@dir", MySqlDbType.VarChar, 100, "direccion")
+        '        FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@tel", MySqlDbType.Int32, 11, "telefono")
+        '        FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@em", MySqlDbType.VarChar, 45, "email")
+
+        '        FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@id", MySqlDbType.Int32, 0, "id_alumno")
+
+        '        '4. Guardar los cambios en la base de datos
+        '        FormInicial.alumnoDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("alumno"))
+        '        '5. Actualiza la tabla del formulario listado de clientes
+        '        CargaInicial()
+        '        Me.Close()
+        '    End If
+        'Catch ex As Exception
+        '    MsgBox("Error espacio en blanco", MsgBoxStyle.Critical)
+
+        'End Try
     End Sub
 End Class
