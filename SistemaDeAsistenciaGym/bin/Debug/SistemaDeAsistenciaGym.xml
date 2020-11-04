@@ -22,6 +22,11 @@ SistemaDeAsistenciaGym
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources._82521642_icono_de_gimnasio_en_el_fondo_blanco_ilustración_vectorial">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.alacarte">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.

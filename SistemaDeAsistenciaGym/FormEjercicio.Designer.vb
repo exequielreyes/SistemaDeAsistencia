@@ -26,10 +26,12 @@ Partial Class FormEjercicio
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btnCargar = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.pbFoto1 = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbFoto1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -73,37 +75,54 @@ Partial Class FormEjercicio
         Me.Label1.TabIndex = 62
         Me.Label1.Text = "Imágen ilustrativa"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(499, 23)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(193, 184)
-        Me.PictureBox1.TabIndex = 63
-        Me.PictureBox1.TabStop = False
-        '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 235)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 266)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(758, 221)
+        Me.DataGridView1.Size = New System.Drawing.Size(758, 190)
         Me.DataGridView1.TabIndex = 64
+        '
+        'btnCargar
+        '
+        Me.btnCargar.Location = New System.Drawing.Point(562, 213)
+        Me.btnCargar.Name = "btnCargar"
+        Me.btnCargar.Size = New System.Drawing.Size(75, 23)
+        Me.btnCargar.TabIndex = 65
+        Me.btnCargar.Text = "Cargar"
+        Me.btnCargar.UseVisualStyleBackColor = True
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'pbFoto1
+        '
+        Me.pbFoto1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbFoto1.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources._82521642_icono_de_gimnasio_en_el_fondo_blanco_ilustración_vectorial
+        Me.pbFoto1.Location = New System.Drawing.Point(499, 23)
+        Me.pbFoto1.Name = "pbFoto1"
+        Me.pbFoto1.Size = New System.Drawing.Size(193, 184)
+        Me.pbFoto1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbFoto1.TabIndex = 63
+        Me.pbFoto1.TabStop = False
         '
         'FormEjercicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(782, 479)
+        Me.Controls.Add(Me.btnCargar)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.pbFoto1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.TextBox1)
         Me.Name = "FormEjercicio"
         Me.Text = "FormEjercicio"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbFoto1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -112,6 +131,8 @@ Partial Class FormEjercicio
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents btnCargar As Button
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents pbFoto1 As PictureBox
 End Class

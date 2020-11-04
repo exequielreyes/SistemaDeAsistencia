@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property _82521642_icono_de_gimnasio_en_el_fondo_blanco_ilustración_vectorial() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("82521642-icono-de-gimnasio-en-el-fondo-blanco-ilustración-vectorial", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property alacarte() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("alacarte", resourceCulture)

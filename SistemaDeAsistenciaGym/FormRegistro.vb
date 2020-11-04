@@ -222,87 +222,89 @@ Public Class FormRegistro
     End Sub
 
     Private Sub btnGuardar2_Click(sender As Object, e As EventArgs) Handles btnGuardar2.Click
-        'Dim fila As DataRow
-        'Dim consulta As String
+        Dim fila As DataRow
+        Dim consulta As String
 
-        'Try
-        '    If accion = True Then
-        '        '1. Crear una nueva fila'
-        '        fila = FormInicial.erbpilatesDataSet.Tables("capacidad").NewRow
+        Try
+            If accion = True Then
+                '1. Crear una nueva fila'
+                fila = FormInicial.erbpilatesDataSet.Tables("capacidad").NewRow
 
-        '        '2. Rellenar la fila con información
-        '        fila("total") = lblTotal.Text
-        '        fila("cantidad") = RbsemanaDos.Text & rbsemanaTres.Text & rbSemanaCuatro.Text
-        '        fila("dia") = dtpFechaInicio
-        '        fila("hora") = cbHora.Text
+                '2. Rellenar la fila con información
+                fila("total") = lblTotal.Text
+                fila("cantidad") = RbsemanaDos.Text & rbsemanaTres.Text & rbSemanaCuatro.Text
+                fila("dia") = dtpFechaInicio.ToString
+                fila("hora") = cbHora.Text
 
-        '        '3. Agregar fila a la tabla del DataSet
-        '        FormInicial.erbpilatesDataSet.Tables("capacidad").Rows.Add(fila)
+                '        '3. Agregar fila a la tabla del DataSet
+                FormInicial.erbpilatesDataSet.Tables("capacidad").Rows.Add(fila)
 
-        '4. Crear Comando para agregar a la BD la fila nueva
-
-        'Fijar bien esto
-        'consulta = "INSERT INTO capacidad (idTurno , total , cantidad ) VALUES ( idTurno , total , cantidad)"
-
-        'FormInicial.capacidadDataAdapter.InsertCommand = New MySqlCommand(consulta, conexion)
-
-        'FormInicial.capacidadDataAdapter.InsertCommand.Parameters.Add("idTurno")
+                '4. Crear Comando para agregar a la BD la fila nueva
 
 
-        '        '5. Guardar los cambios en la base de datos
-        '        FormInicial.alumnoDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("alumno"))
+                consulta = "INSERT INTO capacidad , turno (total , cantidad, dia , hora ) VALUES ( @tot , @cant , @dia , @hor)"
 
-        '        '6. Actualiza la tabla del formulario listado de clientes
-        '        CargaInicial()
+                FormInicial.capacidadDataAdapter.InsertCommand = New MySqlCommand(consulta, conexion)
 
-        '        'Limpiamos los textbox para poder cargar otro cliente            
-        '        tbNombre.Text = ""
-        '        tbApellido.Text = ""
-        '        tbDni.Text = ""
-        '        tbEdad.Text = ""
-        '        tbDireccion.Text = ""
-        '        tbTelefono.Text = ""
-        '        tbEmail.Text = ""
+                FormInicial.capacidadDataAdapter.InsertCommand.Parameters.Add("@tot", MySqlDbType.Int32, 0, "total")
+                FormInicial.capacidadDataAdapter.InsertCommand.Parameters.Add("@cant", MySqlDbType.Int32, 0, "cantidad")
+                FormInicial.capacidadDataAdapter.InsertCommand.Parameters.Add("@dia", MySqlDbType.DateTime, "dia")
+                FormInicial.capacidadDataAdapter.InsertCommand.Parameters.Add("@hor", MySqlDbType.Int32, 0, "hora")
 
-        '    Else
-        '        '1. Seleccionar fila a editar
-        '        fila = FormInicial.erbpilatesDataSet.Tables("alumno").Rows.Find(idFila)
+                '5. Guardar los cambios en la base de datos
+                FormInicial.capacidadDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("capacidad"))
 
+                '6. Actualiza la tabla del formulario listado de clientes
+                CargaInicial()
 
+                '        'Limpiamos los textbox para poder cargar otro cliente            
+                lblTotal.Text = ""
+                RbsemanaDos.Text = ""
+                rbsemanaTres.Text = ""
+                rbSemanaCuatro.Text = ""
+                dtpFechaInicio.Refresh()
+                cbHora.Text = ""
 
-        '        '2. Rellenar la fila con información   
-        '        fila("Nombre") = tbNombre.Text
-        '        fila("apellido") = tbApellido.Text
-        '        fila("dni") = tbDni.Text
-        '        fila("edad") = tbEdad.Text
-        '        fila("direccion") = tbDireccion.Text
-        '        fila("telefono") = tbTelefono.Text
-        '        fila("email") = tbEmail.Text
+            Else
+                '1. Seleccionar fila a editar
+                fila = FormInicial.erbpilatesDataSet.Tables("capacidad").Rows.Find(idFila)
 
 
-        '        '3. Crear Comando para modificar la fila en la BD
 
-        '        consulta = "UPDATE alumno SET nombre=@nom, apellido=@ape, dni=@dni ,edad=@ed, direccion =@dir, telefono=@tel, email =@em WHERE id_alumno=@id"
-        '        FormInicial.alumnoDataAdapter.UpdateCommand = New MySqlCommand(consulta, conexion)
-        '        FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 45, "nombre")
-        '        FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@ape", MySqlDbType.VarChar, 45, "apellido")
-        '        FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@dni", MySqlDbType.Int32, 0, "dni")
-        '        FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@ed", MySqlDbType.Int32, 0, "edad")
-        '        FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@dir", MySqlDbType.VarChar, 100, "direccion")
-        '        FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@tel", MySqlDbType.Int32, 11, "telefono")
-        '        FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@em", MySqlDbType.VarChar, 45, "email")
+                '2. Rellenar la fila con información   
+                fila("total") = lblTotal.Text
+                fila("cantidad") = RbsemanaDos.Text & rbsemanaTres.Text & rbSemanaCuatro.Text
+                fila("dia") = dtpFechaInicio.ToString
+                fila("hora") = cbHora.Text
 
-        '        FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@id", MySqlDbType.Int32, 0, "id_alumno")
 
-        '        '4. Guardar los cambios en la base de datos
-        '        FormInicial.alumnoDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("alumno"))
-        '        '5. Actualiza la tabla del formulario listado de clientes
-        '        CargaInicial()
-        '        Me.Close()
-        '    End If
-        'Catch ex As Exception
-        '    MsgBox("Error espacio en blanco", MsgBoxStyle.Critical)
+                '3. Crear Comando para modificar la fila en la BD
 
-        'End Try
+                consulta = "UPDATE capacidad , turno SET total=@tot, cantidad=@cant, dia=@dia ,hora=@hor WHERE Turno_idTurno=@id"
+                FormInicial.capacidadDataAdapter.UpdateCommand = New MySqlCommand(consulta, conexion)
+                FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@tot", MySqlDbType.Int32, 0, "total")
+                FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@cant", MySqlDbType.Int32, 0, "cantidad")
+                FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@dia", MySqlDbType.DateTime, "dia")
+                FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@hor", MySqlDbType.Int32, 0, "hora")
+                FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@id", MySqlDbType.Int32, 0, "Turno_idTurno")
+
+                '        '4. Guardar los cambios en la base de datos
+                FormInicial.capacidadDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("capacidad"))
+                '        '5. Actualiza la tabla del formulario listado de clientes
+                CargaInicial()
+                Me.Close()
+            End If
+        Catch ex As Exception
+            MsgBox("Error espacio en blanco", MsgBoxStyle.Critical)
+
+        End Try
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        FormEjercicio.ShowDialog()
+    End Sub
+
+    Private Sub rbSemanaCuatro_CheckedChanged(sender As Object, e As EventArgs) Handles rbSemanaCuatro.CheckedChanged
+        lblTotal.Text = "400"
     End Sub
 End Class

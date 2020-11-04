@@ -249,5 +249,8 @@
   <ItemGroup>
     <None Include="Resources\Cancel24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\82521642-icono-de-gimnasio-en-el-fondo-blanco-ilustración-vectorial.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
