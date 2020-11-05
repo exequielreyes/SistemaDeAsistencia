@@ -41,4 +41,8 @@ Public Class FormAsistencia
             End If
         End If
     End Sub
+
+    Private Sub lbAlumno_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lbAlumno.SelectedIndexChanged
+
+    End Sub
 End Class

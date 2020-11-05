@@ -225,15 +225,15 @@ Public Class FormRegistro
         Dim fila As DataRow
         Dim consulta As String
 
-        Try
-            If accion = True Then
+        'Try
+        If accion = True Then
                 '1. Crear una nueva fila'
                 fila = FormInicial.erbpilatesDataSet.Tables("capacidad").NewRow
 
                 '2. Rellenar la fila con información
                 fila("total") = lblTotal.Text
-                fila("cantidad") = RbsemanaDos.Text & rbsemanaTres.Text & rbSemanaCuatro.Text
-                fila("dia") = dtpFechaInicio.ToString
+            'fila("cantidad") = RbsemanaDos.Text & rbsemanaTres.Text & rbSemanaCuatro.Text
+            fila("dia") = dtpFechaInicio.ToString
                 fila("hora") = cbHora.Text
 
                 '        '3. Agregar fila a la tabla del DataSet
@@ -259,10 +259,10 @@ Public Class FormRegistro
 
                 '        'Limpiamos los textbox para poder cargar otro cliente            
                 lblTotal.Text = ""
-                RbsemanaDos.Text = ""
-                rbsemanaTres.Text = ""
-                rbSemanaCuatro.Text = ""
-                dtpFechaInicio.Refresh()
+            'RbsemanaDos.Text = ""
+            'rbsemanaTres.Text = ""
+            'rbSemanaCuatro.Text = ""
+            dtpFechaInicio.Refresh()
                 cbHora.Text = ""
 
             Else
@@ -273,8 +273,8 @@ Public Class FormRegistro
 
                 '2. Rellenar la fila con información   
                 fila("total") = lblTotal.Text
-                fila("cantidad") = RbsemanaDos.Text & rbsemanaTres.Text & rbSemanaCuatro.Text
-                fila("dia") = dtpFechaInicio.ToString
+            'fila("cantidad") = RbsemanaDos.Text & rbsemanaTres.Text & rbSemanaCuatro.Text
+            fila("dia") = dtpFechaInicio.ToString
                 fila("hora") = cbHora.Text
 
 
@@ -294,17 +294,21 @@ Public Class FormRegistro
                 CargaInicial()
                 Me.Close()
             End If
-        Catch ex As Exception
-            MsgBox("Error espacio en blanco", MsgBoxStyle.Critical)
+        'Catch ex As Exception
+        '    MsgBox("Error espacio en blanco", MsgBoxStyle.Critical)
 
-        End Try
+        'End Try
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         FormEjercicio.ShowDialog()
     End Sub
 
-    Private Sub rbSemanaCuatro_CheckedChanged(sender As Object, e As EventArgs) Handles rbSemanaCuatro.CheckedChanged
+    Private Sub rbSemanaCuatro_CheckedChanged(sender As Object, e As EventArgs)
         lblTotal.Text = "400"
+    End Sub
+
+    Private Sub ComboBox4_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox4.SelectedIndexChanged
+        tbAbonadas.Enabled = True
     End Sub
 End Class
