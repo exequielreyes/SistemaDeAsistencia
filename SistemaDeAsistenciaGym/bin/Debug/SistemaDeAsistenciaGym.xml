@@ -27,6 +27,11 @@ SistemaDeAsistenciaGym
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources._2a71ec307740510ce1e7300904131154">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SistemaDeAsistenciaGym.My.Resources.Resources._82521642_icono_de_gimnasio_en_el_fondo_blanco_ilustración_vectorial">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -68,6 +73,11 @@ SistemaDeAsistenciaGym
 </summary>
 </member>
 <member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.edit_find">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.edit_find1">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -158,6 +168,16 @@ SistemaDeAsistenciaGym
 </summary>
 </member>
 <member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.Save24">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.WhatsApp_Image_2020_11_06_at_18_23_41">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.WhatsApp_Image_2020_11_06_at_18_24_05">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

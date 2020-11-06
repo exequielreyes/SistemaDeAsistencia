@@ -25,7 +25,6 @@ Partial Class FormFoto
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormFoto))
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.btnGuardarFotoArchivo = New System.Windows.Forms.Button()
         Me.cmdcamara = New System.Windows.Forms.Button()
         Me.cmdBorrar = New System.Windows.Forms.Button()
@@ -56,22 +55,13 @@ Partial Class FormFoto
         Me.txtNombre.Size = New System.Drawing.Size(327, 20)
         Me.txtNombre.TabIndex = 186
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(131, 345)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 188
-        Me.Button1.Text = "Volver"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'btnGuardarFotoArchivo
         '
         Me.btnGuardarFotoArchivo.BackColor = System.Drawing.Color.DarkSalmon
         Me.btnGuardarFotoArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardarFotoArchivo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardarFotoArchivo.Image = CType(resources.GetObject("btnGuardarFotoArchivo.Image"), System.Drawing.Image)
-        Me.btnGuardarFotoArchivo.Location = New System.Drawing.Point(199, 386)
+        Me.btnGuardarFotoArchivo.Location = New System.Drawing.Point(109, 345)
         Me.btnGuardarFotoArchivo.Name = "btnGuardarFotoArchivo"
         Me.btnGuardarFotoArchivo.Size = New System.Drawing.Size(146, 31)
         Me.btnGuardarFotoArchivo.TabIndex = 185
@@ -199,9 +189,8 @@ Partial Class FormFoto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(351, 425)
+        Me.ClientSize = New System.Drawing.Size(351, 387)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.btnGuardarFotoArchivo)
@@ -226,7 +215,6 @@ Partial Class FormFoto
     Friend WithEvents cmdcamara As Button
     Friend WithEvents cmdBorrar As Button
     Friend WithEvents cmdCapturar As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents btnRestaurar As Button
     Friend WithEvents btnMax As Button

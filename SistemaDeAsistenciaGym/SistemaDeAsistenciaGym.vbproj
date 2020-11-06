@@ -109,6 +109,12 @@
     <Compile Include="FormCamaraWeb.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormDatos.Designer.vb">
+      <DependentUpon>FormDatos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDatos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormEjercicio.Designer.vb">
       <DependentUpon>FormEjercicio.vb</DependentUpon>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCamaraWeb.resx">
       <DependentUpon>FormCamaraWeb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDatos.resx">
+      <DependentUpon>FormDatos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEjercicio.resx">
       <DependentUpon>FormEjercicio.vb</DependentUpon>
@@ -305,6 +314,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fondoInicial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2a71ec307740510ce1e7300904131154.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-find1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2020-11-06 at 18.24.05.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2020-11-06 at 18.23.41.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

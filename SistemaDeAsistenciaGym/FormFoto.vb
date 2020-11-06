@@ -4,16 +4,9 @@ Imports MySql.Data.MySqlClient
 
 Public Class FormFoto
     Private Sub btnGuardarFotoArchivo_Click(sender As Object, e As EventArgs) Handles btnGuardarFotoArchivo.Click
-        Try
-            Dim sFD As New SaveFileDialog
-            sFD.Title = "Guardar Imagen"
-            sFD.Filter = "Imagenes|*.jpg;*.gif;*.png;*.bmp"
-            If sFD.ShowDialog = Windows.Forms.DialogResult.OK Then
-                Me.pbFoto.Image.Save(System.IO.Path.GetFullPath(sFD.FileName))
-            End If
-        Catch ex As Exception
-            MessageBox.Show(Err.Description, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
+        Dim image As Image = pbFoto.Image
+        image.Save("C:\Users\exequ\Documents\Imagix\image.jpg", System.Drawing.Imaging.ImageFormat.Jpeg)
+
     End Sub
 
     Private Sub cmdBorrar_Click(sender As Object, e As EventArgs) Handles cmdBorrar.Click
@@ -36,7 +29,7 @@ Public Class FormFoto
         FormRegistro.Visible = False
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         'Dim secondForm = New FormRegistro()
         'secondForm.Controls.Add(pbFoto)
 
