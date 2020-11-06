@@ -26,25 +26,29 @@ Partial Class FormInicial
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.tmOcultar = New System.Windows.Forms.Timer(Me.components)
         Me.tmMostrar = New System.Windows.Forms.Timer(Me.components)
-        Me.btnAsistencia = New System.Windows.Forms.Button()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.btnSalir = New System.Windows.Forms.Button()
-        Me.btnRegistro = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnRestaurar = New System.Windows.Forms.Button()
+        Me.btnMax = New System.Windows.Forms.Button()
+        Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.btnMin = New System.Windows.Forms.Button()
         Me.btnMenu = New System.Windows.Forms.PictureBox()
+        Me.btnSalir = New System.Windows.Forms.Button()
+        Me.btnAsistencia = New System.Windows.Forms.Button()
+        Me.btnRegistro = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.Brown
-        Me.Panel1.Controls.Add(Me.Panel7)
+        Me.Panel1.BackColor = System.Drawing.Color.Coral
+        Me.Panel1.Controls.Add(Me.btnMenu)
         Me.Panel1.Controls.Add(Me.btnSalir)
         Me.Panel1.Controls.Add(Me.btnAsistencia)
         Me.Panel1.Controls.Add(Me.btnRegistro)
-        Me.Panel1.Controls.Add(Me.btnMenu)
         Me.Panel1.Location = New System.Drawing.Point(0, 157)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(179, 294)
@@ -56,31 +60,84 @@ Partial Class FormInicial
         'tmMostrar
         '
         '
-        'btnAsistencia
+        'Panel2
         '
-        Me.btnAsistencia.BackColor = System.Drawing.Color.Transparent
-        Me.btnAsistencia.FlatAppearance.BorderSize = 0
-        Me.btnAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAsistencia.Font = New System.Drawing.Font("Castellar", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAsistencia.ForeColor = System.Drawing.Color.White
-        Me.btnAsistencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnAsistencia.Location = New System.Drawing.Point(0, 134)
-        Me.btnAsistencia.Name = "btnAsistencia"
-        Me.btnAsistencia.Size = New System.Drawing.Size(179, 44)
-        Me.btnAsistencia.TabIndex = 7
-        Me.btnAsistencia.Text = "        ASISTENCIAS"
-        Me.btnAsistencia.UseVisualStyleBackColor = False
+        Me.Panel2.BackColor = System.Drawing.Color.Coral
+        Me.Panel2.Controls.Add(Me.btnRestaurar)
+        Me.Panel2.Controls.Add(Me.btnMax)
+        Me.Panel2.Controls.Add(Me.btnCerrar)
+        Me.Panel2.Controls.Add(Me.btnMin)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(800, 25)
+        Me.Panel2.TabIndex = 40
         '
-        'Panel7
+        'btnRestaurar
         '
-        Me.Panel7.BackColor = System.Drawing.Color.Transparent
-        Me.Panel7.BackgroundImage = Global.SistemaDeAsistenciaGym.My.Resources.Resources.asistencia
-        Me.Panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Panel7.ForeColor = System.Drawing.Color.Transparent
-        Me.Panel7.Location = New System.Drawing.Point(0, 134)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(40, 44)
-        Me.Panel7.TabIndex = 11
+        Me.btnRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnRestaurar.FlatAppearance.BorderSize = 0
+        Me.btnRestaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRestaurar.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Icono_Restaurar
+        Me.btnRestaurar.Location = New System.Drawing.Point(713, 0)
+        Me.btnRestaurar.Name = "btnRestaurar"
+        Me.btnRestaurar.Size = New System.Drawing.Size(40, 25)
+        Me.btnRestaurar.TabIndex = 43
+        Me.btnRestaurar.UseVisualStyleBackColor = True
+        Me.btnRestaurar.Visible = False
+        '
+        'btnMax
+        '
+        Me.btnMax.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMax.BackColor = System.Drawing.Color.Coral
+        Me.btnMax.FlatAppearance.BorderSize = 0
+        Me.btnMax.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMax.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Icono_Maximizar
+        Me.btnMax.Location = New System.Drawing.Point(713, 0)
+        Me.btnMax.Name = "btnMax"
+        Me.btnMax.Size = New System.Drawing.Size(40, 25)
+        Me.btnMax.TabIndex = 41
+        Me.btnMax.UseVisualStyleBackColor = False
+        '
+        'btnCerrar
+        '
+        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCerrar.FlatAppearance.BorderSize = 0
+        Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCerrar.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.ICON_CERRARF
+        Me.btnCerrar.Location = New System.Drawing.Point(759, 1)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(29, 24)
+        Me.btnCerrar.TabIndex = 42
+        Me.btnCerrar.UseVisualStyleBackColor = True
+        '
+        'btnMin
+        '
+        Me.btnMin.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMin.FlatAppearance.BorderSize = 0
+        Me.btnMin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMin.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Icono_Minimizar
+        Me.btnMin.Location = New System.Drawing.Point(665, 0)
+        Me.btnMin.Name = "btnMin"
+        Me.btnMin.Size = New System.Drawing.Size(39, 25)
+        Me.btnMin.TabIndex = 41
+        Me.btnMin.UseVisualStyleBackColor = True
+        '
+        'btnMenu
+        '
+        Me.btnMenu.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMenu.BackColor = System.Drawing.Color.Transparent
+        Me.btnMenu.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.menu4
+        Me.btnMenu.Location = New System.Drawing.Point(151, 0)
+        Me.btnMenu.Name = "btnMenu"
+        Me.btnMenu.Size = New System.Drawing.Size(28, 39)
+        Me.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnMenu.TabIndex = 12
+        Me.btnMenu.TabStop = False
         '
         'btnSalir
         '
@@ -98,6 +155,23 @@ Partial Class FormInicial
         Me.btnSalir.Text = "SALIR"
         Me.btnSalir.UseVisualStyleBackColor = False
         '
+        'btnAsistencia
+        '
+        Me.btnAsistencia.BackColor = System.Drawing.Color.Transparent
+        Me.btnAsistencia.FlatAppearance.BorderSize = 0
+        Me.btnAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAsistencia.Font = New System.Drawing.Font("Castellar", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAsistencia.ForeColor = System.Drawing.Color.White
+        Me.btnAsistencia.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.qr
+        Me.btnAsistencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAsistencia.Location = New System.Drawing.Point(-13, 134)
+        Me.btnAsistencia.Name = "btnAsistencia"
+        Me.btnAsistencia.Size = New System.Drawing.Size(192, 44)
+        Me.btnAsistencia.TabIndex = 7
+        Me.btnAsistencia.Text = "        ASISTENCIAS"
+        Me.btnAsistencia.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAsistencia.UseVisualStyleBackColor = False
+        '
         'btnRegistro
         '
         Me.btnRegistro.BackColor = System.Drawing.Color.Transparent
@@ -114,19 +188,6 @@ Partial Class FormInicial
         Me.btnRegistro.Text = "     REGISTRO"
         Me.btnRegistro.UseVisualStyleBackColor = False
         '
-        'btnMenu
-        '
-        Me.btnMenu.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMenu.BackColor = System.Drawing.Color.Transparent
-        Me.btnMenu.BackgroundImage = Global.SistemaDeAsistenciaGym.My.Resources.Resources.menu
-        Me.btnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnMenu.Location = New System.Drawing.Point(151, 0)
-        Me.btnMenu.Name = "btnMenu"
-        Me.btnMenu.Size = New System.Drawing.Size(28, 39)
-        Me.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.btnMenu.TabIndex = 5
-        Me.btnMenu.TabStop = False
-        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Logo0
@@ -141,12 +202,14 @@ Partial Class FormInicial
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FormInicial"
         Me.Text = "Form1"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
         CType(Me.btnMenu, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -154,11 +217,15 @@ Partial Class FormInicial
     End Sub
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents btnMenu As PictureBox
     Friend WithEvents tmOcultar As Timer
     Friend WithEvents tmMostrar As Timer
     Friend WithEvents btnRegistro As Button
     Friend WithEvents btnSalir As Button
     Friend WithEvents btnAsistencia As Button
-    Friend WithEvents Panel7 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents btnMin As Button
+    Friend WithEvents btnMax As Button
+    Friend WithEvents btnCerrar As Button
+    Friend WithEvents btnRestaurar As Button
+    Friend WithEvents btnMenu As PictureBox
 End Class

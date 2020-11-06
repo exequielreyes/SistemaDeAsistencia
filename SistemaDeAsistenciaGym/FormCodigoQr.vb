@@ -26,4 +26,25 @@
     Private Sub btnEmail_Click(sender As Object, e As EventArgs) Handles btnEmail.Click
         FormEmail.ShowDialog()
     End Sub
+    Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        Me.Close()
+        desconectarse()
+        FormRegistro.Show()
+    End Sub
+
+    Private Sub btnMax_Click(sender As Object, e As EventArgs) Handles btnMax.Click
+        btnMax.Visible = False
+        btnRestaurar.Visible = True
+        Me.WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub btnRestaurar_Click(sender As Object, e As EventArgs) Handles btnRestaurar.Click
+        btnRestaurar.Visible = False
+        btnMax.Visible = True
+        Me.WindowState = FormWindowState.Normal
+    End Sub
 End Class

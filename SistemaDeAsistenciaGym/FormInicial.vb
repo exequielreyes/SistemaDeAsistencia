@@ -21,15 +21,6 @@ Public Class FormInicial
         End
     End Sub
 
-
-    Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click
-        If Panel1.Width = 179 Then
-            tmOcultar.Enabled = True
-        ElseIf Panel1.Width = 59 Then
-            tmMostrar.Enabled = True
-        End If
-    End Sub
-
     Private Sub tmMostrar_Tick(sender As Object, e As EventArgs) Handles tmMostrar.Tick
         If Panel1.Width >= 179 Then
             Me.tmMostrar.Enabled = False
@@ -46,5 +37,35 @@ Public Class FormInicial
         End If
     End Sub
 
+    Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
 
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        Me.Close()
+        desconectarse()
+        'FormPrincipal.Show()
+    End Sub
+
+    Private Sub btnMax_Click(sender As Object, e As EventArgs) Handles btnMax.Click
+        btnMax.Visible = False
+        btnRestaurar.Visible = True
+        Me.WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub btnRestaurar_Click(sender As Object, e As EventArgs) Handles btnRestaurar.Click
+        btnRestaurar.Visible = False
+        btnMax.Visible = True
+        Me.WindowState = FormWindowState.Normal
+    End Sub
+
+
+
+    Private Sub btnMenu_Click_1(sender As Object, e As EventArgs) Handles btnMenu.Click
+        If Panel1.Width = 179 Then
+            tmOcultar.Enabled = True
+        ElseIf Panel1.Width = 59 Then
+            tmMostrar.Enabled = True
+        End If
+    End Sub
 End Class

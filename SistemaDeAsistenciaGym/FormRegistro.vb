@@ -38,6 +38,7 @@ Public Class FormRegistro
         btnGuardar.Enabled = False
         btnBorrar.Enabled = True
         btnCancelar.Enabled = False
+        Btnqr.Enabled = False
 
     End Sub
 
@@ -48,7 +49,7 @@ Public Class FormRegistro
         btnBorrar.Enabled = False
         btnCancelar.Enabled = True
         btnGuardar.Enabled = True
-        Btnqr.Enabled = True
+        'Btnqr.Enabled = True
     End Sub
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         cancelar()
@@ -57,10 +58,10 @@ Public Class FormRegistro
     Private Sub Btnqr_Click(sender As Object, e As EventArgs) Handles Btnqr.Click
         FormCodigoQr.Show()
     End Sub
-    Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
-        FormInicial.Show()
-        Me.Hide()
-    End Sub
+    'Private Sub btnVolver_Click(sender As Object, e As EventArgs)
+    '    FormInicial.Show()
+    '    Me.Hide()
+    'End Sub
 
     Private Sub pbFoto1_Click(sender As Object, e As EventArgs) Handles pbFoto1.Click
         FormFoto.Show()
@@ -227,73 +228,73 @@ Public Class FormRegistro
 
         'Try
         If accion = True Then
-                '1. Crear una nueva fila'
-                fila = FormInicial.erbpilatesDataSet.Tables("capacidad").NewRow
+            '1. Crear una nueva fila'
+            fila = FormInicial.erbpilatesDataSet.Tables("capacidad").NewRow
 
-                '2. Rellenar la fila con información
-                fila("total") = lblTotal.Text
+            '2. Rellenar la fila con información
+            fila("total") = lblTotal.Text
             'fila("cantidad") = RbsemanaDos.Text & rbsemanaTres.Text & rbSemanaCuatro.Text
             fila("dia") = dtpFechaInicio.ToString
-                fila("hora") = cbHora.Text
+            fila("hora") = cbHora.Text
 
-                '        '3. Agregar fila a la tabla del DataSet
-                FormInicial.erbpilatesDataSet.Tables("capacidad").Rows.Add(fila)
+            '        '3. Agregar fila a la tabla del DataSet
+            FormInicial.erbpilatesDataSet.Tables("capacidad").Rows.Add(fila)
 
-                '4. Crear Comando para agregar a la BD la fila nueva
+            '4. Crear Comando para agregar a la BD la fila nueva
 
 
-                consulta = "INSERT INTO capacidad , turno (total , cantidad, dia , hora ) VALUES ( @tot , @cant , @dia , @hor)"
+            consulta = "INSERT INTO capacidad , turno (total , cantidad, dia , hora ) VALUES ( @tot , @cant , @dia , @hor)"
 
-                FormInicial.capacidadDataAdapter.InsertCommand = New MySqlCommand(consulta, conexion)
+            FormInicial.capacidadDataAdapter.InsertCommand = New MySqlCommand(consulta, conexion)
 
-                FormInicial.capacidadDataAdapter.InsertCommand.Parameters.Add("@tot", MySqlDbType.Int32, 0, "total")
-                FormInicial.capacidadDataAdapter.InsertCommand.Parameters.Add("@cant", MySqlDbType.Int32, 0, "cantidad")
-                FormInicial.capacidadDataAdapter.InsertCommand.Parameters.Add("@dia", MySqlDbType.DateTime, "dia")
-                FormInicial.capacidadDataAdapter.InsertCommand.Parameters.Add("@hor", MySqlDbType.Int32, 0, "hora")
+            FormInicial.capacidadDataAdapter.InsertCommand.Parameters.Add("@tot", MySqlDbType.Int32, 0, "total")
+            FormInicial.capacidadDataAdapter.InsertCommand.Parameters.Add("@cant", MySqlDbType.Int32, 0, "cantidad")
+            FormInicial.capacidadDataAdapter.InsertCommand.Parameters.Add("@dia", MySqlDbType.DateTime, "dia")
+            FormInicial.capacidadDataAdapter.InsertCommand.Parameters.Add("@hor", MySqlDbType.Int32, 0, "hora")
 
-                '5. Guardar los cambios en la base de datos
-                FormInicial.capacidadDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("capacidad"))
+            '5. Guardar los cambios en la base de datos
+            FormInicial.capacidadDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("capacidad"))
 
-                '6. Actualiza la tabla del formulario listado de clientes
-                CargaInicial()
+            '6. Actualiza la tabla del formulario listado de clientes
+            CargaInicial()
 
-                '        'Limpiamos los textbox para poder cargar otro cliente            
-                lblTotal.Text = ""
+            '        'Limpiamos los textbox para poder cargar otro cliente            
+            lblTotal.Text = ""
             'RbsemanaDos.Text = ""
             'rbsemanaTres.Text = ""
             'rbSemanaCuatro.Text = ""
             dtpFechaInicio.Refresh()
-                cbHora.Text = ""
+            cbHora.Text = ""
 
-            Else
-                '1. Seleccionar fila a editar
-                fila = FormInicial.erbpilatesDataSet.Tables("capacidad").Rows.Find(idFila)
+        Else
+            '1. Seleccionar fila a editar
+            fila = FormInicial.erbpilatesDataSet.Tables("capacidad").Rows.Find(idFila)
 
 
 
-                '2. Rellenar la fila con información   
-                fila("total") = lblTotal.Text
+            '2. Rellenar la fila con información   
+            fila("total") = lblTotal.Text
             'fila("cantidad") = RbsemanaDos.Text & rbsemanaTres.Text & rbSemanaCuatro.Text
             fila("dia") = dtpFechaInicio.ToString
-                fila("hora") = cbHora.Text
+            fila("hora") = cbHora.Text
 
 
-                '3. Crear Comando para modificar la fila en la BD
+            '3. Crear Comando para modificar la fila en la BD
 
-                consulta = "UPDATE capacidad , turno SET total=@tot, cantidad=@cant, dia=@dia ,hora=@hor WHERE Turno_idTurno=@id"
-                FormInicial.capacidadDataAdapter.UpdateCommand = New MySqlCommand(consulta, conexion)
-                FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@tot", MySqlDbType.Int32, 0, "total")
-                FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@cant", MySqlDbType.Int32, 0, "cantidad")
-                FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@dia", MySqlDbType.DateTime, "dia")
-                FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@hor", MySqlDbType.Int32, 0, "hora")
-                FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@id", MySqlDbType.Int32, 0, "Turno_idTurno")
+            consulta = "UPDATE capacidad , turno SET total=@tot, cantidad=@cant, dia=@dia ,hora=@hor WHERE Turno_idTurno=@id"
+            FormInicial.capacidadDataAdapter.UpdateCommand = New MySqlCommand(consulta, conexion)
+            FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@tot", MySqlDbType.Int32, 0, "total")
+            FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@cant", MySqlDbType.Int32, 0, "cantidad")
+            FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@dia", MySqlDbType.DateTime, "dia")
+            FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@hor", MySqlDbType.Int32, 0, "hora")
+            FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@id", MySqlDbType.Int32, 0, "Turno_idTurno")
 
-                '        '4. Guardar los cambios en la base de datos
-                FormInicial.capacidadDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("capacidad"))
-                '        '5. Actualiza la tabla del formulario listado de clientes
-                CargaInicial()
-                Me.Close()
-            End If
+            '        '4. Guardar los cambios en la base de datos
+            FormInicial.capacidadDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("capacidad"))
+            '        '5. Actualiza la tabla del formulario listado de clientes
+            CargaInicial()
+            Me.Close()
+        End If
         'Catch ex As Exception
         '    MsgBox("Error espacio en blanco", MsgBoxStyle.Critical)
 
@@ -310,5 +311,31 @@ Public Class FormRegistro
 
     Private Sub ComboBox4_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox4.SelectedIndexChanged
         tbAbonadas.Enabled = True
+    End Sub
+
+    Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub btnRestaurar_Click(sender As Object, e As EventArgs) Handles btnRestaurar.Click
+        btnRestaurar.Visible = False
+        btnMax.Visible = True
+        Me.WindowState = FormWindowState.Normal
+    End Sub
+
+    Private Sub btnMax_Click(sender As Object, e As EventArgs) Handles btnMax.Click
+        btnMax.Visible = False
+        btnRestaurar.Visible = True
+        Me.WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        Me.Close()
+        desconectarse()
+        FormInicial.Show()
+    End Sub
+
+    Private Sub tbDni_TextChanged(sender As Object, e As EventArgs) Handles tbDni.TextChanged
+        Btnqr.Enabled = True
     End Sub
 End Class

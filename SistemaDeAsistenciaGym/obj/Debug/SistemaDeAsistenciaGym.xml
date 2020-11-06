@@ -22,12 +22,22 @@ SistemaDeAsistenciaGym
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources._21">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SistemaDeAsistenciaGym.My.Resources.Resources._82521642_icono_de_gimnasio_en_el_fondo_blanco_ilustración_vectorial">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.alacarte">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.archivo">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -47,12 +57,52 @@ SistemaDeAsistenciaGym
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.Cancel241">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.client">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.edit_find">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.gtk_edit">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.ICON_CERRARF">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.Icono_Maximizar">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.Icono_Minimizar">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.Icono_Restaurar">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.list_add">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.list_remove">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -68,6 +118,41 @@ SistemaDeAsistenciaGym
 </summary>
 </member>
 <member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.menu">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.menu2">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.menu4">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.Mobile_Menu_Icon">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.Mobile_Menu_Icon1">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.qr">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.qr_code___copia">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.Save24">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
