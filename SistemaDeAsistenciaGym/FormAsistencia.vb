@@ -4,7 +4,7 @@ Imports BarcodeLib.BarcodeReader
 Public Class FormAsistencia
     Private dispositivos As FilterInfoCollection
     Private fuenteVideo As VideoCaptureDevice
-    Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
+    Private Sub btnVolver_Click(sender As Object, e As EventArgs)
         FormInicial.Show()
         Me.Hide()
     End Sub
@@ -45,4 +45,26 @@ Public Class FormAsistencia
     Private Sub lbAlumno_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lbAlumno.SelectedIndexChanged
 
     End Sub
+    Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub btnRestaurar_Click(sender As Object, e As EventArgs) Handles btnRestaurar.Click
+        btnRestaurar.Visible = False
+        btnMax.Visible = True
+        Me.WindowState = FormWindowState.Normal
+    End Sub
+
+    Private Sub btnMax_Click(sender As Object, e As EventArgs) Handles btnMax.Click
+        btnMax.Visible = False
+        btnRestaurar.Visible = True
+        Me.WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        Me.Close()
+        desconectarse()
+        FormInicial.Show()
+    End Sub
+
 End Class

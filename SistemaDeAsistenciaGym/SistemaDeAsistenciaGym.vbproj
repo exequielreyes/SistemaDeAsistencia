@@ -303,5 +303,8 @@
   <ItemGroup>
     <None Include="Resources\qr.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoInicial.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

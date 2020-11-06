@@ -72,6 +72,11 @@ SistemaDeAsistenciaGym
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.fondoInicial">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.gtk_edit">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.

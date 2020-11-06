@@ -8,6 +8,19 @@ Public Class FormRegistro
     Private Sub FormRegistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FormInicial.Hide()
         CargaInicial()
+
+        'If accion Then
+        '    tbNombre.Text = ""
+        '    tbApellido.Text = ""
+        '    tbDni.Text = ""
+        '    tbEdad.Text = ""
+        '    tbDireccion.Text = ""
+        '    tbTelefono.Text = ""
+        '    tbEmail.Text = ""
+        '    Me.Text = "Nuevo Cliente"
+        'Else
+        '    Me.Text = "Editar Cliente"
+        'End If
     End Sub
     Sub activarTextBox(ByVal activo As Boolean)
         If activo = True Then
@@ -31,6 +44,20 @@ Public Class FormRegistro
             tbEmail.Enabled = False
         End If
     End Sub
+    Sub cargarTextBox()
+        Dim fila As DataGridViewRow = dgvListado.CurrentRow
+        idFila = fila.Cells(0).Value
+        tbNombre.Text = fila.Cells(1).Value
+        tbApellido.Text = fila.Cells(2).Value
+        tbDni.Text = fila.Cells(3).Value
+        tbEdad.Text = fila.Cells(4).Value
+        tbDireccion.Text = fila.Cells(5).Value
+        tbTelefono.Text = fila.Cells(6).Value
+        tbEmail.Text = fila.Cells(7).Value
+
+
+    End Sub
+
     Sub cancelar()
         activarTextBox(False)
         btnNuevo.Enabled = True
@@ -38,8 +65,14 @@ Public Class FormRegistro
         btnGuardar.Enabled = False
         btnBorrar.Enabled = True
         btnCancelar.Enabled = False
+        tbNombre.Text = ""
+        tbApellido.Text = ""
+        tbDni.Text = ""
+        tbDireccion.Text = ""
+        tbEdad.Text = ""
+        tbTelefono.Text = ""
+        tbEmail.Text = ""
         Btnqr.Enabled = False
-
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
@@ -128,9 +161,27 @@ Public Class FormRegistro
         dgvListado.Columns(0).Visible = False
 
     End Sub
-    Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs) Handles tbBuscar.TextChanged
-        vista.RowFilter = cbBuscarCampo.Text & " Like '" + tbBuscar.Text + "%'"
+
+    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+        activarTextBox(True)
+        btnNuevo.Enabled = False
+        btnEditar.Enabled = False
+        btnBorrar.Enabled = False
+        btnGuardar.Enabled = True
+        btnCancelar.Enabled = True
+        accion = False
+
+        'idFila = dgvListado.CurrentRow.Cells(0).Value
+
+        'tbNombre.Text = dgvListado.CurrentRow.Cells(1).Value
+        'tbApellido.Text = dgvListado.CurrentRow.Cells(2).Value
+        'tbDni.Text = dgvListado.CurrentRow.Cells(3).Value
+        'tbEdad.Text = dgvListado.CurrentRow.Cells(4).Value
+        'tbDireccion.Text = dgvListado.CurrentRow.Cells(5).Value
+        'tbTelefono.Text = dgvListado.CurrentRow.Cells(6).Value
+        'tbEmail.Text = dgvListado.CurrentRow.Cells(7).Value
     End Sub
+
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim fila As DataRow
@@ -338,4 +389,10 @@ Public Class FormRegistro
     Private Sub tbDni_TextChanged(sender As Object, e As EventArgs) Handles tbDni.TextChanged
         Btnqr.Enabled = True
     End Sub
+
+    Private Sub tbBuscar_TextChanged(sender As Object, e As EventArgs) Handles tbBuscar.TextChanged
+        vista.RowFilter = cbBuscarCampo.Text & " LIKE '" + tbBuscar.Text + "%'"
+    End Sub
+
+
 End Class
