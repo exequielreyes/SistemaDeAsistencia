@@ -7,6 +7,7 @@ Public Class FormAsistencia
     Private dispositivos As FilterInfoCollection
     Private fuenteVideo As VideoCaptureDevice
 
+
     Private Sub btnVolver_Click(sender As Object, e As EventArgs)
         FormInicial.Show()
         Me.Hide()
@@ -72,7 +73,22 @@ Public Class FormAsistencia
 
     'Public Function comparar()
     '    conectarse()
-    '    FormInicial.
+    '    FormInicial.erbpilatesDataSet.Tables("Alumno").Clear()
+    '    FormInicial.alumnoDataAdapter.SelectCommand = New MySqlCommand("SELECT dni FROM alumno", conexion)
+    '    Try
+    '        If BarcodeReader.QRCODE = "dni" Then
+    '            FormInicial.erbpilatesDataSet.Tables("Clases").Clear()
+    '            'FormInicial.clasesDataAdapter.SelectCommand
+
+
+    '        End If
+
+    '    Catch ex As Exception
+
+    '    End Try
+
+
+
     '    Return 0
     'End Function
 
