@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.Runtime.InteropServices
 Public Class FormInicial
+    'Private vista As New DataView
     Public Property alumnoDataAdapter As New MySqlDataAdapter
     Public Property capacidadDataAdapter As New MySqlDataAdapter
     Public Property turnoDataAdapter As New MySqlDataAdapter
@@ -17,6 +18,19 @@ Public Class FormInicial
         erbpilatesDataSet.Tables.Add("alumno")
         erbpilatesDataSet.Tables.Add("capacidad")
         erbpilatesDataSet.Tables.Add("patologias")
+
+        'conectarse()
+        'erbpilatesDataSet.Tables("Alumno").Clear()
+        'alumnoDataAdapter.SelectCommand = New MySqlCommand("SELECT * FROM alumno", conexion)
+        'alumnoDataAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey
+        'alumnoDataAdapter.Fill(erbpilatesDataSet.Tables("Alumno"))
+        'vista = erbpilatesDataSet.Tables("Alumno").DefaultView
+        'FormRegistro.dgvListado.DataSource = vista
+        'FormRegistro.dgvListado.Columns(0).Visible = False
+        'FormRegistro.dgvListado.Columns(8).Visible = False
+        'FormRegistro.dgvListado.Columns(9).Visible = False
+        'FormRegistro.dgvListado.ClearSelection()
+        'desconectarse()
 
     End Sub
 

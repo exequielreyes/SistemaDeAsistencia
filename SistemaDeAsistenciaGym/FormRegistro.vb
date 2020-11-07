@@ -22,6 +22,50 @@ Public Class FormRegistro
         '    Me.Text = "Editar Cliente"
         'End If
     End Sub
+    Public Sub CargaInicial()
+        '-------Alumno----------'
+        conectarse()
+        FormInicial.erbpilatesDataSet.Tables("Alumno").Clear()
+        FormInicial.alumnoDataAdapter.SelectCommand = New MySqlCommand("SELECT * FROM alumno", conexion)
+        FormInicial.alumnoDataAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey
+        FormInicial.alumnoDataAdapter.Fill(FormInicial.erbpilatesDataSet.Tables("Alumno"))
+        vista = FormInicial.erbpilatesDataSet.Tables("Alumno").DefaultView
+        dgvListado.DataSource = vista
+        dgvListado.Columns(0).Visible = False
+        dgvListado.Columns(8).Visible = False
+        'dgvListado.Columns(9).Visible = False
+        dgvListado.ClearSelection()
+        desconectarse()
+    End Sub
+    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+        accion = True
+        activarTextBox(True)
+        btnEditar.Enabled = False
+        btnBorrar.Enabled = False
+        btnCancelar.Enabled = True
+        btnGuardar.Enabled = True
+        'Btnqr.Enabled = True
+    End Sub
+    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+        activarTextBox(True)
+        btnNuevo.Enabled = False
+        btnEditar.Enabled = False
+        btnBorrar.Enabled = False
+        btnGuardar.Enabled = True
+        btnCancelar.Enabled = True
+        accion = False
+        cargarTextBox()
+        'idFila = dgvListado.CurrentRow.Cells(0).Value
+
+        'tbNombre.Text = dgvListado.CurrentRow.Cells(1).Value
+        'tbApellido.Text = dgvListado.CurrentRow.Cells(2).Value
+        'tbDni.Text = dgvListado.CurrentRow.Cells(3).Value
+        'tbEdad.Text = dgvListado.CurrentRow.Cells(4).Value
+        'tbDireccion.Text = dgvListado.CurrentRow.Cells(5).Value
+        'tbTelefono.Text = dgvListado.CurrentRow.Cells(6).Value
+        'tbEmail.Text = dgvListado.CurrentRow.Cells(7).Value
+    End Sub
+
     Sub activarTextBox(ByVal activo As Boolean)
         If activo = True Then
 
@@ -75,15 +119,7 @@ Public Class FormRegistro
         Btnqr.Enabled = False
     End Sub
 
-    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
-        accion = True
-        activarTextBox(True)
-        btnEditar.Enabled = False
-        btnBorrar.Enabled = False
-        btnCancelar.Enabled = True
-        btnGuardar.Enabled = True
-        'Btnqr.Enabled = True
-    End Sub
+
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         cancelar()
     End Sub
@@ -91,120 +127,88 @@ Public Class FormRegistro
     Private Sub Btnqr_Click(sender As Object, e As EventArgs) Handles Btnqr.Click
         FormCodigoQr.Show()
     End Sub
-    'Private Sub btnVolver_Click(sender As Object, e As EventArgs)
-    '    FormInicial.Show()
-    '    Me.Hide()
-    'End Sub
+
 
     Private Sub pbFoto1_Click(sender As Object, e As EventArgs) Handles pbFoto1.Click
         FormFoto.Show()
     End Sub
-    Public Sub CargaInicial()
-        '-------Alumno----------'
-        conectarse()
-        FormInicial.erbpilatesDataSet.Tables("Alumno").Clear()
-        FormInicial.alumnoDataAdapter.SelectCommand = New MySqlCommand("SELECT * FROM alumno", conexion)
-        FormInicial.alumnoDataAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey
-        FormInicial.alumnoDataAdapter.Fill(FormInicial.erbpilatesDataSet.Tables("Alumno"))
-        vista = FormInicial.erbpilatesDataSet.Tables("Alumno").DefaultView
-        dgvListado.DataSource = vista
-        dgvListado.Columns(0).Visible = False
-        dgvListado.Columns(8).Visible = False
-        dgvListado.Columns(9).Visible = False
-        dgvListado.ClearSelection()
-        desconectarse()
-    End Sub
 
-    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
-        If (MessageBox.Show("Está seguro de borrar este cliente?", "Borrar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes) Then
-            Try
-                FormInicial.erbpilatesDataSet.Tables("alumno").Rows.Find(idFila).Delete()
-                FormInicial.alumnoDataAdapter.DeleteCommand = New MySqlCommand("DELETE FROM alumno WHERE id_alumno= @id", conexion)
-                FormInicial.alumnoDataAdapter.DeleteCommand.Parameters.Add("@id_alumno", MySqlDbType.Int32, 0, "id")
-                FormInicial.alumnoDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("Alumno"))
-
-            Catch ex As Exception
-                MsgBox(ex)
-                ' MsgBox("No se puede borrar porque el cliente tiene ventas relacionadas")
-            End Try
-        End If
-        dgvListado.CurrentCell = dgvListado.Rows(0).Cells(1)
-        idFila = dgvListado.CurrentRow.Cells(0).Value
-    End Sub
     Private Sub dgvListado_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvListado.CellClick
         dgvListado.Columns(0).Visible = False
 
     End Sub
 
-    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
-        activarTextBox(True)
-        btnNuevo.Enabled = False
-        btnEditar.Enabled = False
-        btnBorrar.Enabled = False
-        btnGuardar.Enabled = True
-        btnCancelar.Enabled = True
-        accion = False
-        cargarTextBox()
-        'idFila = dgvListado.CurrentRow.Cells(0).Value
 
-        'tbNombre.Text = dgvListado.CurrentRow.Cells(1).Value
-        'tbApellido.Text = dgvListado.CurrentRow.Cells(2).Value
-        'tbDni.Text = dgvListado.CurrentRow.Cells(3).Value
-        'tbEdad.Text = dgvListado.CurrentRow.Cells(4).Value
-        'tbDireccion.Text = dgvListado.CurrentRow.Cells(5).Value
-        'tbTelefono.Text = dgvListado.CurrentRow.Cells(6).Value
-        'tbEmail.Text = dgvListado.CurrentRow.Cells(7).Value
-    End Sub
 
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        Dim fila As DataRow
-        Dim consulta As String
 
+        Dim consulta As String
+        Dim repetido As Integer = 0
+        Dim fila As DataRow
         Try
             If accion = True Then
-                '1. Crear una nueva fila'
-                fila = FormInicial.erbpilatesDataSet.Tables("Alumno").NewRow
+                Dim filadni As DataGridViewRow = New DataGridViewRow
+                Dim documento As String
+                For Each filadni In dgvListado.Rows
+                    documento = (filadni.Cells("DNI").Value)
+                    If tbDni.Text = documento Then
+                        MsgBox("DNI Ya registrado, vuelva a intentarlo.")
+                        repetido = 1
+                        cancelar()
+                    End If
+                Next
 
-                '2. Rellenar la fila con información
-                fila("nombre") = tbNombre.Text
-                fila("apellido") = tbApellido.Text
-                fila("dni") = tbDni.Text
-                fila("edad") = tbEdad.Text
-                fila("direccion") = tbDireccion.Text
-                fila("telefono") = tbTelefono.Text
-                fila("email") = tbEmail.Text
+                If repetido = 0 Then
+                    '1. Crear una nueva fila'
+                    fila = FormInicial.erbpilatesDataSet.Tables("Alumno").NewRow
 
-                '3. Agregar fila a la tabla del DataSet
-                FormInicial.erbpilatesDataSet.Tables("alumno").Rows.Add(fila)
+                    '2. Rellenar la fila con información
+                    fila("nombre") = tbNombre.Text
+                    fila("apellido") = tbApellido.Text
+                    fila("DNI") = tbDni.Text
+                    fila("edad") = tbEdad.Text
+                    fila("direccion") = tbDireccion.Text
+                    fila("telefono") = tbTelefono.Text
+                    fila("email") = tbEmail.Text
+                    fila("foto") = pbFoto1.Image
 
-                '4. Crear Comando para agregar a la BD la fila nueva
+                    '3. Agregar fila a la tabla del DataSet
+                    FormInicial.erbpilatesDataSet.Tables("alumno").Rows.Add(fila)
 
-                consulta = "INSERT INTO alumno (nombre, apellido,dni, edad, direccion ,telefono,email) VALUES ( @nom, @ape,@dni, @ed,@dir,@tel,@em)"
-                FormInicial.alumnoDataAdapter.InsertCommand = New MySqlCommand(consulta, conexion)
-                FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 45, "nombre")
-                FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@ape", MySqlDbType.VarChar, 45, "apellido")
-                FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@dni", MySqlDbType.Int32, 0, "dni")
-                FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@ed", MySqlDbType.Int32, 0, "edad")
-                FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@dir", MySqlDbType.VarChar, 100, "direccion")
-                FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@tel", MySqlDbType.Int32, 11, "telefono")
-                FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@em", MySqlDbType.VarChar, 45, "email")
+                    '4. Crear Comando para agregar a la BD la fila nueva
 
-                '5. Guardar los cambios en la base de datos
-                FormInicial.alumnoDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("alumno"))
+                    consulta = "INSERT INTO alumno (nombre, apellido,DNI, edad, direccion ,telefono,email, foto) VALUES ( @nom, @ape,@dni, @ed,@dir,@tel,@em, @fot)"
+                    FormInicial.alumnoDataAdapter.InsertCommand = New MySqlCommand(consulta, conexion)
+                    FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 45, "nombre")
+                    FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@ape", MySqlDbType.VarChar, 45, "apellido")
+                    FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@dni", MySqlDbType.Int32, 0, "DNI")
+                    FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@ed", MySqlDbType.Int32, 0, "edad")
+                    FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@dir", MySqlDbType.VarChar, 100, "direccion")
+                    FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@tel", MySqlDbType.Int32, 11, "telefono")
+                    FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@em", MySqlDbType.VarChar, 45, "email")
+                    FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@fot", MySqlDbType.Blob, "foto")
+                    '5. Guardar los cambios en la base de datos
+                    FormInicial.alumnoDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("alumno"))
 
-                '6. Actualiza la tabla del formulario listado de clientes
-                CargaInicial()
+                    '6. Actualiza la tabla del formulario listado de clientes
+                    '6. Volver a cargar la tabla del dataset para obtener los ultimos cambios de la BD
+                    'FormInicial.erbpilatesDataSet.Tables("alumno").Clear()
+                    'FormInicial.alumnoDataAdapter.SelectCommand = New MySqlCommand("SELECT * FROM alumno", conexion)
+                    'FormInicial.alumnoDataAdapter.Fill(FormInicial.erbpilatesDataSet.Tables("alumno"))
 
-                'Limpiamos los textbox para poder cargar otro cliente            
-                tbNombre.Text = ""
-                tbApellido.Text = ""
-                tbDni.Text = ""
-                tbEdad.Text = ""
-                tbDireccion.Text = ""
-                tbTelefono.Text = ""
-                tbEmail.Text = ""
+                    CargaInicial()
 
+                    'Limpiamos los textbox para poder cargar otro cliente            
+                    tbNombre.Text = ""
+                    tbApellido.Text = ""
+                    tbDni.Text = ""
+                    tbEdad.Text = ""
+                    tbDireccion.Text = ""
+                    tbTelefono.Text = ""
+                    tbEmail.Text = ""
+
+                End If
             Else
                 '1. Seleccionar fila a editar
                 fila = FormInicial.erbpilatesDataSet.Tables("alumno").Rows.Find(idFila)
@@ -213,24 +217,25 @@ Public Class FormRegistro
                 '2. Rellenar la fila con información   
                 fila("Nombre") = tbNombre.Text
                 fila("apellido") = tbApellido.Text
-                fila("dni") = tbDni.Text
+                fila("DNI") = tbDni.Text
                 fila("edad") = tbEdad.Text
                 fila("direccion") = tbDireccion.Text
                 fila("telefono") = tbTelefono.Text
                 fila("email") = tbEmail.Text
-
+                fila("foto") = pbFoto1.Image
 
                 '3. Crear Comando para modificar la fila en la BD
 
-                consulta = "UPDATE alumno SET nombre=@nom, apellido=@ape, dni=@dni ,edad=@ed, direccion =@dir, telefono=@tel, email =@em WHERE id_alumno=@id"
+                consulta = "UPDATE alumno SET nombre=@nom, apellido=@ape, DNI=@dni ,edad=@ed, direccion =@dir, telefono=@tel, email =@em , foto =@fot WHERE id_alumno=@id"
                 FormInicial.alumnoDataAdapter.UpdateCommand = New MySqlCommand(consulta, conexion)
                 FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 45, "nombre")
                 FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@ape", MySqlDbType.VarChar, 45, "apellido")
-                FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@dni", MySqlDbType.Int32, 0, "dni")
+                FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@dni", MySqlDbType.Int32, 0, "DNI")
                 FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@ed", MySqlDbType.Int32, 0, "edad")
                 FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@dir", MySqlDbType.VarChar, 100, "direccion")
                 FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@tel", MySqlDbType.Int32, 11, "telefono")
                 FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@em", MySqlDbType.VarChar, 45, "email")
+                FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@fot", MySqlDbType.Blob, "foto")
 
                 FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@id", MySqlDbType.Int32, 0, "id_alumno")
 
@@ -238,14 +243,33 @@ Public Class FormRegistro
                 FormInicial.alumnoDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("alumno"))
                 '5. Actualiza la tabla del formulario listado de clientes
                 CargaInicial()
-                Me.Close()
+                'Me.Close()
             End If
+
         Catch ex As Exception
             MsgBox("Error espacio en blanco", MsgBoxStyle.Critical)
 
         End Try
-    End Sub
 
+        cancelar()
+    End Sub
+    Private Sub btnBorrar_Click(sender As Object, e As EventArgs) Handles btnBorrar.Click
+        If (MessageBox.Show("Está seguro de borrar este cliente?", "Borrar", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning) = DialogResult.Yes) Then
+            Try
+                FormInicial.erbpilatesDataSet.Tables("alumno").Rows.Find(idFila).Delete()
+                FormInicial.alumnoDataAdapter.DeleteCommand = New MySqlCommand("DELETE FROM alumno WHERE id_alumno = @id", conexion)
+                FormInicial.alumnoDataAdapter.DeleteCommand.Parameters.Add("@id", MySqlDbType.Int32, 0, "id_alumno")
+                FormInicial.alumnoDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("Alumno"))
+
+            Catch ex As Exception
+                MsgBox(ex)
+                MsgBox("No se puede borrar porque el cliente tiene ventas relacionadas")
+            End Try
+        End If
+        dgvListado.CurrentCell = dgvListado.Rows(0).Cells(1)
+        idFila = dgvListado.CurrentRow.Cells(0).Value
+        cancelar()
+    End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         FormEjercicio.ShowDialog()
     End Sub

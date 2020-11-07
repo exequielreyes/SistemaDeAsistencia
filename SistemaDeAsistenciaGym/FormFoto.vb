@@ -4,6 +4,7 @@ Imports MySql.Data.MySqlClient
 
 Public Class FormFoto
     Private Sub btnGuardarFotoArchivo_Click(sender As Object, e As EventArgs) Handles btnGuardarFotoArchivo.Click
+
         Dim image As Image = pbFoto.Image
         image.Save("C:\Users\exequ\Documents\Imagix\image.jpg", System.Drawing.Imaging.ImageFormat.Jpeg)
 
@@ -30,14 +31,6 @@ Public Class FormFoto
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
-        'Dim secondForm = New FormRegistro()
-        'secondForm.Controls.Add(pbFoto)
-
-        ''(( pbFoto ) secondForm.Controls("pbFoto1").Image = this.pictureBox1.Image
-        'secondForm.Show()
-
-        'FormRegistro.ShowDialog()
-
     End Sub
     Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
         Me.WindowState = FormWindowState.Minimized

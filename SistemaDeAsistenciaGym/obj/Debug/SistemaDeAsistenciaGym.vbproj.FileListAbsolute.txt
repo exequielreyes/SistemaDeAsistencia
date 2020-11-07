@@ -151,3 +151,4 @@ C:\Users\Doble G\Documents\GitHub\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj
 C:\Users\Doble G\Documents\GitHub\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.Resources.resources
 C:\Users\Doble G\Documents\GitHub\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.vbproj.GenerateResource.Cache
 C:\Users\Doble G\Documents\GitHub\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormInfo.resources
+C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormInfo.resources
