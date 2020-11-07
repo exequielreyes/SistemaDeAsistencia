@@ -46,8 +46,9 @@ Public Class FormDatos
             fila("dia") = cbDia.Text
             fila("hora") = cbHora.Text
             fila("clase_abonadas") = tbAbonadas.Text
+            fila("cantidad") = cbClases.Text
             fila("total") = lbTotal.Text
-            'fila("cantidad") = RbsemanaDos.Text & rbsemanaTres.Text & rbSemanaCuatro.Text
+
 
 
             '        '3. Agregar fila a la tabla del DataSet
@@ -56,14 +57,15 @@ Public Class FormDatos
             '4. Crear Comando para agregar a la BD la fila nueva
 
 
-            consulta = "INSERT INTO capacidad , turno (total , cantidad, dia , hora ) VALUES ( @tot , @cant , @dia , @hor)"
+            consulta = "INSERT INTO capacidad (total , cantidad) VALUES ( @tot , @cant)"
+
 
             FormInicial.capacidadDataAdapter.InsertCommand = New MySqlCommand(consulta, conexion)
 
             FormInicial.capacidadDataAdapter.InsertCommand.Parameters.Add("@tot", MySqlDbType.Int32, 0, "total")
             FormInicial.capacidadDataAdapter.InsertCommand.Parameters.Add("@cant", MySqlDbType.Int32, 0, "cantidad")
-            FormInicial.capacidadDataAdapter.InsertCommand.Parameters.Add("@dia", MySqlDbType.DateTime, "dia")
-            FormInicial.capacidadDataAdapter.InsertCommand.Parameters.Add("@hor", MySqlDbType.Int32, 0, "hora")
+            'FormInicial.capacidadDataAdapter.InsertCommand.Parameters.Add("@dia", MySqlDbType.DateTime, "dia")
+            'FormInicial.capacidadDataAdapter.InsertCommand.Parameters.Add("@hor", MySqlDbType.Int32, 0, "hora")
 
             '5. Guardar los cambios en la base de datos
             FormInicial.capacidadDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("capacidad"))
@@ -73,11 +75,7 @@ Public Class FormDatos
 
             '        'Limpiamos los textbox para poder cargar otro cliente            
             lbTotal.Text = ""
-            'RbsemanaDos.Text = ""
-            'rbsemanaTres.Text = ""
-            'rbSemanaCuatro.Text = ""
-            dtpFechaInicio.Refresh()
-            cbHora.Text = ""
+            cbClases.Text = ""
 
         Else
             '1. Seleccionar fila a editar
@@ -87,20 +85,17 @@ Public Class FormDatos
 
             '2. Rellenar la fila con información   
             fila("total") = lbTotal.Text
-            'fila("cantidad") = RbsemanaDos.Text & rbsemanaTres.Text & rbSemanaCuatro.Text
-            fila("dia") = dtpFechaInicio.ToString
-            fila("hora") = cbHora.Text
-
+            fila("cantidad") = cbClases.Text
 
             '3. Crear Comando para modificar la fila en la BD
 
-            consulta = "UPDATE capacidad , turno SET total=@tot, cantidad=@cant, dia=@dia ,hora=@hor WHERE Turno_idTurno=@id"
+            consulta = "UPDATE capacidad SET total=@tot, cantidad=@cant WHERE Alumno_id_alumno=@id"
             FormInicial.capacidadDataAdapter.UpdateCommand = New MySqlCommand(consulta, conexion)
             FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@tot", MySqlDbType.Int32, 0, "total")
             FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@cant", MySqlDbType.Int32, 0, "cantidad")
-            FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@dia", MySqlDbType.DateTime, "dia")
-            FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@hor", MySqlDbType.Int32, 0, "hora")
-            FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@id", MySqlDbType.Int32, 0, "Turno_idTurno")
+            'FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@dia", MySqlDbType.DateTime, "dia")
+            'FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@hor", MySqlDbType.Int32, 0, "hora")
+            FormInicial.capacidadDataAdapter.UpdateCommand.Parameters.Add("@id", MySqlDbType.Int32, 0, " Alumno_id_alumno")
 
             '        '4. Guardar los cambios en la base de datos
             FormInicial.capacidadDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("capacidad"))
@@ -138,5 +133,266 @@ Public Class FormDatos
             cbLesiones.Enabled = False
             cbOtros.Enabled = False
         End If
+    End Sub
+    Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        Me.Close()
+        desconectarse()
+        FormRegistro.Show()
+    End Sub
+
+    Private Sub btnMax_Click(sender As Object, e As EventArgs) Handles btnMax.Click
+        btnMax.Visible = False
+        btnRestaurar.Visible = True
+        Me.WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub btnRestaurar_Click(sender As Object, e As EventArgs) Handles btnRestaurar.Click
+        btnRestaurar.Visible = False
+        btnMax.Visible = True
+        Me.WindowState = FormWindowState.Normal
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        CheckBox1.Enabled = True
+        CheckBox2.Enabled = True
+        CheckBox3.Enabled = True
+        CheckBox4.Enabled = True
+        CheckBox5.Enabled = True
+
+        If ComboBox1.Text = "Piernas" Then
+            CheckBox1.Text = "Reformer con sogas y tabla de pique"
+            CheckBox2.Text = "Cadillac con resorte para resistencia"
+            CheckBox3.Text = "Parado con resortes cortos para gluteos"
+            CheckBox4.Visible = False
+            CheckBox5.Visible = False
+
+        ElseIf ComboBox1.Text = "Bíceps" Then
+            CheckBox1.Text = "Reformer en decubito dorsal"
+            CheckBox2.Text = "reformer en box o cajon"
+            CheckBox3.Text = "combinados de sogas y mancuernas"
+            CheckBox4.Visible = False
+            CheckBox5.Visible = False
+
+        ElseIf ComboBox1.Text = "Tríceps" Then
+            CheckBox4.Visible = True
+            CheckBox5.Visible = True
+            CheckBox1.Text = "Reformer en decubito dorsal"
+            CheckBox2.Text = "Reformer con box invertido y con soga"
+            CheckBox3.Text = "Reformer con box sin asistencia"
+            CheckBox4.Text = "Reformer con box combinados con oblicuos"
+            CheckBox5.Text = "Reformer con combo chair combinados con biceps"
+
+        ElseIf ComboBox1.Text = "Espalda" Then
+            CheckBox1.Text = "Reformer en decubito dorsal"
+            CheckBox2.Text = "Sentado en box y sogas"
+            CheckBox3.Text = "Cadillac en suspension sobre trapecio"
+            CheckBox4.Text = "Laddel Barrel"
+            CheckBox5.Text = "Combo chair"
+
+        ElseIf ComboBox1.Text = "Pecho" Then
+            CheckBox1.Text = "Reformer en decubito dorsal"
+            CheckBox2.Text = "box y sogas"
+            CheckBox3.Text = "Cadillac, suspendido en trapecio"
+            CheckBox4.Text = "Combo Chair combinado con biceps y triceps"
+            CheckBox5.Visible = False
+
+        ElseIf ComboBox1.Text = "Elongación" Then
+            CheckBox1.Text = "Reformer con sogas para piernas"
+            CheckBox2.Text = "Reformer sin asistencia"
+            CheckBox3.Text = "Cadillac sin asistencia"
+            CheckBox4.Text = "Laddel Barrel para columna vertebral"
+            CheckBox5.Visible = False
+
+        ElseIf ComboBox1.Text = "Pelota" Then
+            CheckBox5.Visible = True
+            CheckBox1.Text = "Como elemento complementario para piernas"
+            CheckBox2.Text = "Como elemento complementario en cadillac para brazos"
+            CheckBox3.Text = "Sola contra de la pared en trabajo para piernas"
+            CheckBox4.Text = "Complemento con combo chair para trabajo de pecho"
+            CheckBox5.Text = "Para elongacion integral para abdominales"
+
+        ElseIf ComboBox1.Text = "Abdominales" Then
+            CheckBox5.Visible = True
+            CheckBox1.Text = "En reformer simple"
+            CheckBox2.Text = "Reformer con piernas sujetada, con soga, invertido"
+            CheckBox3.Text = "En cadillac suspendidos y con asistenci"
+            CheckBox4.Text = "En laddel Barrel de frente e invertido"
+            CheckBox5.Text = "En combo Chair de frente"
+        End If
+
+    End Sub
+
+    Private Sub CheckBox1_MouseMove(sender As Object, e As MouseEventArgs) Handles CheckBox1.MouseMove
+
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+
+        If ComboBox1.Text = "Piernas" Then
+
+            If CheckBox1.Checked = True Then
+
+                pbEjercicios.Visible = True
+            Else
+
+                pbEjercicios.Visible = False
+
+            End If
+        End If
+    End Sub
+
+    Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox2.CheckedChanged
+
+        If CheckBox2.Checked = True Then
+
+            pbEjercicio2.Visible = True
+        Else
+
+            pbEjercicio2.Visible = False
+
+        End If
+    End Sub
+
+    Private Sub CheckBox3_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox3.CheckedChanged
+        If CheckBox3.Checked = True Then
+
+            pbEjercicio3.Visible = True
+        Else
+
+            pbEjercicio3.Visible = False
+
+        End If
+    End Sub
+
+    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
+        If ComboBox1.Text = "Piernas" Then
+            CheckBox1.Text = "Reformer con sogas y tabla de pique"
+            CheckBox2.Text = "Cadillac con resorte para resistencia"
+            CheckBox3.Text = "Parado con resortes cortos para gluteos"
+            CheckBox4.Visible = False
+            CheckBox5.Visible = False
+
+        ElseIf ComboBox1.Text = "Bíceps" Then
+            CheckBox1.Text = "Reformer en decubito dorsal"
+            CheckBox2.Text = "reformer en box o cajon"
+            CheckBox3.Text = "combinados de sogas y mancuernas"
+            CheckBox4.Visible = False
+            CheckBox5.Visible = False
+
+        ElseIf ComboBox1.Text = "Tríceps" Then
+            CheckBox4.Visible = True
+            CheckBox5.Visible = True
+            CheckBox1.Text = "Reformer en decubito dorsal"
+            CheckBox2.Text = "Reformer con box invertido y con soga"
+            CheckBox3.Text = "Reformer con box sin asistencia"
+            CheckBox4.Text = "Reformer con box combinados con oblicuos"
+            CheckBox5.Text = "Reformer con combo chair combinados con biceps"
+
+        ElseIf ComboBox1.Text = "Espalda" Then
+            CheckBox1.Text = "Reformer en decubito dorsal"
+            CheckBox2.Text = "Sentado en box y sogas"
+            CheckBox3.Text = "Cadillac en suspension sobre trapecio"
+            CheckBox4.Text = "Laddel Barrel"
+            CheckBox5.Text = "Combo chair"
+
+        ElseIf ComboBox1.Text = "Pecho" Then
+            CheckBox1.Text = "Reformer en decubito dorsal"
+            CheckBox2.Text = "box y sogas"
+            CheckBox3.Text = "Cadillac, suspendido en trapecio"
+            CheckBox4.Text = "Combo Chair combinado con biceps y triceps"
+            CheckBox5.Visible = False
+
+        ElseIf ComboBox1.Text = "Elongación" Then
+            CheckBox1.Text = "Reformer con sogas para piernas"
+            CheckBox2.Text = "Reformer sin asistencia"
+            CheckBox3.Text = "Cadillac sin asistencia"
+            CheckBox4.Text = "Laddel Barrel para columna vertebral"
+            CheckBox5.Visible = False
+
+        ElseIf ComboBox1.Text = "Pelota" Then
+            CheckBox5.Visible = True
+            CheckBox1.Text = "Como elemento complementario para piernas"
+            CheckBox2.Text = "Como elemento complementario en cadillac para brazos"
+            CheckBox3.Text = "Sola contra de la pared en trabajo para piernas"
+            CheckBox4.Text = "Complemento con combo chair para trabajo de pecho"
+            CheckBox5.Text = "Para elongacion integral para abdominales"
+
+        ElseIf ComboBox1.Text = "Abdominales" Then
+            CheckBox5.Visible = True
+            CheckBox1.Text = "En reformer simple"
+            CheckBox2.Text = "Reformer con piernas sujetada, con soga, invertido"
+            CheckBox3.Text = "En cadillac suspendidos y con asistenci"
+            CheckBox4.Text = "En laddel Barrel de frente e invertido"
+            CheckBox5.Text = "En combo Chair de frente"
+        End If
+
+    End Sub
+
+    Private Sub ComboBox3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox3.SelectedIndexChanged
+        If ComboBox1.Text = "Piernas" Then
+            CheckBox1.Text = "Reformer con sogas y tabla de pique"
+            CheckBox2.Text = "Cadillac con resorte para resistencia"
+            CheckBox3.Text = "Parado con resortes cortos para gluteos"
+            CheckBox4.Visible = False
+            CheckBox5.Visible = False
+
+        ElseIf ComboBox1.Text = "Bíceps" Then
+            CheckBox1.Text = "Reformer en decubito dorsal"
+            CheckBox2.Text = "reformer en box o cajon"
+            CheckBox3.Text = "combinados de sogas y mancuernas"
+            CheckBox4.Visible = False
+            CheckBox5.Visible = False
+
+        ElseIf ComboBox1.Text = "Tríceps" Then
+            CheckBox4.Visible = True
+            CheckBox5.Visible = True
+            CheckBox1.Text = "Reformer en decubito dorsal"
+            CheckBox2.Text = "Reformer con box invertido y con soga"
+            CheckBox3.Text = "Reformer con box sin asistencia"
+            CheckBox4.Text = "Reformer con box combinados con oblicuos"
+            CheckBox5.Text = "Reformer con combo chair combinados con biceps"
+
+        ElseIf ComboBox1.Text = "Espalda" Then
+            CheckBox1.Text = "Reformer en decubito dorsal"
+            CheckBox2.Text = "Sentado en box y sogas"
+            CheckBox3.Text = "Cadillac en suspension sobre trapecio"
+            CheckBox4.Text = "Laddel Barrel"
+            CheckBox5.Text = "Combo chair"
+
+        ElseIf ComboBox1.Text = "Pecho" Then
+            CheckBox1.Text = "Reformer en decubito dorsal"
+            CheckBox2.Text = "box y sogas"
+            CheckBox3.Text = "Cadillac, suspendido en trapecio"
+            CheckBox4.Text = "Combo Chair combinado con biceps y triceps"
+            CheckBox5.Visible = False
+
+        ElseIf ComboBox1.Text = "Elongación" Then
+            CheckBox1.Text = "Reformer con sogas para piernas"
+            CheckBox2.Text = "Reformer sin asistencia"
+            CheckBox3.Text = "Cadillac sin asistencia"
+            CheckBox4.Text = "Laddel Barrel para columna vertebral"
+            CheckBox5.Visible = False
+
+        ElseIf ComboBox1.Text = "Pelota" Then
+            CheckBox5.Visible = True
+            CheckBox1.Text = "Como elemento complementario para piernas"
+            CheckBox2.Text = "Como elemento complementario en cadillac para brazos"
+            CheckBox3.Text = "Sola contra de la pared en trabajo para piernas"
+            CheckBox4.Text = "Complemento con combo chair para trabajo de pecho"
+            CheckBox5.Text = "Para elongacion integral para abdominales"
+
+        ElseIf ComboBox1.Text = "Abdominales" Then
+            CheckBox5.Visible = True
+            CheckBox1.Text = "En reformer simple"
+            CheckBox2.Text = "Reformer con piernas sujetada, con soga, invertido"
+            CheckBox3.Text = "En cadillac suspendidos y con asistenci"
+            CheckBox4.Text = "En laddel Barrel de frente e invertido"
+            CheckBox5.Text = "En combo Chair de frente"
+        End If
+
     End Sub
 End Class

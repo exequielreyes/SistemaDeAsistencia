@@ -57,6 +57,11 @@ SistemaDeAsistenciaGym
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.cadillac_con_resorte">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.Cancel24">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -157,12 +162,22 @@ SistemaDeAsistenciaGym
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.Parado_con_resorte">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.qr">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.qr_code___copia">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SistemaDeAsistenciaGym.My.Resources.Resources.reformer_con_tabla_de_pique">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

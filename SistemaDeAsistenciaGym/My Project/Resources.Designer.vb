@@ -133,6 +133,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property cadillac_con_resorte() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("cadillac con resorte", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property Cancel24() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Cancel24", resourceCulture)
@@ -333,6 +343,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property Parado_con_resorte() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Parado con resorte", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property qr() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("qr", resourceCulture)
@@ -346,6 +366,16 @@ Namespace My.Resources
         Friend ReadOnly Property qr_code___copia() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("qr-code - copia", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property reformer_con_tabla_de_pique() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("reformer con tabla de pique", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

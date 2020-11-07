@@ -25,18 +25,18 @@ Partial Class FormFoto
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormFoto))
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.btnGuardarFotoArchivo = New System.Windows.Forms.Button()
-        Me.cmdcamara = New System.Windows.Forms.Button()
-        Me.cmdBorrar = New System.Windows.Forms.Button()
-        Me.cmdCapturar = New System.Windows.Forms.Button()
-        Me.pbFoto = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnRestaurar = New System.Windows.Forms.Button()
         Me.btnMax = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnMin = New System.Windows.Forms.Button()
-        CType(Me.pbFoto, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btnGuardarFotoArchivo = New System.Windows.Forms.Button()
+        Me.cmdcamara = New System.Windows.Forms.Button()
+        Me.cmdBorrar = New System.Windows.Forms.Button()
+        Me.cmdCapturar = New System.Windows.Forms.Button()
+        Me.pbFoto = New System.Windows.Forms.PictureBox()
         Me.Panel2.SuspendLayout()
+        CType(Me.pbFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label4
@@ -54,69 +54,6 @@ Partial Class FormFoto
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(327, 20)
         Me.txtNombre.TabIndex = 186
-        '
-        'btnGuardarFotoArchivo
-        '
-        Me.btnGuardarFotoArchivo.BackColor = System.Drawing.Color.DarkSalmon
-        Me.btnGuardarFotoArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGuardarFotoArchivo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnGuardarFotoArchivo.Image = CType(resources.GetObject("btnGuardarFotoArchivo.Image"), System.Drawing.Image)
-        Me.btnGuardarFotoArchivo.Location = New System.Drawing.Point(109, 345)
-        Me.btnGuardarFotoArchivo.Name = "btnGuardarFotoArchivo"
-        Me.btnGuardarFotoArchivo.Size = New System.Drawing.Size(146, 31)
-        Me.btnGuardarFotoArchivo.TabIndex = 185
-        Me.btnGuardarFotoArchivo.Text = "Guardar en archivo"
-        Me.btnGuardarFotoArchivo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.btnGuardarFotoArchivo.UseVisualStyleBackColor = False
-        '
-        'cmdcamara
-        '
-        Me.cmdcamara.BackColor = System.Drawing.Color.DarkSalmon
-        Me.cmdcamara.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.cmdcamara.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cmdcamara.Image = CType(resources.GetObject("cmdcamara.Image"), System.Drawing.Image)
-        Me.cmdcamara.Location = New System.Drawing.Point(18, 308)
-        Me.cmdcamara.Name = "cmdcamara"
-        Me.cmdcamara.Size = New System.Drawing.Size(107, 31)
-        Me.cmdcamara.TabIndex = 182
-        Me.cmdcamara.Text = "Camara"
-        Me.cmdcamara.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.cmdcamara.UseVisualStyleBackColor = False
-        '
-        'cmdBorrar
-        '
-        Me.cmdBorrar.BackColor = System.Drawing.Color.DarkSalmon
-        Me.cmdBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cmdBorrar.Image = CType(resources.GetObject("cmdBorrar.Image"), System.Drawing.Image)
-        Me.cmdBorrar.Location = New System.Drawing.Point(236, 308)
-        Me.cmdBorrar.Name = "cmdBorrar"
-        Me.cmdBorrar.Size = New System.Drawing.Size(93, 31)
-        Me.cmdBorrar.TabIndex = 184
-        Me.cmdBorrar.Text = "Borrar"
-        Me.cmdBorrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.cmdBorrar.UseVisualStyleBackColor = False
-        '
-        'cmdCapturar
-        '
-        Me.cmdCapturar.BackColor = System.Drawing.Color.DarkSalmon
-        Me.cmdCapturar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cmdCapturar.Image = CType(resources.GetObject("cmdCapturar.Image"), System.Drawing.Image)
-        Me.cmdCapturar.Location = New System.Drawing.Point(131, 308)
-        Me.cmdCapturar.Name = "cmdCapturar"
-        Me.cmdCapturar.Size = New System.Drawing.Size(99, 31)
-        Me.cmdCapturar.TabIndex = 183
-        Me.cmdCapturar.Text = "Capturar"
-        Me.cmdCapturar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.cmdCapturar.UseVisualStyleBackColor = False
-        '
-        'pbFoto
-        '
-        Me.pbFoto.Location = New System.Drawing.Point(22, 41)
-        Me.pbFoto.Name = "pbFoto"
-        Me.pbFoto.Size = New System.Drawing.Size(304, 209)
-        Me.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbFoto.TabIndex = 6
-        Me.pbFoto.TabStop = False
         '
         'Panel2
         '
@@ -185,6 +122,69 @@ Partial Class FormFoto
         Me.btnMin.TabIndex = 41
         Me.btnMin.UseVisualStyleBackColor = True
         '
+        'btnGuardarFotoArchivo
+        '
+        Me.btnGuardarFotoArchivo.BackColor = System.Drawing.Color.DarkSalmon
+        Me.btnGuardarFotoArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuardarFotoArchivo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardarFotoArchivo.Image = CType(resources.GetObject("btnGuardarFotoArchivo.Image"), System.Drawing.Image)
+        Me.btnGuardarFotoArchivo.Location = New System.Drawing.Point(99, 345)
+        Me.btnGuardarFotoArchivo.Name = "btnGuardarFotoArchivo"
+        Me.btnGuardarFotoArchivo.Size = New System.Drawing.Size(146, 31)
+        Me.btnGuardarFotoArchivo.TabIndex = 185
+        Me.btnGuardarFotoArchivo.Text = "Guardar en archivo"
+        Me.btnGuardarFotoArchivo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnGuardarFotoArchivo.UseVisualStyleBackColor = False
+        '
+        'cmdcamara
+        '
+        Me.cmdcamara.BackColor = System.Drawing.Color.DarkSalmon
+        Me.cmdcamara.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.cmdcamara.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmdcamara.Image = CType(resources.GetObject("cmdcamara.Image"), System.Drawing.Image)
+        Me.cmdcamara.Location = New System.Drawing.Point(18, 308)
+        Me.cmdcamara.Name = "cmdcamara"
+        Me.cmdcamara.Size = New System.Drawing.Size(107, 31)
+        Me.cmdcamara.TabIndex = 182
+        Me.cmdcamara.Text = "Camara"
+        Me.cmdcamara.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdcamara.UseVisualStyleBackColor = False
+        '
+        'cmdBorrar
+        '
+        Me.cmdBorrar.BackColor = System.Drawing.Color.DarkSalmon
+        Me.cmdBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmdBorrar.Image = CType(resources.GetObject("cmdBorrar.Image"), System.Drawing.Image)
+        Me.cmdBorrar.Location = New System.Drawing.Point(236, 308)
+        Me.cmdBorrar.Name = "cmdBorrar"
+        Me.cmdBorrar.Size = New System.Drawing.Size(93, 31)
+        Me.cmdBorrar.TabIndex = 184
+        Me.cmdBorrar.Text = "Borrar"
+        Me.cmdBorrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdBorrar.UseVisualStyleBackColor = False
+        '
+        'cmdCapturar
+        '
+        Me.cmdCapturar.BackColor = System.Drawing.Color.DarkSalmon
+        Me.cmdCapturar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmdCapturar.Image = CType(resources.GetObject("cmdCapturar.Image"), System.Drawing.Image)
+        Me.cmdCapturar.Location = New System.Drawing.Point(131, 308)
+        Me.cmdCapturar.Name = "cmdCapturar"
+        Me.cmdCapturar.Size = New System.Drawing.Size(99, 31)
+        Me.cmdCapturar.TabIndex = 183
+        Me.cmdCapturar.Text = "Capturar"
+        Me.cmdCapturar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.cmdCapturar.UseVisualStyleBackColor = False
+        '
+        'pbFoto
+        '
+        Me.pbFoto.Location = New System.Drawing.Point(22, 41)
+        Me.pbFoto.Name = "pbFoto"
+        Me.pbFoto.Size = New System.Drawing.Size(304, 209)
+        Me.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbFoto.TabIndex = 6
+        Me.pbFoto.TabStop = False
+        '
         'FormFoto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -201,8 +201,8 @@ Partial Class FormFoto
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FormFoto"
         Me.Text = "FormFoto"
-        CType(Me.pbFoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
+        CType(Me.pbFoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

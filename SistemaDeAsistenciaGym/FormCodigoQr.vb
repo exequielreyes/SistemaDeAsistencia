@@ -8,19 +8,34 @@
         End Try
     End Sub
 
-    Private Sub SaveFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles SaveFileDialog1.FileOk
-        Try
-            Dim img As New Bitmap(PictureBox1.Image)
-            img.Save(SaveFileDialog1.FileName, Imaging.ImageFormat.Png)
+    'Private Sub SaveFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles SaveFileDialog1.FileOk
+    '    Try
+    '        Dim img As New Bitmap(PictureBox1.Image)
+    '        img.Save(SaveFileDialog1.FileName, Imaging.ImageFormat.Png)
 
-        Catch ex As Exception
-            MsgBox(ex.Message)
+    '    Catch ex As Exception
+    '        MsgBox(ex.Message)
 
-        End Try
-    End Sub
+    '    End Try
+    'End Sub
 
     Private Sub bGuardar_Click(sender As Object, e As EventArgs) Handles bGuardar.Click
-        SaveFileDialog1.ShowDialog()
+        'SaveFileDialog1.ShowDialog()
+
+        Dim image As Image = PictureBox1.Image
+        image.Save("C:\Users\exequ\Documents\Imagix\QR\image.jpg", System.Drawing.Imaging.ImageFormat.Jpeg)
+
+
+
+
+
+
+
+
+
+
+
+
     End Sub
 
     Private Sub btnEmail_Click(sender As Object, e As EventArgs) Handles btnEmail.Click

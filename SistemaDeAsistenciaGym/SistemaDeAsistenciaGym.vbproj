@@ -327,5 +327,14 @@
   <ItemGroup>
     <None Include="Resources\WhatsApp Image 2020-11-06 at 18.23.41.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reformer con tabla de pique.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadillac con resorte.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Parado con resorte.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

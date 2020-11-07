@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormDatos
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,26 +20,21 @@ Partial Class FormDatos
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormDatos))
-        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.tbApellido = New System.Windows.Forms.TextBox()
         Me.tbNombre = New System.Windows.Forms.TextBox()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.btnGuardar2 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.tbAbonadas = New System.Windows.Forms.TextBox()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.cbClases = New System.Windows.Forms.ComboBox()
@@ -55,13 +50,7 @@ Partial Class FormDatos
         Me.dtpFechaInicio = New System.Windows.Forms.DateTimePicker()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
-        Me.pbFoto = New System.Windows.Forms.PictureBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
         Me.cbOtros = New System.Windows.Forms.CheckBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -92,13 +81,34 @@ Partial Class FormDatos
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnRestaurar = New System.Windows.Forms.Button()
+        Me.btnMax = New System.Windows.Forms.Button()
+        Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.btnMin = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnGuardar2 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.pbFoto = New System.Windows.Forms.PictureBox()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.pbEjercicio2 = New System.Windows.Forms.PictureBox()
+        Me.pbEjercicio3 = New System.Windows.Forms.PictureBox()
+        Me.pbEjercicios = New System.Windows.Forms.PictureBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         CType(Me.dgvListado2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         CType(Me.dgvListado3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage4.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        CType(Me.pbFoto, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbEjercicio2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbEjercicio3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbEjercicios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -107,10 +117,10 @@ Partial Class FormDatos
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(-1, 12)
+        Me.TabControl1.Location = New System.Drawing.Point(3, 24)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(928, 514)
+        Me.TabControl1.Size = New System.Drawing.Size(924, 502)
         Me.TabControl1.TabIndex = 9
         '
         'TabPage2
@@ -123,7 +133,6 @@ Partial Class FormDatos
         Me.TabPage2.Controls.Add(Me.Button3)
         Me.TabPage2.Controls.Add(Me.btnGuardar2)
         Me.TabPage2.Controls.Add(Me.Button5)
-        Me.TabPage2.Controls.Add(Me.Button6)
         Me.TabPage2.Controls.Add(Me.tbAbonadas)
         Me.TabPage2.Controls.Add(Me.Label27)
         Me.TabPage2.Controls.Add(Me.cbClases)
@@ -143,7 +152,7 @@ Partial Class FormDatos
         Me.TabPage2.Location = New System.Drawing.Point(4, 25)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(920, 485)
+        Me.TabPage2.Size = New System.Drawing.Size(916, 473)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Turno"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -154,7 +163,7 @@ Partial Class FormDatos
         Me.tbApellido.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbApellido.Enabled = False
         Me.tbApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbApellido.Location = New System.Drawing.Point(7, 146)
+        Me.tbApellido.Location = New System.Drawing.Point(10, 175)
         Me.tbApellido.Multiline = True
         Me.tbApellido.Name = "tbApellido"
         Me.tbApellido.Size = New System.Drawing.Size(194, 23)
@@ -166,7 +175,7 @@ Partial Class FormDatos
         Me.tbNombre.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.tbNombre.Enabled = False
         Me.tbNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbNombre.Location = New System.Drawing.Point(7, 97)
+        Me.tbNombre.Location = New System.Drawing.Point(10, 126)
         Me.tbNombre.Multiline = True
         Me.tbNombre.Name = "tbNombre"
         Me.tbNombre.Size = New System.Drawing.Size(194, 23)
@@ -177,7 +186,7 @@ Partial Class FormDatos
         Me.Label28.AutoSize = True
         Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label28.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Label28.Location = New System.Drawing.Point(3, 74)
+        Me.Label28.Location = New System.Drawing.Point(6, 103)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(69, 20)
         Me.Label28.TabIndex = 84
@@ -188,99 +197,17 @@ Partial Class FormDatos
         Me.Label29.AutoSize = True
         Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label29.ForeColor = System.Drawing.Color.Black
-        Me.Label29.Location = New System.Drawing.Point(4, 123)
+        Me.Label29.Location = New System.Drawing.Point(7, 152)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(69, 20)
         Me.Label29.TabIndex = 85
         Me.Label29.Text = "Apellido:"
         '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.DarkSalmon
-        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.list_remove
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button2.Location = New System.Drawing.Point(791, 124)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(106, 34)
-        Me.Button2.TabIndex = 79
-        Me.Button2.Text = "Borrar"
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.DarkSalmon
-        Me.Button3.Enabled = False
-        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Cancel241
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button3.Location = New System.Drawing.Point(791, 206)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(106, 38)
-        Me.Button3.TabIndex = 80
-        Me.Button3.Text = "Cancelar"
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'btnGuardar2
-        '
-        Me.btnGuardar2.BackColor = System.Drawing.Color.DarkSalmon
-        Me.btnGuardar2.Enabled = False
-        Me.btnGuardar2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnGuardar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnGuardar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGuardar2.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Save24
-        Me.btnGuardar2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnGuardar2.Location = New System.Drawing.Point(791, 164)
-        Me.btnGuardar2.Name = "btnGuardar2"
-        Me.btnGuardar2.Size = New System.Drawing.Size(106, 36)
-        Me.btnGuardar2.TabIndex = 81
-        Me.btnGuardar2.Text = "Guardar"
-        Me.btnGuardar2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGuardar2.UseVisualStyleBackColor = False
-        '
-        'Button5
-        '
-        Me.Button5.BackColor = System.Drawing.Color.DarkSalmon
-        Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.gtk_edit
-        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button5.Location = New System.Drawing.Point(791, 85)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(106, 34)
-        Me.Button5.TabIndex = 82
-        Me.Button5.Text = "Editar"
-        Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.UseVisualStyleBackColor = False
-        '
-        'Button6
-        '
-        Me.Button6.BackColor = System.Drawing.Color.DarkSalmon
-        Me.Button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.list_add
-        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button6.Location = New System.Drawing.Point(791, 45)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(106, 34)
-        Me.Button6.TabIndex = 83
-        Me.Button6.Text = "Nuevo"
-        Me.Button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.UseVisualStyleBackColor = False
-        '
         'tbAbonadas
         '
         Me.tbAbonadas.BackColor = System.Drawing.Color.DarkSalmon
         Me.tbAbonadas.Enabled = False
-        Me.tbAbonadas.Location = New System.Drawing.Point(427, 186)
+        Me.tbAbonadas.Location = New System.Drawing.Point(430, 215)
         Me.tbAbonadas.Name = "tbAbonadas"
         Me.tbAbonadas.Size = New System.Drawing.Size(100, 22)
         Me.tbAbonadas.TabIndex = 78
@@ -290,7 +217,7 @@ Partial Class FormDatos
         Me.Label27.AutoSize = True
         Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label27.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Label27.Location = New System.Drawing.Point(423, 162)
+        Me.Label27.Location = New System.Drawing.Point(426, 191)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(124, 20)
         Me.Label27.TabIndex = 77
@@ -301,7 +228,7 @@ Partial Class FormDatos
         Me.cbClases.BackColor = System.Drawing.Color.DarkSalmon
         Me.cbClases.FormattingEnabled = True
         Me.cbClases.Items.AddRange(New Object() {"2 veces a la semana", "3 veces a la semana", "4 veces a la semana"})
-        Me.cbClases.Location = New System.Drawing.Point(593, 74)
+        Me.cbClases.Location = New System.Drawing.Point(596, 103)
         Me.cbClases.Name = "cbClases"
         Me.cbClases.Size = New System.Drawing.Size(150, 24)
         Me.cbClases.TabIndex = 76
@@ -311,7 +238,7 @@ Partial Class FormDatos
         Me.cbDia.BackColor = System.Drawing.Color.DarkSalmon
         Me.cbDia.FormattingEnabled = True
         Me.cbDia.Items.AddRange(New Object() {"Lunes", "Martes", "Miercoles", "Jueves", "Viernes"})
-        Me.cbDia.Location = New System.Drawing.Point(427, 74)
+        Me.cbDia.Location = New System.Drawing.Point(430, 103)
         Me.cbDia.Name = "cbDia"
         Me.cbDia.Size = New System.Drawing.Size(150, 24)
         Me.cbDia.TabIndex = 75
@@ -321,7 +248,7 @@ Partial Class FormDatos
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label26.Location = New System.Drawing.Point(423, 51)
+        Me.Label26.Location = New System.Drawing.Point(426, 80)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(33, 20)
         Me.Label26.TabIndex = 74
@@ -332,7 +259,7 @@ Partial Class FormDatos
         Me.cbHora.BackColor = System.Drawing.Color.DarkSalmon
         Me.cbHora.FormattingEnabled = True
         Me.cbHora.Items.AddRange(New Object() {"8:00", "9:00", "10:00", "11:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00"})
-        Me.cbHora.Location = New System.Drawing.Point(427, 124)
+        Me.cbHora.Location = New System.Drawing.Point(430, 153)
         Me.cbHora.Name = "cbHora"
         Me.cbHora.Size = New System.Drawing.Size(150, 24)
         Me.cbHora.TabIndex = 73
@@ -343,7 +270,7 @@ Partial Class FormDatos
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Label14.Location = New System.Drawing.Point(142, 13)
+        Me.Label14.Location = New System.Drawing.Point(145, 42)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(90, 25)
         Me.Label14.TabIndex = 71
@@ -354,7 +281,7 @@ Partial Class FormDatos
         Me.lbTotal.AutoSize = True
         Me.lbTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbTotal.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.lbTotal.Location = New System.Drawing.Point(644, 184)
+        Me.lbTotal.Location = New System.Drawing.Point(647, 213)
         Me.lbTotal.Name = "lbTotal"
         Me.lbTotal.Size = New System.Drawing.Size(44, 20)
         Me.lbTotal.TabIndex = 70
@@ -365,7 +292,7 @@ Partial Class FormDatos
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Label15.Location = New System.Drawing.Point(597, 164)
+        Me.Label15.Location = New System.Drawing.Point(600, 193)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(146, 20)
         Me.Label15.TabIndex = 69
@@ -376,7 +303,7 @@ Partial Class FormDatos
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label17.Location = New System.Drawing.Point(589, 51)
+        Me.Label17.Location = New System.Drawing.Point(592, 80)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(144, 20)
         Me.Label17.TabIndex = 65
@@ -389,14 +316,14 @@ Partial Class FormDatos
         Me.dgvListado2.BackgroundColor = System.Drawing.Color.DarkSlateGray
         Me.dgvListado2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvListado2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle40.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle40.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle40.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListado2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle40
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListado2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvListado2.ColumnHeadersHeight = 25
         Me.dgvListado2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvListado2.EnableHeadersVisualStyles = False
@@ -406,20 +333,20 @@ Partial Class FormDatos
         Me.dgvListado2.Name = "dgvListado2"
         Me.dgvListado2.ReadOnly = True
         Me.dgvListado2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle41.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle41.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListado2.RowHeadersDefaultCellStyle = DataGridViewCellStyle41
-        DataGridViewCellStyle42.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle42.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle42.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.White
-        Me.dgvListado2.RowsDefaultCellStyle = DataGridViewCellStyle42
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListado2.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvListado2.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvListado2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvListado2.Size = New System.Drawing.Size(924, 208)
         Me.dgvListado2.TabIndex = 60
@@ -429,7 +356,7 @@ Partial Class FormDatos
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Label18.Location = New System.Drawing.Point(423, 101)
+        Me.Label18.Location = New System.Drawing.Point(426, 130)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(44, 20)
         Me.Label18.TabIndex = 58
@@ -438,7 +365,7 @@ Partial Class FormDatos
         'dtpFechaInicio
         '
         Me.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaInicio.Location = New System.Drawing.Point(593, 122)
+        Me.dtpFechaInicio.Location = New System.Drawing.Point(596, 151)
         Me.dtpFechaInicio.Name = "dtpFechaInicio"
         Me.dtpFechaInicio.Size = New System.Drawing.Size(143, 22)
         Me.dtpFechaInicio.TabIndex = 57
@@ -448,7 +375,7 @@ Partial Class FormDatos
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Label19.Location = New System.Drawing.Point(589, 101)
+        Me.Label19.Location = New System.Drawing.Point(592, 130)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(115, 20)
         Me.Label19.TabIndex = 56
@@ -460,23 +387,11 @@ Partial Class FormDatos
         Me.Label24.BackColor = System.Drawing.Color.Transparent
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Label24.Location = New System.Drawing.Point(547, 13)
+        Me.Label24.Location = New System.Drawing.Point(550, 42)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(73, 25)
         Me.Label24.TabIndex = 50
         Me.Label24.Text = "Turno"
-        '
-        'pbFoto
-        '
-        Me.pbFoto.BackgroundImage = CType(resources.GetObject("pbFoto.BackgroundImage"), System.Drawing.Image)
-        Me.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbFoto.InitialImage = Nothing
-        Me.pbFoto.Location = New System.Drawing.Point(221, 51)
-        Me.pbFoto.Name = "pbFoto"
-        Me.pbFoto.Size = New System.Drawing.Size(181, 167)
-        Me.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pbFoto.TabIndex = 72
-        Me.pbFoto.TabStop = False
         '
         'TabPage3
         '
@@ -484,7 +399,6 @@ Partial Class FormDatos
         Me.TabPage3.Controls.Add(Me.Button8)
         Me.TabPage3.Controls.Add(Me.Button9)
         Me.TabPage3.Controls.Add(Me.Button10)
-        Me.TabPage3.Controls.Add(Me.Button11)
         Me.TabPage3.Controls.Add(Me.cbOtros)
         Me.TabPage3.Controls.Add(Me.Label11)
         Me.TabPage3.Controls.Add(Me.Label13)
@@ -504,92 +418,10 @@ Partial Class FormDatos
         Me.TabPage3.Location = New System.Drawing.Point(4, 25)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(920, 485)
+        Me.TabPage3.Size = New System.Drawing.Size(916, 473)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Historia Clinica"
         Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'Button7
-        '
-        Me.Button7.BackColor = System.Drawing.Color.DarkSalmon
-        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.list_remove
-        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button7.Location = New System.Drawing.Point(785, 101)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(106, 34)
-        Me.Button7.TabIndex = 84
-        Me.Button7.Text = "Borrar"
-        Me.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button7.UseVisualStyleBackColor = False
-        '
-        'Button8
-        '
-        Me.Button8.BackColor = System.Drawing.Color.DarkSalmon
-        Me.Button8.Enabled = False
-        Me.Button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Cancel241
-        Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button8.Location = New System.Drawing.Point(785, 183)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(106, 38)
-        Me.Button8.TabIndex = 85
-        Me.Button8.Text = "Cancelar"
-        Me.Button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button8.UseVisualStyleBackColor = False
-        '
-        'Button9
-        '
-        Me.Button9.BackColor = System.Drawing.Color.DarkSalmon
-        Me.Button9.Enabled = False
-        Me.Button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button9.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Save24
-        Me.Button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button9.Location = New System.Drawing.Point(785, 141)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(106, 36)
-        Me.Button9.TabIndex = 86
-        Me.Button9.Text = "Guardar"
-        Me.Button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button9.UseVisualStyleBackColor = False
-        '
-        'Button10
-        '
-        Me.Button10.BackColor = System.Drawing.Color.DarkSalmon
-        Me.Button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.gtk_edit
-        Me.Button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button10.Location = New System.Drawing.Point(785, 62)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(106, 34)
-        Me.Button10.TabIndex = 87
-        Me.Button10.Text = "Editar"
-        Me.Button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button10.UseVisualStyleBackColor = False
-        '
-        'Button11
-        '
-        Me.Button11.BackColor = System.Drawing.Color.DarkSalmon
-        Me.Button11.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button11.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.list_add
-        Me.Button11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button11.Location = New System.Drawing.Point(785, 22)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(106, 34)
-        Me.Button11.TabIndex = 88
-        Me.Button11.Text = "Nuevo"
-        Me.Button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button11.UseVisualStyleBackColor = False
         '
         'cbOtros
         '
@@ -727,14 +559,14 @@ Partial Class FormDatos
         Me.dgvListado3.BackgroundColor = System.Drawing.Color.DarkSlateGray
         Me.dgvListado3.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.dgvListado3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle37.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle37.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle37.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListado3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle37
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListado3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvListado3.ColumnHeadersHeight = 25
         Me.dgvListado3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.dgvListado3.EnableHeadersVisualStyles = False
@@ -744,20 +576,20 @@ Partial Class FormDatos
         Me.dgvListado3.Name = "dgvListado3"
         Me.dgvListado3.ReadOnly = True
         Me.dgvListado3.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle38.BackColor = System.Drawing.Color.MidnightBlue
-        DataGridViewCellStyle38.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvListado3.RowHeadersDefaultCellStyle = DataGridViewCellStyle38
-        DataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle39.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle39.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.DarkCyan
-        DataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.White
-        Me.dgvListado3.RowsDefaultCellStyle = DataGridViewCellStyle39
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.MidnightBlue
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvListado3.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkCyan
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White
+        Me.dgvListado3.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvListado3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvListado3.Size = New System.Drawing.Size(917, 222)
         Me.dgvListado3.TabIndex = 47
@@ -797,6 +629,9 @@ Partial Class FormDatos
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.pbEjercicio2)
+        Me.TabPage4.Controls.Add(Me.pbEjercicio3)
+        Me.TabPage4.Controls.Add(Me.pbEjercicios)
         Me.TabPage4.Controls.Add(Me.Button1)
         Me.TabPage4.Controls.Add(Me.CheckBox5)
         Me.TabPage4.Controls.Add(Me.CheckBox4)
@@ -813,14 +648,14 @@ Partial Class FormDatos
         Me.TabPage4.Location = New System.Drawing.Point(4, 25)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(920, 485)
+        Me.TabPage4.Size = New System.Drawing.Size(916, 473)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Rutinas"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(480, 276)
+        Me.Button1.Location = New System.Drawing.Point(300, 334)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(207, 23)
         Me.Button1.TabIndex = 65
@@ -830,47 +665,52 @@ Partial Class FormDatos
         'CheckBox5
         '
         Me.CheckBox5.AutoSize = True
-        Me.CheckBox5.Location = New System.Drawing.Point(583, 147)
+        Me.CheckBox5.Enabled = False
+        Me.CheckBox5.Location = New System.Drawing.Point(329, 190)
         Me.CheckBox5.Name = "CheckBox5"
         Me.CheckBox5.Size = New System.Drawing.Size(104, 20)
         Me.CheckBox5.TabIndex = 64
-        Me.CheckBox5.Text = "CheckBox1"
+        Me.CheckBox5.Text = "CheckBox5"
         Me.CheckBox5.UseVisualStyleBackColor = True
         '
         'CheckBox4
         '
         Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Location = New System.Drawing.Point(430, 149)
+        Me.CheckBox4.Enabled = False
+        Me.CheckBox4.Location = New System.Drawing.Point(329, 164)
         Me.CheckBox4.Name = "CheckBox4"
         Me.CheckBox4.Size = New System.Drawing.Size(104, 20)
         Me.CheckBox4.TabIndex = 64
-        Me.CheckBox4.Text = "CheckBox1"
+        Me.CheckBox4.Text = "CheckBox4"
         Me.CheckBox4.UseVisualStyleBackColor = True
         '
         'CheckBox3
         '
         Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(743, 85)
+        Me.CheckBox3.Enabled = False
+        Me.CheckBox3.Location = New System.Drawing.Point(329, 138)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(104, 20)
         Me.CheckBox3.TabIndex = 64
-        Me.CheckBox3.Text = "CheckBox1"
+        Me.CheckBox3.Text = "CheckBox3"
         Me.CheckBox3.UseVisualStyleBackColor = True
         '
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(583, 85)
+        Me.CheckBox2.Enabled = False
+        Me.CheckBox2.Location = New System.Drawing.Point(329, 112)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(104, 20)
         Me.CheckBox2.TabIndex = 64
-        Me.CheckBox2.Text = "CheckBox1"
+        Me.CheckBox2.Text = "CheckBox2"
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(430, 85)
+        Me.CheckBox1.Enabled = False
+        Me.CheckBox1.Location = New System.Drawing.Point(329, 85)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(104, 20)
         Me.CheckBox1.TabIndex = 64
@@ -881,7 +721,7 @@ Partial Class FormDatos
         '
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label25.ForeColor = System.Drawing.SystemColors.Desktop
         Me.Label25.Location = New System.Drawing.Point(18, 191)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(267, 16)
@@ -892,7 +732,7 @@ Partial Class FormDatos
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label21.ForeColor = System.Drawing.SystemColors.Desktop
         Me.Label21.Location = New System.Drawing.Point(18, 126)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(267, 16)
@@ -903,7 +743,7 @@ Partial Class FormDatos
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label20.ForeColor = System.Drawing.SystemColors.Desktop
         Me.Label20.Location = New System.Drawing.Point(18, 62)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(267, 16)
@@ -915,7 +755,7 @@ Partial Class FormDatos
         Me.Label16.AutoSize = True
         Me.Label16.Enabled = False
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Label16.ForeColor = System.Drawing.SystemColors.Desktop
         Me.Label16.Location = New System.Drawing.Point(16, 13)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(92, 25)
@@ -949,24 +789,271 @@ Partial Class FormDatos
         Me.ComboBox1.Size = New System.Drawing.Size(184, 24)
         Me.ComboBox1.TabIndex = 0
         '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.Coral
+        Me.Panel2.Controls.Add(Me.btnRestaurar)
+        Me.Panel2.Controls.Add(Me.btnMax)
+        Me.Panel2.Controls.Add(Me.btnCerrar)
+        Me.Panel2.Controls.Add(Me.btnMin)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(927, 25)
+        Me.Panel2.TabIndex = 41
+        '
+        'btnRestaurar
+        '
+        Me.btnRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnRestaurar.FlatAppearance.BorderSize = 0
+        Me.btnRestaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRestaurar.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Icono_Restaurar
+        Me.btnRestaurar.Location = New System.Drawing.Point(848, 0)
+        Me.btnRestaurar.Name = "btnRestaurar"
+        Me.btnRestaurar.Size = New System.Drawing.Size(40, 25)
+        Me.btnRestaurar.TabIndex = 43
+        Me.btnRestaurar.UseVisualStyleBackColor = True
+        Me.btnRestaurar.Visible = False
+        '
+        'btnMax
+        '
+        Me.btnMax.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMax.BackColor = System.Drawing.Color.Coral
+        Me.btnMax.FlatAppearance.BorderSize = 0
+        Me.btnMax.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMax.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Icono_Maximizar
+        Me.btnMax.Location = New System.Drawing.Point(848, 0)
+        Me.btnMax.Name = "btnMax"
+        Me.btnMax.Size = New System.Drawing.Size(40, 25)
+        Me.btnMax.TabIndex = 41
+        Me.btnMax.UseVisualStyleBackColor = False
+        '
+        'btnCerrar
+        '
+        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCerrar.FlatAppearance.BorderSize = 0
+        Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCerrar.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.ICON_CERRARF
+        Me.btnCerrar.Location = New System.Drawing.Point(894, 1)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(29, 24)
+        Me.btnCerrar.TabIndex = 42
+        Me.btnCerrar.UseVisualStyleBackColor = True
+        '
+        'btnMin
+        '
+        Me.btnMin.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMin.FlatAppearance.BorderSize = 0
+        Me.btnMin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMin.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Icono_Minimizar
+        Me.btnMin.Location = New System.Drawing.Point(800, 0)
+        Me.btnMin.Name = "btnMin"
+        Me.btnMin.Size = New System.Drawing.Size(39, 25)
+        Me.btnMin.TabIndex = 41
+        Me.btnMin.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.DarkSalmon
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.list_remove
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button2.Location = New System.Drawing.Point(788, 228)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(106, 34)
+        Me.Button2.TabIndex = 79
+        Me.Button2.Text = "Borrar"
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.DarkSalmon
+        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Cancel241
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button3.Location = New System.Drawing.Point(788, 145)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(106, 38)
+        Me.Button3.TabIndex = 80
+        Me.Button3.Text = "Cancelar"
+        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'btnGuardar2
+        '
+        Me.btnGuardar2.BackColor = System.Drawing.Color.DarkSalmon
+        Me.btnGuardar2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnGuardar2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnGuardar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuardar2.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Save24
+        Me.btnGuardar2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnGuardar2.Location = New System.Drawing.Point(788, 103)
+        Me.btnGuardar2.Name = "btnGuardar2"
+        Me.btnGuardar2.Size = New System.Drawing.Size(106, 36)
+        Me.btnGuardar2.TabIndex = 81
+        Me.btnGuardar2.Text = "Guardar"
+        Me.btnGuardar2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGuardar2.UseVisualStyleBackColor = False
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.DarkSalmon
+        Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.gtk_edit
+        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button5.Location = New System.Drawing.Point(788, 189)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(106, 34)
+        Me.Button5.TabIndex = 82
+        Me.Button5.Text = "Editar"
+        Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button5.UseVisualStyleBackColor = False
+        '
+        'pbFoto
+        '
+        Me.pbFoto.BackgroundImage = CType(resources.GetObject("pbFoto.BackgroundImage"), System.Drawing.Image)
+        Me.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbFoto.InitialImage = Nothing
+        Me.pbFoto.Location = New System.Drawing.Point(224, 80)
+        Me.pbFoto.Name = "pbFoto"
+        Me.pbFoto.Size = New System.Drawing.Size(181, 167)
+        Me.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbFoto.TabIndex = 72
+        Me.pbFoto.TabStop = False
+        '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.Color.DarkSalmon
+        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.list_remove
+        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button7.Location = New System.Drawing.Point(779, 83)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(106, 34)
+        Me.Button7.TabIndex = 84
+        Me.Button7.Text = "Borrar"
+        Me.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button7.UseVisualStyleBackColor = False
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.DarkSalmon
+        Me.Button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Cancel241
+        Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button8.Location = New System.Drawing.Point(779, 165)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(106, 38)
+        Me.Button8.TabIndex = 85
+        Me.Button8.Text = "Cancelar"
+        Me.Button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button8.UseVisualStyleBackColor = False
+        '
+        'Button9
+        '
+        Me.Button9.BackColor = System.Drawing.Color.DarkSalmon
+        Me.Button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button9.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Save24
+        Me.Button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button9.Location = New System.Drawing.Point(779, 123)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(106, 36)
+        Me.Button9.TabIndex = 86
+        Me.Button9.Text = "Guardar"
+        Me.Button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button9.UseVisualStyleBackColor = False
+        '
+        'Button10
+        '
+        Me.Button10.BackColor = System.Drawing.Color.DarkSalmon
+        Me.Button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button10.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.gtk_edit
+        Me.Button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button10.Location = New System.Drawing.Point(779, 44)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(106, 34)
+        Me.Button10.TabIndex = 87
+        Me.Button10.Text = "Editar"
+        Me.Button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button10.UseVisualStyleBackColor = False
+        '
+        'pbEjercicio2
+        '
+        Me.pbEjercicio2.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.cadillac_con_resorte
+        Me.pbEjercicio2.Location = New System.Drawing.Point(711, 62)
+        Me.pbEjercicio2.Name = "pbEjercicio2"
+        Me.pbEjercicio2.Size = New System.Drawing.Size(192, 172)
+        Me.pbEjercicio2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbEjercicio2.TabIndex = 70
+        Me.pbEjercicio2.TabStop = False
+        Me.pbEjercicio2.Visible = False
+        '
+        'pbEjercicio3
+        '
+        Me.pbEjercicio3.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Parado_con_resorte
+        Me.pbEjercicio3.Location = New System.Drawing.Point(711, 62)
+        Me.pbEjercicio3.Name = "pbEjercicio3"
+        Me.pbEjercicio3.Size = New System.Drawing.Size(192, 172)
+        Me.pbEjercicio3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbEjercicio3.TabIndex = 69
+        Me.pbEjercicio3.TabStop = False
+        Me.pbEjercicio3.Visible = False
+        '
+        'pbEjercicios
+        '
+        Me.pbEjercicios.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.reformer_con_tabla_de_pique
+        Me.pbEjercicios.Location = New System.Drawing.Point(711, 62)
+        Me.pbEjercicios.Name = "pbEjercicios"
+        Me.pbEjercicios.Size = New System.Drawing.Size(192, 172)
+        Me.pbEjercicios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbEjercicios.TabIndex = 66
+        Me.pbEjercicios.TabStop = False
+        Me.pbEjercicios.Visible = False
+        '
         'FormDatos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.SistemaDeAsistenciaGym.My.Resources.Resources.fondoInicial
         Me.ClientSize = New System.Drawing.Size(927, 539)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.TabControl1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FormDatos"
         Me.Text = "FormDatos"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.dgvListado2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbFoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         CType(Me.dgvListado3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        CType(Me.pbFoto, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbEjercicio2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbEjercicio3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbEjercicios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -977,7 +1064,6 @@ Partial Class FormDatos
     Friend WithEvents Button3 As Button
     Friend WithEvents btnGuardar2 As Button
     Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
     Friend WithEvents tbAbonadas As TextBox
     Friend WithEvents Label27 As Label
     Friend WithEvents cbClases As ComboBox
@@ -1033,5 +1119,12 @@ Partial Class FormDatos
     Friend WithEvents Button8 As Button
     Friend WithEvents Button9 As Button
     Friend WithEvents Button10 As Button
-    Friend WithEvents Button11 As Button
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents btnRestaurar As Button
+    Friend WithEvents btnMax As Button
+    Friend WithEvents btnCerrar As Button
+    Friend WithEvents btnMin As Button
+    Friend WithEvents pbEjercicios As PictureBox
+    Friend WithEvents pbEjercicio2 As PictureBox
+    Friend WithEvents pbEjercicio3 As PictureBox
 End Class
