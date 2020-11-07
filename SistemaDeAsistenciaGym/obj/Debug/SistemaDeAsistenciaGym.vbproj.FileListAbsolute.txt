@@ -151,4 +151,8 @@ C:\Users\Doble G\Documents\GitHub\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj
 C:\Users\Doble G\Documents\GitHub\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.Resources.resources
 C:\Users\Doble G\Documents\GitHub\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.vbproj.GenerateResource.Cache
 C:\Users\Doble G\Documents\GitHub\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormInfo.resources
-C:\Users\exequ\Documents\GitHub\SistemaDeAsistenciaGym\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormInfo.resources
+E:\UNIVERSIDAD\Github\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormCamaraWeb.resources
+E:\UNIVERSIDAD\Github\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormDatos.resources
+E:\UNIVERSIDAD\Github\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormEjercicio.resources
+E:\UNIVERSIDAD\Github\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormInfo.resources
+E:\UNIVERSIDAD\Github\SistemaDeAsistencia\SistemaDeAsistenciaGym\obj\Debug\SistemaDeAsistenciaGym.FormRutina.resources
