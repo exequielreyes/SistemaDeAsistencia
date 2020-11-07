@@ -125,7 +125,7 @@ Public Class FormRegistro
 
             Catch ex As Exception
                 MsgBox(ex)
-                MsgBox("No se puede borrar porque el cliente tiene ventas relacionadas")
+                ' MsgBox("No se puede borrar porque el cliente tiene ventas relacionadas")
             End Try
         End If
         dgvListado.CurrentCell = dgvListado.Rows(0).Cells(1)

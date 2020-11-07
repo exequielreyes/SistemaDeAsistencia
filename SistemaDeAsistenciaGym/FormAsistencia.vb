@@ -1,9 +1,12 @@
 ﻿Imports AForge.Video.DirectShow
 Imports BarcodeLib.BarcodeReader
+Imports MySql.Data.MySqlClient
+
 
 Public Class FormAsistencia
     Private dispositivos As FilterInfoCollection
     Private fuenteVideo As VideoCaptureDevice
+
     Private Sub btnVolver_Click(sender As Object, e As EventArgs)
         FormInicial.Show()
         Me.Hide()
@@ -66,5 +69,15 @@ Public Class FormAsistencia
         desconectarse()
         FormInicial.Show()
     End Sub
+
+    'Public Function comparar()
+    '    conectarse()
+    '    FormInicial.
+    '    Return 0
+    'End Function
+
+
+
+
 
 End Class
