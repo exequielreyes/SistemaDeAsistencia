@@ -71,26 +71,31 @@ Public Class FormAsistencia
         FormInicial.Show()
     End Sub
 
-    'Public Function comparar()
-    '    conectarse()
-    '    FormInicial.erbpilatesDataSet.Tables("Alumno").Clear()
-    '    FormInicial.alumnoDataAdapter.SelectCommand = New MySqlCommand("SELECT dni FROM alumno", conexion)
-    '    Try
-    '        If BarcodeReader.QRCODE = "dni" Then
-    '            FormInicial.erbpilatesDataSet.Tables("Clases").Clear()
-    '            'FormInicial.clasesDataAdapter.SelectCommand
+    Public Function comparar()
+        Dim id As Integer
+        Dim qr As Integer
 
-
-    '        End If
-
-    '    Catch ex As Exception
-
-    '    End Try
+        qr = BarcodeReader.QRCODE
+        conectarse()
+        FormInicial.erbpilatesDataSet.Tables("Alumno").Clear()
+        FormInicial.alumnoDataAdapter.SelectCommand = New MySqlCommand("SELECT DNI FROM alumno", conexion)
+        Try
+            If qr = "@DNI" Then
+                FormInicial.alumnoDataAdapter.SelectCommand = New MySqlCommand("SELECT DNI FROM alumno WHERE id_alumno=1")
 
 
 
-    '    Return 0
-    'End Function
+
+            End If
+
+        Catch ex As Exception
+
+        End Try
+
+
+
+        Return 0
+    End Function
 
 
 

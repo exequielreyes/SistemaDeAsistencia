@@ -35,7 +35,9 @@ Partial Class FormAsistencia
         Me.btnMax = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnMin = New System.Windows.Forms.Button()
+        Me.dgvAsistencia = New System.Windows.Forms.DataGridView()
         Me.Panel2.SuspendLayout()
+        CType(Me.dgvAsistencia, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Timer1
@@ -109,7 +111,7 @@ Partial Class FormAsistencia
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(712, 25)
+        Me.Panel2.Size = New System.Drawing.Size(725, 25)
         Me.Panel2.TabIndex = 42
         '
         'btnRestaurar
@@ -119,7 +121,7 @@ Partial Class FormAsistencia
         Me.btnRestaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRestaurar.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Icono_Restaurar
-        Me.btnRestaurar.Location = New System.Drawing.Point(625, 0)
+        Me.btnRestaurar.Location = New System.Drawing.Point(638, 0)
         Me.btnRestaurar.Name = "btnRestaurar"
         Me.btnRestaurar.Size = New System.Drawing.Size(40, 25)
         Me.btnRestaurar.TabIndex = 43
@@ -134,7 +136,7 @@ Partial Class FormAsistencia
         Me.btnMax.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMax.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Icono_Maximizar
-        Me.btnMax.Location = New System.Drawing.Point(625, 0)
+        Me.btnMax.Location = New System.Drawing.Point(638, 0)
         Me.btnMax.Name = "btnMax"
         Me.btnMax.Size = New System.Drawing.Size(40, 25)
         Me.btnMax.TabIndex = 41
@@ -147,7 +149,7 @@ Partial Class FormAsistencia
         Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCerrar.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.ICON_CERRARF
-        Me.btnCerrar.Location = New System.Drawing.Point(671, 1)
+        Me.btnCerrar.Location = New System.Drawing.Point(684, 1)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(29, 24)
         Me.btnCerrar.TabIndex = 42
@@ -160,17 +162,26 @@ Partial Class FormAsistencia
         Me.btnMin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMin.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Icono_Minimizar
-        Me.btnMin.Location = New System.Drawing.Point(577, 0)
+        Me.btnMin.Location = New System.Drawing.Point(590, 0)
         Me.btnMin.Name = "btnMin"
         Me.btnMin.Size = New System.Drawing.Size(39, 25)
         Me.btnMin.TabIndex = 41
         Me.btnMin.UseVisualStyleBackColor = True
         '
+        'dgvAsistencia
+        '
+        Me.dgvAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvAsistencia.Location = New System.Drawing.Point(36, 439)
+        Me.dgvAsistencia.Name = "dgvAsistencia"
+        Me.dgvAsistencia.Size = New System.Drawing.Size(664, 150)
+        Me.dgvAsistencia.TabIndex = 43
+        '
         'FormAsistencia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(712, 451)
+        Me.ClientSize = New System.Drawing.Size(725, 598)
+        Me.Controls.Add(Me.dgvAsistencia)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.lbAlumno)
         Me.Controls.Add(Me.vspQR)
@@ -182,6 +193,7 @@ Partial Class FormAsistencia
         Me.Name = "FormAsistencia"
         Me.Text = "FormAsistencia"
         Me.Panel2.ResumeLayout(False)
+        CType(Me.dgvAsistencia, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -199,4 +211,5 @@ Partial Class FormAsistencia
     Friend WithEvents btnMax As Button
     Friend WithEvents btnCerrar As Button
     Friend WithEvents btnMin As Button
+    Friend WithEvents dgvAsistencia As DataGridView
 End Class
