@@ -60,18 +60,18 @@ Partial Class FormDatos
         Me.Label24 = New System.Windows.Forms.Label()
         Me.pbFoto = New System.Windows.Forms.PictureBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
+        Me.btnBorrar = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.btnEditar = New System.Windows.Forms.Button()
         Me.cbOtros = New System.Windows.Forms.CheckBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.tbPeso = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.tbGrupo = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.tbAltura = New System.Windows.Forms.TextBox()
         Me.rbDetalles = New System.Windows.Forms.RichTextBox()
         Me.cbCardiaco = New System.Windows.Forms.CheckBox()
         Me.cbLesiones = New System.Windows.Forms.CheckBox()
@@ -485,18 +485,18 @@ Partial Class FormDatos
         '
         'TabPage3
         '
-        Me.TabPage3.Controls.Add(Me.Button7)
-        Me.TabPage3.Controls.Add(Me.Button8)
-        Me.TabPage3.Controls.Add(Me.Button9)
-        Me.TabPage3.Controls.Add(Me.Button10)
+        Me.TabPage3.Controls.Add(Me.btnBorrar)
+        Me.TabPage3.Controls.Add(Me.btnCancelar)
+        Me.TabPage3.Controls.Add(Me.btnGuardar)
+        Me.TabPage3.Controls.Add(Me.btnEditar)
         Me.TabPage3.Controls.Add(Me.cbOtros)
         Me.TabPage3.Controls.Add(Me.Label11)
         Me.TabPage3.Controls.Add(Me.Label13)
-        Me.TabPage3.Controls.Add(Me.TextBox3)
+        Me.TabPage3.Controls.Add(Me.tbPeso)
         Me.TabPage3.Controls.Add(Me.Label12)
-        Me.TabPage3.Controls.Add(Me.TextBox2)
+        Me.TabPage3.Controls.Add(Me.tbGrupo)
         Me.TabPage3.Controls.Add(Me.Label10)
-        Me.TabPage3.Controls.Add(Me.TextBox1)
+        Me.TabPage3.Controls.Add(Me.tbAltura)
         Me.TabPage3.Controls.Add(Me.rbDetalles)
         Me.TabPage3.Controls.Add(Me.cbCardiaco)
         Me.TabPage3.Controls.Add(Me.cbLesiones)
@@ -513,69 +513,69 @@ Partial Class FormDatos
         Me.TabPage3.Text = "Historia Clinica"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'Button7
+        'btnBorrar
         '
-        Me.Button7.BackColor = System.Drawing.Color.DarkSalmon
-        Me.Button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.list_remove
-        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button7.Location = New System.Drawing.Point(779, 83)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(106, 34)
-        Me.Button7.TabIndex = 84
-        Me.Button7.Text = "Borrar"
-        Me.Button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button7.UseVisualStyleBackColor = False
+        Me.btnBorrar.BackColor = System.Drawing.Color.DarkSalmon
+        Me.btnBorrar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBorrar.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.list_remove
+        Me.btnBorrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnBorrar.Location = New System.Drawing.Point(775, 114)
+        Me.btnBorrar.Name = "btnBorrar"
+        Me.btnBorrar.Size = New System.Drawing.Size(106, 34)
+        Me.btnBorrar.TabIndex = 84
+        Me.btnBorrar.Text = "Borrar"
+        Me.btnBorrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBorrar.UseVisualStyleBackColor = False
         '
-        'Button8
+        'btnCancelar
         '
-        Me.Button8.BackColor = System.Drawing.Color.DarkSalmon
-        Me.Button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Cancel241
-        Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button8.Location = New System.Drawing.Point(779, 165)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(106, 38)
-        Me.Button8.TabIndex = 85
-        Me.Button8.Text = "Cancelar"
-        Me.Button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.btnCancelar.BackColor = System.Drawing.Color.DarkSalmon
+        Me.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancelar.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Cancel241
+        Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnCancelar.Location = New System.Drawing.Point(775, 196)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(106, 38)
+        Me.btnCancelar.TabIndex = 85
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCancelar.UseVisualStyleBackColor = False
         '
-        'Button9
+        'btnGuardar
         '
-        Me.Button9.BackColor = System.Drawing.Color.DarkSalmon
-        Me.Button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button9.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Save24
-        Me.Button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button9.Location = New System.Drawing.Point(779, 123)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(106, 36)
-        Me.Button9.TabIndex = 86
-        Me.Button9.Text = "Guardar"
-        Me.Button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button9.UseVisualStyleBackColor = False
+        Me.btnGuardar.BackColor = System.Drawing.Color.DarkSalmon
+        Me.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuardar.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Save24
+        Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnGuardar.Location = New System.Drawing.Point(775, 154)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(106, 36)
+        Me.btnGuardar.TabIndex = 86
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGuardar.UseVisualStyleBackColor = False
         '
-        'Button10
+        'btnEditar
         '
-        Me.Button10.BackColor = System.Drawing.Color.DarkSalmon
-        Me.Button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.gtk_edit
-        Me.Button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button10.Location = New System.Drawing.Point(779, 44)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(106, 34)
-        Me.Button10.TabIndex = 87
-        Me.Button10.Text = "Editar"
-        Me.Button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button10.UseVisualStyleBackColor = False
+        Me.btnEditar.BackColor = System.Drawing.Color.DarkSalmon
+        Me.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEditar.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.gtk_edit
+        Me.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnEditar.Location = New System.Drawing.Point(775, 75)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(106, 34)
+        Me.btnEditar.TabIndex = 87
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEditar.UseVisualStyleBackColor = False
         '
         'cbOtros
         '
@@ -613,13 +613,13 @@ Partial Class FormDatos
         Me.Label13.TabIndex = 58
         Me.Label13.Text = "Peso"
         '
-        'TextBox3
+        'tbPeso
         '
-        Me.TextBox3.BackColor = System.Drawing.Color.DarkSalmon
-        Me.TextBox3.Location = New System.Drawing.Point(13, 136)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox3.TabIndex = 57
+        Me.tbPeso.BackColor = System.Drawing.Color.DarkSalmon
+        Me.tbPeso.Location = New System.Drawing.Point(13, 136)
+        Me.tbPeso.Name = "tbPeso"
+        Me.tbPeso.Size = New System.Drawing.Size(100, 22)
+        Me.tbPeso.TabIndex = 57
         '
         'Label12
         '
@@ -632,13 +632,13 @@ Partial Class FormDatos
         Me.Label12.TabIndex = 56
         Me.Label12.Text = "Grupo sanguineo"
         '
-        'TextBox2
+        'tbGrupo
         '
-        Me.TextBox2.BackColor = System.Drawing.Color.DarkSalmon
-        Me.TextBox2.Location = New System.Drawing.Point(13, 189)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox2.TabIndex = 55
+        Me.tbGrupo.BackColor = System.Drawing.Color.DarkSalmon
+        Me.tbGrupo.Location = New System.Drawing.Point(13, 189)
+        Me.tbGrupo.Name = "tbGrupo"
+        Me.tbGrupo.Size = New System.Drawing.Size(100, 22)
+        Me.tbGrupo.TabIndex = 55
         '
         'Label10
         '
@@ -651,13 +651,13 @@ Partial Class FormDatos
         Me.Label10.TabIndex = 54
         Me.Label10.Text = "Altura"
         '
-        'TextBox1
+        'tbAltura
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.DarkSalmon
-        Me.TextBox1.Location = New System.Drawing.Point(13, 81)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox1.TabIndex = 53
+        Me.tbAltura.BackColor = System.Drawing.Color.DarkSalmon
+        Me.tbAltura.Location = New System.Drawing.Point(13, 81)
+        Me.tbAltura.Name = "tbAltura"
+        Me.tbAltura.Size = New System.Drawing.Size(100, 22)
+        Me.tbAltura.TabIndex = 53
         '
         'rbDetalles
         '
@@ -773,7 +773,7 @@ Partial Class FormDatos
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Label2.Location = New System.Drawing.Point(564, 50)
+        Me.Label2.Location = New System.Drawing.Point(602, 50)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(75, 20)
         Me.Label2.TabIndex = 44
@@ -1108,11 +1108,11 @@ Partial Class FormDatos
     Friend WithEvents cbOtros As CheckBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents tbPeso As TextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents tbGrupo As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents tbAltura As TextBox
     Friend WithEvents rbDetalles As RichTextBox
     Friend WithEvents cbCardiaco As CheckBox
     Friend WithEvents cbLesiones As CheckBox
@@ -1139,10 +1139,10 @@ Partial Class FormDatos
     Friend WithEvents tbNombre As TextBox
     Friend WithEvents Label28 As Label
     Friend WithEvents Label29 As Label
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Button9 As Button
-    Friend WithEvents Button10 As Button
+    Friend WithEvents btnBorrar As Button
+    Friend WithEvents btnCancelar As Button
+    Friend WithEvents btnGuardar As Button
+    Friend WithEvents btnEditar As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents btnRestaurar As Button
     Friend WithEvents btnMax As Button

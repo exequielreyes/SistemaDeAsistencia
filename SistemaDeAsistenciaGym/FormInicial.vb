@@ -19,19 +19,6 @@ Public Class FormInicial
         erbpilatesDataSet.Tables.Add("capacidad")
         erbpilatesDataSet.Tables.Add("patologias")
 
-        'conectarse()
-        'erbpilatesDataSet.Tables("Alumno").Clear()
-        'alumnoDataAdapter.SelectCommand = New MySqlCommand("SELECT * FROM alumno", conexion)
-        'alumnoDataAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey
-        'alumnoDataAdapter.Fill(erbpilatesDataSet.Tables("Alumno"))
-        'vista = erbpilatesDataSet.Tables("Alumno").DefaultView
-        'FormRegistro.dgvListado.DataSource = vista
-        'FormRegistro.dgvListado.Columns(0).Visible = False
-        'FormRegistro.dgvListado.Columns(8).Visible = False
-        'FormRegistro.dgvListado.Columns(9).Visible = False
-        'FormRegistro.dgvListado.ClearSelection()
-        'desconectarse()
-
     End Sub
 
     Private Sub btnRegistro_Click_1(sender As Object, e As EventArgs) Handles btnRegistro.Click

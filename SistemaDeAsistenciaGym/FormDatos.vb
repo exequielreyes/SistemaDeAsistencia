@@ -271,6 +271,8 @@ Public Class FormDatos
     End Sub
 
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
+        ComboBox1.Enabled = True
+
         If ComboBox1.Text = "Piernas" Then
             CheckBox1.Text = "Reformer con sogas y tabla de pique"
             CheckBox2.Text = "Cadillac con resorte para resistencia"
@@ -335,6 +337,7 @@ Public Class FormDatos
     End Sub
 
     Private Sub ComboBox3_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox3.SelectedIndexChanged
+        ComboBox2.Enabled = False
         If ComboBox1.Text = "Piernas" Then
             CheckBox1.Text = "Reformer con sogas y tabla de pique"
             CheckBox2.Text = "Cadillac con resorte para resistencia"
@@ -396,5 +399,128 @@ Public Class FormDatos
             CheckBox5.Text = "En combo Chair de frente"
         End If
 
+    End Sub
+
+    Private Sub btnGuardar3_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+
+        Dim consulta As String
+        Dim fila As DataRow
+        Try
+            If accion = True Then
+
+                '1. Crear una nueva fila'
+                fila = FormInicial.erbpilatesDataSet.Tables("Alumno").NewRow
+
+                '2. Rellenar la fila con información
+
+                fila("cardiacas") = cbCardiaco.Text
+                fila("lesiones_reciente") = cbLesiones.Text
+                fila("columna") = cbColumna.Text
+                fila("otros") = cbOtros.Text
+                fila("detalles") = rbDetalles.Text
+                fila("altura_cm") = tbAltura.Text
+                fila("peso") = tbPeso.Text
+                fila("grupo_sanguineo") = tbGrupo.Text
+
+
+                '3. Agregar fila a la tabla del DataSet
+                FormInicial.erbpilatesDataSet.Tables("alumno").Rows.Add(fila)
+
+                '4. Crear Comando para agregar a la BD la fila nueva
+
+                consulta = "INSERT INTO patologias (idHistoria, cardiacas,lesiones_recientes, columna, otros ,detalles,altura_cm, peso , grupo_sanguineo) VALUES ( @idHis, @car,@les, @col,@otr,@det,@alt, @pes ,@grup)"
+                FormInicial.patologiasDataAdapter.InsertCommand = New MySqlCommand(consulta, conexion)
+                FormInicial.patologiasDataAdapter.InsertCommand.Parameters.Add("@car", MySqlDbType.Int32, 0, "cardiacas")
+                FormInicial.patologiasDataAdapter.InsertCommand.Parameters.Add("@les", MySqlDbType.Int32, 0, "lesiones_recientes")
+                FormInicial.patologiasDataAdapter.InsertCommand.Parameters.Add("@col", MySqlDbType.Int32, 0, "columna")
+                FormInicial.patologiasDataAdapter.InsertCommand.Parameters.Add("@otr", MySqlDbType.Int32, 0, "otros")
+                FormInicial.patologiasDataAdapter.InsertCommand.Parameters.Add("@det", MySqlDbType.VarChar, 250, "detalles")
+                FormInicial.patologiasDataAdapter.InsertCommand.Parameters.Add("@alt", MySqlDbType.Int32, 0, "altura_cm")
+                FormInicial.patologiasDataAdapter.InsertCommand.Parameters.Add("@pes", MySqlDbType.Decimal, 10, "peso")
+                FormInicial.patologiasDataAdapter.InsertCommand.Parameters.Add("@grup", MySqlDbType.VarChar, 45, "grupo_sanguineo")
+
+
+                '5. Guardar los cambios en la base de datos
+                FormInicial.patologiasDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("patologias"))
+
+
+                CargaInicial()
+
+                'Limpiamos los textbox para poder cargar otro cliente            
+                cbCardiaco.Text = ""
+                cbLesiones.Text = ""
+                cbColumna.Text = ""
+                cbOtros.Text = ""
+                rbDetalles.Text = ""
+                tbAltura.Text = ""
+                tbPeso.Text = ""
+                tbGrupo.Text = ""
+
+
+            Else
+                '1. Seleccionar fila a editar
+                fila = FormInicial.erbpilatesDataSet.Tables("patologias").Rows.Find(idFila)
+
+
+                '2. Rellenar la fila con información   
+
+                fila("cardiacas") = cbCardiaco.Text
+                fila("lesiones_reciente") = cbLesiones.Text
+                fila("columna") = cbColumna.Text
+                fila("otros") = cbOtros.Text
+                fila("detalles") = rbDetalles.Text
+                fila("altura_cm") = tbAltura.Text
+                fila("peso") = tbPeso.Text
+                fila("grupo_sanguineo") = tbGrupo.Text
+
+                '3. Crear Comando para modificar la fila en la BD
+
+                consulta = "UPDATE patologia SET cardiaco=@car, lesiones_recientes=@les, columna=@col ,otros=@otr, detalles =@det, altura_cm=@alt, peso =@pes , grupo_sanguineo =@grup  WHERE id_alumno=@id"
+                FormInicial.patologiasDataAdapter.UpdateCommand = New MySqlCommand(consulta, conexion)
+                FormInicial.patologiasDataAdapter.UpdateCommand.Parameters.Add("@car", MySqlDbType.Int32, 0, "cardiacas")
+                FormInicial.patologiasDataAdapter.UpdateCommand.Parameters.Add("@les", MySqlDbType.Int32, 0, "lesiones_recientes")
+                FormInicial.patologiasDataAdapter.UpdateCommand.Parameters.Add("@col", MySqlDbType.Int32, 0, "columna")
+                FormInicial.patologiasDataAdapter.UpdateCommand.Parameters.Add("@otr", MySqlDbType.Int32, 0, "otros")
+                FormInicial.patologiasDataAdapter.UpdateCommand.Parameters.Add("@det", MySqlDbType.VarChar, 250, "detalles")
+                FormInicial.patologiasDataAdapter.UpdateCommand.Parameters.Add("@alt", MySqlDbType.Int32, 0, "altura_cm")
+                FormInicial.patologiasDataAdapter.UpdateCommand.Parameters.Add("@pes", MySqlDbType.Decimal, 10, "peso")
+                FormInicial.patologiasDataAdapter.UpdateCommand.Parameters.Add("@grup", MySqlDbType.VarChar, 45, "grupo_sanguineo")
+
+                FormInicial.patologiasDataAdapter.UpdateCommand.Parameters.Add("@id", MySqlDbType.Int32, 0, "id_alumno")
+
+                '4. Guardar los cambios en la base de datos
+                FormInicial.patologiasDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("alumno"))
+                '5. Actualiza la tabla del formulario listado de clientes
+                CargaInicial()
+                'Me.Close()
+            End If
+
+
+        Catch ex As Exception
+            MsgBox("Error espacio en blanco", MsgBoxStyle.Critical)
+
+        End Try
+    End Sub
+    Sub cancelar()
+        'activarTextBox(False)
+
+        btnEditar.Enabled = True
+        btnGuardar.Enabled = False
+        'btnBorrar.Enabled = True
+        btnCancelar.Enabled = False
+
+
+        cbColumna.Text = ""
+        cbCardiaco.Text = ""
+        cbLesiones.Text = ""
+        cbOtros.Text = ""
+        tbAltura.Text = ""
+        tbPeso.Text = ""
+        tbGrupo.Text = ""
+
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        cancelar()
     End Sub
 End Class

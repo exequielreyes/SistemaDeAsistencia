@@ -24,12 +24,6 @@ Partial Class FormAsistencia
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.btnIniciar = New System.Windows.Forms.Button()
-        Me.btnDetener = New System.Windows.Forms.Button()
-        Me.vspQR = New AForge.Controls.VideoSourcePlayer()
-        Me.lbAlumno = New System.Windows.Forms.ListBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnRestaurar = New System.Windows.Forms.Button()
         Me.btnMax = New System.Windows.Forms.Button()
@@ -45,6 +39,13 @@ Partial Class FormAsistencia
         Me.TimerActualizar = New System.Windows.Forms.Timer(Me.components)
         Me.lblTimer = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.VideoSourcePlayer1 = New AForge.Controls.VideoSourcePlayer()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         CType(Me.dgvAlumnos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,64 +54,6 @@ Partial Class FormAsistencia
         'Timer1
         '
         Me.Timer1.Interval = 1000
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(33, 34)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(104, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Seleccione cámara: "
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.BackColor = System.Drawing.Color.DarkSalmon
-        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(143, 34)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(227, 21)
-        Me.ComboBox1.TabIndex = 1
-        '
-        'btnIniciar
-        '
-        Me.btnIniciar.BackColor = System.Drawing.Color.DarkSalmon
-        Me.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnIniciar.Location = New System.Drawing.Point(143, 61)
-        Me.btnIniciar.Name = "btnIniciar"
-        Me.btnIniciar.Size = New System.Drawing.Size(107, 23)
-        Me.btnIniciar.TabIndex = 2
-        Me.btnIniciar.Text = "Iniciar"
-        Me.btnIniciar.UseVisualStyleBackColor = False
-        '
-        'btnDetener
-        '
-        Me.btnDetener.BackColor = System.Drawing.Color.DarkSalmon
-        Me.btnDetener.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDetener.Location = New System.Drawing.Point(256, 61)
-        Me.btnDetener.Name = "btnDetener"
-        Me.btnDetener.Size = New System.Drawing.Size(114, 23)
-        Me.btnDetener.TabIndex = 2
-        Me.btnDetener.Text = "Detener"
-        Me.btnDetener.UseVisualStyleBackColor = False
-        '
-        'vspQR
-        '
-        Me.vspQR.Location = New System.Drawing.Point(36, 90)
-        Me.vspQR.Name = "vspQR"
-        Me.vspQR.Size = New System.Drawing.Size(480, 322)
-        Me.vspQR.TabIndex = 3
-        Me.vspQR.Text = "VideoSourcePlayer1"
-        Me.vspQR.VideoSource = Nothing
-        '
-        'lbAlumno
-        '
-        Me.lbAlumno.FormattingEnabled = True
-        Me.lbAlumno.Location = New System.Drawing.Point(527, 92)
-        Me.lbAlumno.Name = "lbAlumno"
-        Me.lbAlumno.Size = New System.Drawing.Size(173, 316)
-        Me.lbAlumno.TabIndex = 4
         '
         'Panel2
         '
@@ -190,15 +133,16 @@ Partial Class FormAsistencia
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(740, 49)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(593, 91)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 13)
+        Me.Label2.Size = New System.Drawing.Size(63, 16)
         Me.Label2.TabIndex = 44
         Me.Label2.Text = "Nombre"
         '
         'tbNombre
         '
-        Me.tbNombre.Location = New System.Drawing.Point(743, 76)
+        Me.tbNombre.Location = New System.Drawing.Point(596, 110)
         Me.tbNombre.Name = "tbNombre"
         Me.tbNombre.Size = New System.Drawing.Size(184, 20)
         Me.tbNombre.TabIndex = 45
@@ -206,15 +150,16 @@ Partial Class FormAsistencia
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(937, 49)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(790, 91)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(44, 13)
+        Me.Label3.Size = New System.Drawing.Size(66, 16)
         Me.Label3.TabIndex = 44
         Me.Label3.Text = "Apellido"
         '
         'tbApellido
         '
-        Me.tbApellido.Location = New System.Drawing.Point(940, 76)
+        Me.tbApellido.Location = New System.Drawing.Point(793, 110)
         Me.tbApellido.Name = "tbApellido"
         Me.tbApellido.Size = New System.Drawing.Size(184, 20)
         Me.tbApellido.TabIndex = 45
@@ -222,15 +167,16 @@ Partial Class FormAsistencia
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(740, 118)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(593, 160)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(26, 13)
+        Me.Label4.Size = New System.Drawing.Size(34, 16)
         Me.Label4.TabIndex = 44
         Me.Label4.Text = "DNI"
         '
         'tbDNI
         '
-        Me.tbDNI.Location = New System.Drawing.Point(743, 145)
+        Me.tbDNI.Location = New System.Drawing.Point(596, 179)
         Me.tbDNI.Name = "tbDNI"
         Me.tbDNI.Size = New System.Drawing.Size(184, 20)
         Me.tbDNI.TabIndex = 45
@@ -241,7 +187,7 @@ Partial Class FormAsistencia
         'lblTimer
         '
         Me.lblTimer.AutoSize = True
-        Me.lblTimer.Location = New System.Drawing.Point(652, 213)
+        Me.lblTimer.Location = New System.Drawing.Point(494, 214)
         Me.lblTimer.Name = "lblTimer"
         Me.lblTimer.Size = New System.Drawing.Size(39, 13)
         Me.lblTimer.TabIndex = 46
@@ -249,17 +195,93 @@ Partial Class FormAsistencia
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(940, 145)
+        Me.PictureBox1.Location = New System.Drawing.Point(793, 179)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(184, 167)
         Me.PictureBox1.TabIndex = 47
         Me.PictureBox1.TabStop = False
         '
+        'VideoSourcePlayer1
+        '
+        Me.VideoSourcePlayer1.Location = New System.Drawing.Point(36, 129)
+        Me.VideoSourcePlayer1.Name = "VideoSourcePlayer1"
+        Me.VideoSourcePlayer1.Size = New System.Drawing.Size(408, 211)
+        Me.VideoSourcePlayer1.TabIndex = 54
+        Me.VideoSourcePlayer1.Text = "VideoSourcePlayer1"
+        Me.VideoSourcePlayer1.VideoSource = Nothing
+        '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(450, 76)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(105, 264)
+        Me.ListBox1.TabIndex = 53
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(414, 49)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(173, 16)
+        Me.Label1.TabIndex = 52
+        Me.Label1.Text = "Codigo Qr Escaneados:"
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.DarkSalmon
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Location = New System.Drawing.Point(216, 82)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(70, 23)
+        Me.Button2.TabIndex = 51
+        Me.Button2.Text = "Detener"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.DarkSalmon
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Location = New System.Drawing.Point(140, 82)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(70, 23)
+        Me.Button1.TabIndex = 50
+        Me.Button1.Text = "Iniciar"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(91, 55)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(228, 21)
+        Me.ComboBox1.TabIndex = 49
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(19, 60)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(66, 16)
+        Me.Label5.TabIndex = 48
+        Me.Label5.Text = "Camara:"
+        '
         'FormAsistencia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.SistemaDeAsistenciaGym.My.Resources.Resources.fondoInicial
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1137, 598)
+        Me.Controls.Add(Me.VideoSourcePlayer1)
+        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.tbApellido)
         Me.Controls.Add(Me.tbDNI)
@@ -269,14 +291,10 @@ Partial Class FormAsistencia
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.dgvAlumnos)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.lbAlumno)
-        Me.Controls.Add(Me.vspQR)
-        Me.Controls.Add(Me.btnDetener)
-        Me.Controls.Add(Me.btnIniciar)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblTimer)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.HelpButton = True
         Me.Name = "FormAsistencia"
         Me.Text = "FormAsistencia"
         Me.Panel2.ResumeLayout(False)
@@ -288,12 +306,6 @@ Partial Class FormAsistencia
     End Sub
 
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents btnIniciar As Button
-    Friend WithEvents btnDetener As Button
-    Friend WithEvents vspQR As AForge.Controls.VideoSourcePlayer
-    Friend WithEvents lbAlumno As ListBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents btnRestaurar As Button
     Friend WithEvents btnMax As Button
@@ -309,4 +321,11 @@ Partial Class FormAsistencia
     Friend WithEvents TimerActualizar As Timer
     Friend WithEvents lblTimer As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents VideoSourcePlayer1 As AForge.Controls.VideoSourcePlayer
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label5 As Label
 End Class
