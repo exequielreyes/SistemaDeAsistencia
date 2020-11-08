@@ -9,18 +9,6 @@ Public Class FormRegistro
         FormInicial.Hide()
         CargaInicial()
 
-        'If accion Then
-        '    tbNombre.Text = ""
-        '    tbApellido.Text = ""
-        '    tbDni.Text = ""
-        '    tbEdad.Text = ""
-        '    tbDireccion.Text = ""
-        '    tbTelefono.Text = ""
-        '    tbEmail.Text = ""
-        '    Me.Text = "Nuevo Cliente"
-        'Else
-        '    Me.Text = "Editar Cliente"
-        'End If
     End Sub
     Public Sub CargaInicial()
         '-------Alumno----------'
@@ -55,15 +43,7 @@ Public Class FormRegistro
         btnCancelar.Enabled = True
         accion = False
         cargarTextBox()
-        'idFila = dgvListado.CurrentRow.Cells(0).Value
 
-        'tbNombre.Text = dgvListado.CurrentRow.Cells(1).Value
-        'tbApellido.Text = dgvListado.CurrentRow.Cells(2).Value
-        'tbDni.Text = dgvListado.CurrentRow.Cells(3).Value
-        'tbEdad.Text = dgvListado.CurrentRow.Cells(4).Value
-        'tbDireccion.Text = dgvListado.CurrentRow.Cells(5).Value
-        'tbTelefono.Text = dgvListado.CurrentRow.Cells(6).Value
-        'tbEmail.Text = dgvListado.CurrentRow.Cells(7).Value
     End Sub
 
     Sub activarTextBox(ByVal activo As Boolean)
@@ -98,6 +78,7 @@ Public Class FormRegistro
         tbDireccion.Text = fila.Cells(5).Value
         tbTelefono.Text = fila.Cells(6).Value
         tbEmail.Text = fila.Cells(7).Value
+        'pbFoto1.Image = fila.Cells(9).Value
 
 
     End Sub
@@ -182,11 +163,11 @@ Public Class FormRegistro
                     FormInicial.alumnoDataAdapter.InsertCommand = New MySqlCommand(consulta, conexion)
                     FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 45, "nombre")
                     FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@ape", MySqlDbType.VarChar, 45, "apellido")
-                    FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@dni", MySqlDbType.Int32, 0, "DNI")
-                    FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@ed", MySqlDbType.Int32, 0, "edad")
-                    FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@dir", MySqlDbType.VarChar, 100, "direccion")
-                    FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@tel", MySqlDbType.Int32, 11, "telefono")
-                    FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@em", MySqlDbType.VarChar, 45, "email")
+                    FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@dni", MySqlDbType.Int32, 8, "DNI")
+                    FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@ed", MySqlDbType.Int32, 2, "edad")
+                    FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@dir", MySqlDbType.VarChar, 250, "direccion")
+                    FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@tel", MySqlDbType.Int64, 10, "telefono")
+                    FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@em", MySqlDbType.VarChar, 250, "email")
                     'FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@fot", MySqlDbType.Blob, "foto")
                     '5. Guardar los cambios en la base de datos
                     FormInicial.alumnoDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("alumno"))
@@ -230,12 +211,12 @@ Public Class FormRegistro
                 FormInicial.alumnoDataAdapter.UpdateCommand = New MySqlCommand(consulta, conexion)
                 FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 45, "nombre")
                 FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@ape", MySqlDbType.VarChar, 45, "apellido")
-                FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@dni", MySqlDbType.Int32, 0, "DNI")
-                FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@ed", MySqlDbType.Int32, 0, "edad")
-                FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@dir", MySqlDbType.VarChar, 100, "direccion")
-                FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@tel", MySqlDbType.Int32, 11, "telefono")
-                FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@em", MySqlDbType.VarChar, 45, "email")
-                'FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@fot", MySqlDbType.Blob, "foto")
+                FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@dni", MySqlDbType.Int32, 8, "DNI")
+                FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@ed", MySqlDbType.Int32, 2, "edad")
+                FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@dir", MySqlDbType.VarChar, 250, "direccion")
+                FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@tel", MySqlDbType.Int64, 10, "telefono")
+                FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@em", MySqlDbType.VarChar, 250, "email")
+                'FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@fot", MySqlDbType.VarChar, 250, "foto")
 
                 FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@id", MySqlDbType.Int32, 0, "id_alumno")
 

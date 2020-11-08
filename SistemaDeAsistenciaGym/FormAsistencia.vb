@@ -4,6 +4,11 @@ Imports MySql.Data.MySqlClient
 
 
 Public Class FormAsistencia
+    Private vista As New DataView
+    Private accion As Boolean
+    Private idFila As String
+    Dim consulta As String
+
     Private dispositivos As FilterInfoCollection
     Private fuenteVideo As VideoCaptureDevice
 
@@ -15,12 +20,43 @@ Public Class FormAsistencia
 
     Private Sub FormAsistencia_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FormInicial.Hide()
+        'GroupBox1.Visible = False
+        'dgvAlumnos.Visible = False
+        conectarse()
+        FormInicial.erbpilatesDataSet.Tables("Alumno").Clear()
+        FormInicial.alumnoDataAdapter.SelectCommand = New MySqlCommand("SELECT *FROM alumno", conexion)
+        FormInicial.alumnoDataAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey
+        FormInicial.alumnoDataAdapter.Fill(FormInicial.erbpilatesDataSet.Tables("Alumno"))
+        vista = FormInicial.erbpilatesDataSet.Tables("Alumno").DefaultView
+        dgvAlumnos.DataSource = vista
+        'dgvAlumnos.Columns(0).Visible = False
+        desconectarse()
+
+
+        cargarTextBox()
         dispositivos = New FilterInfoCollection(FilterCategory.VideoInputDevice)
         For Each x As FilterInfo In dispositivos
             ComboBox1.Items.Add(x.Name)
         Next
         ComboBox1.SelectedIndex = 0
+        TimerActualizar.Start()
+
     End Sub
+
+    Sub cargarTextBox()
+        Dim fila As DataGridViewRow = dgvAlumnos.CurrentRow
+        idFila = fila.Cells(0).Value
+        tbNombre.Text = fila.Cells(1).Value
+        tbApellido.Text = fila.Cells(2).Value
+        tbDNI.Text = fila.Cells(3).Value
+    End Sub
+
+    Private Sub dgvAlumnos_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAlumnos.CellContentClick
+        If vista.Count > 0 Then
+            cargarTextBox()
+        End If
+    End Sub
+
 
     Private Sub btnIniciar_Click(sender As Object, e As EventArgs) Handles btnIniciar.Click
         Timer1.Enabled = True
@@ -49,6 +85,15 @@ Public Class FormAsistencia
                 End If
             End If
         End If
+        'If VideoSourcePlayer1.GetCurrentVideoFrame() IsNot Nothing Then
+        '    Dim img As New Bitmap(VideoSourcePlayer1.GetCurrentVideoFrame)
+        '    Dim resultados As String() = BarcodeReader.read(img, BarcodeReader.QRCODE)
+        '    img.Dispose()
+        '    If resultados IsNot Nothing AndAlso resultados.Count > 0 Then
+        '        ListBox1.Items.Add(resultados(0))
+        '    End If
+        'End If
+
         'lblTimerCamara.Text += 1
         'If lblTimerCamara.Text = 10 Then
         '    Timer1.Enabled = False
@@ -108,13 +153,15 @@ Public Class FormAsistencia
         Return 0
     End Function
 
-    'Private Sub TimerActualizar_Tick(sender As Object, e As EventArgs) Handles TimerActualizar.Tick
-    '    lblTimer1.Text += 1
-    '    If lblTimer.Text = 10 Then
-    '        FormPrincipal.escuelaDataSet.Tables("alumnoscopia").Clear()
-    '        FormPrincipal.alumnosDataAdapter.SelectCommand = New OleDbCommand("SELECT * FROM alumnos", miConexion)
-    '        FormPrincipal.alumnosDataAdapter.Fill(FormPrincipal.escuelaDataSet.Tables("alumnoscopia"))
-    '        lblTimer.Text = 0
-    '    End If
-    'End Sub
+    Private Sub TimerActualizar_Tick(sender As Object, e As EventArgs) Handles TimerActualizar.Tick
+        'lblTimer.Text += 1
+        'If lblTimer.Text = 10 Then
+        '    FormInicial.erbpilatesDataSet.Tables("alumno").Clear()
+        '    FormInicial.alumnoDataAdapter.SelectCommand = New MySqlCommand("SELECT * FROM alumno", conexion)
+        '    FormInicial.alumnoDataAdapter.Fill(FormInicial.erbpilatesDataSet.Tables("alumno"))
+        '    lblTimer.Text = 0
+        'End If
+    End Sub
+
+
 End Class

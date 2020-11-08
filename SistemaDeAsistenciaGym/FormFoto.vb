@@ -6,7 +6,7 @@ Public Class FormFoto
     Private Sub btnGuardarFotoArchivo_Click(sender As Object, e As EventArgs) Handles btnGuardarFotoArchivo.Click
 
         Dim image As Image = pbFoto.Image
-        image.Save("C:\Users\exequ\Documents\Imagix\image.jpg", System.Drawing.Imaging.ImageFormat.Jpeg)
+        image.Save("C:\Users\Doble G\Desktop\FOTO\", System.Drawing.Imaging.ImageFormat.Jpeg)
 
     End Sub
 
