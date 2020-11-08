@@ -65,6 +65,7 @@ Public Class FormAsistencia
         VideoSourcePlayer1.Start()
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ListBox1.Text = ""
         Timer1.Enabled = False
         VideoSourcePlayer1.Stop()
     End Sub
