@@ -169,6 +169,7 @@ Public Class FormRegistro
                     FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@tel", MySqlDbType.Int64, 10, "telefono")
                     FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@em", MySqlDbType.VarChar, 250, "email")
                     'FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@fot", MySqlDbType.Blob, "foto")
+
                     '5. Guardar los cambios en la base de datos
                     FormInicial.alumnoDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("alumno"))
 
@@ -216,7 +217,7 @@ Public Class FormRegistro
                 FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@dir", MySqlDbType.VarChar, 250, "direccion")
                 FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@tel", MySqlDbType.Int64, 10, "telefono")
                 FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@em", MySqlDbType.VarChar, 250, "email")
-                'FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@fot", MySqlDbType.VarChar, 250, "foto")
+                'FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@fot", MySqlDbType.Blob, "foto")
 
                 FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@id", MySqlDbType.Int32, 0, "id_alumno")
 

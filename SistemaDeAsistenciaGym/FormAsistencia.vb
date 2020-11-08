@@ -130,23 +130,13 @@ Public Class FormAsistencia
     Public Function comparar()
         'Dim id As Integer
         Dim qr As Integer
-
         qr = BarcodeReader.QRCODE
-        conectarse()
-        FormInicial.erbpilatesDataSet.Tables("Alumno").Clear()
-        FormInicial.alumnoDataAdapter.SelectCommand = New MySqlCommand("SELECT DNI FROM alumno", conexion)
-        Try
-            If qr = "@DNI" Then
-                FormInicial.alumnoDataAdapter.SelectCommand = New MySqlCommand("SELECT DNI FROM alumno WHERE id_alumno=1")
+
+        'If  Then
+
+        'End If
 
 
-
-
-            End If
-
-        Catch ex As Exception
-
-        End Try
 
 
 
