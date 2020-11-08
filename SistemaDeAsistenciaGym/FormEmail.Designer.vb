@@ -36,24 +36,30 @@ Partial Class FormEmail
         Me.Button1 = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.PbArchivo = New System.Windows.Forms.PictureBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnRestaurar = New System.Windows.Forms.Button()
+        Me.btnMax = New System.Windows.Forms.Button()
+        Me.btnCerrar = New System.Windows.Forms.Button()
+        Me.btnMin = New System.Windows.Forms.Button()
         CType(Me.PbArchivo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label1.Location = New System.Drawing.Point(28, 152)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(28, 190)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(73, 20)
+        Me.Label1.Size = New System.Drawing.Size(82, 20)
         Me.Label1.TabIndex = 66
         Me.Label1.Text = "Adjuntar:"
         '
         'btnAdjuntarArchivo
         '
         Me.btnAdjuntarArchivo.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnAdjuntarArchivo.Location = New System.Drawing.Point(107, 152)
+        Me.btnAdjuntarArchivo.Location = New System.Drawing.Point(116, 190)
         Me.btnAdjuntarArchivo.Name = "btnAdjuntarArchivo"
         Me.btnAdjuntarArchivo.Size = New System.Drawing.Size(36, 23)
         Me.btnAdjuntarArchivo.TabIndex = 65
@@ -63,7 +69,7 @@ Partial Class FormEmail
         'lblArchivoCargado
         '
         Me.lblArchivoCargado.AutoSize = True
-        Me.lblArchivoCargado.Location = New System.Drawing.Point(149, 175)
+        Me.lblArchivoCargado.Location = New System.Drawing.Point(149, 213)
         Me.lblArchivoCargado.Name = "lblArchivoCargado"
         Me.lblArchivoCargado.Size = New System.Drawing.Size(86, 13)
         Me.lblArchivoCargado.TabIndex = 64
@@ -72,7 +78,7 @@ Partial Class FormEmail
         '
         'Tbrutaarchivo
         '
-        Me.Tbrutaarchivo.Location = New System.Drawing.Point(288, 165)
+        Me.Tbrutaarchivo.Location = New System.Drawing.Point(361, 215)
         Me.Tbrutaarchivo.Name = "Tbrutaarchivo"
         Me.Tbrutaarchivo.Size = New System.Drawing.Size(100, 20)
         Me.Tbrutaarchivo.TabIndex = 62
@@ -84,7 +90,7 @@ Partial Class FormEmail
         Me.CBMotivo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
         Me.CBMotivo.FormattingEnabled = True
         Me.CBMotivo.Items.AddRange(New Object() {"[Notificacion]", "[Importante]", "[Urgente]"})
-        Me.CBMotivo.Location = New System.Drawing.Point(116, 49)
+        Me.CBMotivo.Location = New System.Drawing.Point(130, 87)
         Me.CBMotivo.Name = "CBMotivo"
         Me.CBMotivo.Size = New System.Drawing.Size(122, 28)
         Me.CBMotivo.TabIndex = 61
@@ -94,10 +100,10 @@ Partial Class FormEmail
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label5.Location = New System.Drawing.Point(52, 52)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(52, 90)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(59, 20)
+        Me.Label5.Size = New System.Drawing.Size(66, 20)
         Me.Label5.TabIndex = 60
         Me.Label5.Text = "Motivo:"
         '
@@ -105,10 +111,10 @@ Partial Class FormEmail
         '
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label3.Location = New System.Drawing.Point(12, 20)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(12, 58)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(99, 20)
+        Me.Label3.Size = New System.Drawing.Size(112, 20)
         Me.Label3.TabIndex = 59
         Me.Label3.Text = "Destinatario:"
         '
@@ -116,10 +122,10 @@ Partial Class FormEmail
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label2.Location = New System.Drawing.Point(46, 86)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(46, 124)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 20)
+        Me.Label2.Size = New System.Drawing.Size(71, 20)
         Me.Label2.TabIndex = 58
         Me.Label2.Text = "Asunto:"
         '
@@ -127,7 +133,7 @@ Partial Class FormEmail
         '
         Me.TbPara.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TbPara.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.TbPara.Location = New System.Drawing.Point(116, 17)
+        Me.TbPara.Location = New System.Drawing.Point(130, 55)
         Me.TbPara.Name = "TbPara"
         Me.TbPara.Size = New System.Drawing.Size(272, 26)
         Me.TbPara.TabIndex = 57
@@ -136,16 +142,16 @@ Partial Class FormEmail
         '
         Me.TbAsunto.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TbAsunto.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.TbAsunto.Location = New System.Drawing.Point(116, 83)
+        Me.TbAsunto.Location = New System.Drawing.Point(130, 121)
         Me.TbAsunto.Name = "TbAsunto"
         Me.TbAsunto.Size = New System.Drawing.Size(178, 26)
         Me.TbAsunto.TabIndex = 56
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(17, 191)
+        Me.RichTextBox1.Location = New System.Drawing.Point(17, 241)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(464, 173)
+        Me.RichTextBox1.Size = New System.Drawing.Size(464, 123)
         Me.RichTextBox1.TabIndex = 67
         Me.RichTextBox1.Text = ""
         '
@@ -165,7 +171,7 @@ Partial Class FormEmail
         'PbArchivo
         '
         Me.PbArchivo.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.logo
-        Me.PbArchivo.Location = New System.Drawing.Point(163, 126)
+        Me.PbArchivo.Location = New System.Drawing.Point(177, 164)
         Me.PbArchivo.Name = "PbArchivo"
         Me.PbArchivo.Size = New System.Drawing.Size(59, 46)
         Me.PbArchivo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -173,11 +179,79 @@ Partial Class FormEmail
         Me.PbArchivo.TabStop = False
         Me.PbArchivo.Visible = False
         '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.Coral
+        Me.Panel2.Controls.Add(Me.btnRestaurar)
+        Me.Panel2.Controls.Add(Me.btnMax)
+        Me.Panel2.Controls.Add(Me.btnCerrar)
+        Me.Panel2.Controls.Add(Me.btnMin)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(508, 25)
+        Me.Panel2.TabIndex = 69
+        '
+        'btnRestaurar
+        '
+        Me.btnRestaurar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnRestaurar.FlatAppearance.BorderSize = 0
+        Me.btnRestaurar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRestaurar.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Icono_Restaurar
+        Me.btnRestaurar.Location = New System.Drawing.Point(421, 0)
+        Me.btnRestaurar.Name = "btnRestaurar"
+        Me.btnRestaurar.Size = New System.Drawing.Size(40, 25)
+        Me.btnRestaurar.TabIndex = 43
+        Me.btnRestaurar.UseVisualStyleBackColor = True
+        Me.btnRestaurar.Visible = False
+        '
+        'btnMax
+        '
+        Me.btnMax.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMax.BackColor = System.Drawing.Color.Coral
+        Me.btnMax.FlatAppearance.BorderSize = 0
+        Me.btnMax.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMax.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Icono_Maximizar
+        Me.btnMax.Location = New System.Drawing.Point(421, 0)
+        Me.btnMax.Name = "btnMax"
+        Me.btnMax.Size = New System.Drawing.Size(40, 25)
+        Me.btnMax.TabIndex = 41
+        Me.btnMax.UseVisualStyleBackColor = False
+        '
+        'btnCerrar
+        '
+        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCerrar.FlatAppearance.BorderSize = 0
+        Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCerrar.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.ICON_CERRARF
+        Me.btnCerrar.Location = New System.Drawing.Point(467, 1)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(29, 24)
+        Me.btnCerrar.TabIndex = 42
+        Me.btnCerrar.UseVisualStyleBackColor = True
+        '
+        'btnMin
+        '
+        Me.btnMin.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMin.FlatAppearance.BorderSize = 0
+        Me.btnMin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMin.Image = Global.SistemaDeAsistenciaGym.My.Resources.Resources.Icono_Minimizar
+        Me.btnMin.Location = New System.Drawing.Point(373, 0)
+        Me.btnMin.Name = "btnMin"
+        Me.btnMin.Size = New System.Drawing.Size(39, 25)
+        Me.btnMin.TabIndex = 41
+        Me.btnMin.UseVisualStyleBackColor = True
+        '
         'FormEmail
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(508, 412)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Label1)
@@ -191,9 +265,11 @@ Partial Class FormEmail
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TbPara)
         Me.Controls.Add(Me.TbAsunto)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FormEmail"
         Me.Text = "FormEmail"
         CType(Me.PbArchivo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -213,4 +289,9 @@ Partial Class FormEmail
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents btnRestaurar As Button
+    Friend WithEvents btnMax As Button
+    Friend WithEvents btnCerrar As Button
+    Friend WithEvents btnMin As Button
 End Class

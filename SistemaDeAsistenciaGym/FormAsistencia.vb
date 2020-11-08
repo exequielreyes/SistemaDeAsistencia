@@ -65,7 +65,7 @@ Public Class FormAsistencia
         VideoSourcePlayer1.Start()
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        ListBox1.Text = ""
+
         Timer1.Enabled = False
         VideoSourcePlayer1.Stop()
     End Sub
@@ -76,46 +76,16 @@ Public Class FormAsistencia
             Dim resultados As String() = BarcodeReader.read(img, BarcodeReader.QRCODE)
             img.Dispose()
             If resultados IsNot Nothing AndAlso resultados.Count > 0 Then
-                ListBox1.Items.Add(resultados(0))
+                'If resultados(0).IndexOf("0000") <> 1 Then
+
+                '    resultados(0) = resultados(0).Replace("0000", "")
+                '    ListBox1.Items.Add(resultados(0))
+                'End If
             End If
         End If
     End Sub
 
-    'Private Sub btnDetener_Click(sender As Object, e As EventArgs)
-    '    Timer1.Enabled = False
-    '    vspQR.Stop()
-    'End Sub
 
-    'Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-    '    If vspQR.GetCurrentVideoFrame() IsNot Nothing Then
-    '        Dim img As New Bitmap(vspQR.GetCurrentVideoFrame())
-    '        Dim resultados As String() = BarcodeReader.read(img, BarcodeReader.QRCODE)
-    '        img.Dispose()
-    '        If resultados IsNot Nothing AndAlso resultados.Count() > 0 Then
-    '            If resultados(0).IndexOf("1111") <> -1 Then
-
-    '                resultados(0) = resultados(0).Replace("1111", "")
-
-    '                lbAlumno.Items.Insert(0, resultados(0))
-    '            End If
-    '        End If
-    '    End If
-    'If VideoSourcePlayer1.GetCurrentVideoFrame() IsNot Nothing Then
-    '    Dim img As New Bitmap(VideoSourcePlayer1.GetCurrentVideoFrame)
-    '    Dim resultados As String() = BarcodeReader.read(img, BarcodeReader.QRCODE)
-    '    img.Dispose()
-    '    If resultados IsNot Nothing AndAlso resultados.Count > 0 Then
-    '        ListBox1.Items.Add(resultados(0))
-    '    End If
-    'End If
-
-    'lblTimerCamara.Text += 1
-    'If lblTimerCamara.Text = 10 Then
-    '    Timer1.Enabled = False
-    '    VideoSourcePlayer1.Stop()
-    '    lblTimerCamara.Text = 0
-    'End If
-    'End Sub
 
     Private Sub lbAlumno_SelectedIndexChanged(sender As Object, e As EventArgs)
 
@@ -151,22 +121,28 @@ Public Class FormAsistencia
 
         'End If
 
-
-
-
-
         Return 0
     End Function
 
-    Private Sub TimerActualizar_Tick(sender As Object, e As EventArgs) Handles TimerActualizar.Tick
-        'lblTimer.Text += 1
-        'If lblTimer.Text = 10 Then
-        '    FormInicial.erbpilatesDataSet.Tables("alumno").Clear()
-        '    FormInicial.alumnoDataAdapter.SelectCommand = New MySqlCommand("SELECT * FROM alumno", conexion)
-        '    FormInicial.alumnoDataAdapter.Fill(FormInicial.erbpilatesDataSet.Tables("alumno"))
-        '    lblTimer.Text = 0
-        'End If
+
+
+
+    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
+        'For i = 0 To ListBox1.ListCount - 1
+        '    If ListBox1.List(i)) = tbDni   .text Then
+
+        '          End If
+        'Next i
+
+        'For j = 0 To ListBox2.Items.Count - 1
+        For i = 0 To ListBox1.Items.Count - 1
+            If ListBox1.Items(i).ToString = tbDNI.Text Then
+                MsgBox("Bienvenido")
+                ' MsgBox(ListBox1.Items(i).ToString & " = " & ListBox2.Items(j).ToString)
+                ListBox1.Items.RemoveAt(i)
+                Exit For
+            End If
+        Next i
+
     End Sub
-
-
 End Class

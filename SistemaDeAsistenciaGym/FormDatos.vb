@@ -271,7 +271,7 @@ Public Class FormDatos
     End Sub
 
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
-        ComboBox1.Enabled = True
+
 
         If ComboBox1.Text = "Piernas" Then
             CheckBox1.Text = "Reformer con sogas y tabla de pique"
