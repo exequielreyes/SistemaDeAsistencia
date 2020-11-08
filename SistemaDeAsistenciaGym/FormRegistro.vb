@@ -26,13 +26,13 @@ Public Class FormRegistro
         '-------Alumno----------'
         conectarse()
         FormInicial.erbpilatesDataSet.Tables("Alumno").Clear()
-        FormInicial.alumnoDataAdapter.SelectCommand = New MySqlCommand("SELECT * FROM alumno", conexion)
+        FormInicial.alumnoDataAdapter.SelectCommand = New MySqlCommand("SELECT alumno.nombre as 'Nombre', alumno.apellido as 'Apellido', alumno.DNI as 'Dni', alumno.edad as 'Edad',alumno.direccion as 'Direccion',alumno.telefono as 'Telefono',alumno.email as 'Email',alumno.nombreqr as 'QR',alumno.foto as 'Foto' FROM alumno", conexion)
         FormInicial.alumnoDataAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey
         FormInicial.alumnoDataAdapter.Fill(FormInicial.erbpilatesDataSet.Tables("Alumno"))
         vista = FormInicial.erbpilatesDataSet.Tables("Alumno").DefaultView
         dgvListado.DataSource = vista
-        dgvListado.Columns(0).Visible = False
-        dgvListado.Columns(8).Visible = False
+        'dgvListado.Columns(0).Visible = False
+        'dgvListado.Columns(8).Visible = False
         'dgvListado.Columns(9).Visible = False
         dgvListado.ClearSelection()
         desconectarse()
@@ -171,14 +171,14 @@ Public Class FormRegistro
                     fila("direccion") = tbDireccion.Text
                     fila("telefono") = tbTelefono.Text
                     fila("email") = tbEmail.Text
-                    fila("foto") = pbFoto1.Image
+                    'fila("foto") = pbFoto1.Image
 
                     '3. Agregar fila a la tabla del DataSet
                     FormInicial.erbpilatesDataSet.Tables("alumno").Rows.Add(fila)
 
                     '4. Crear Comando para agregar a la BD la fila nueva
 
-                    consulta = "INSERT INTO alumno (nombre, apellido,DNI, edad, direccion ,telefono,email, foto) VALUES ( @nom, @ape,@dni, @ed,@dir,@tel,@em, @fot)"
+                    consulta = "INSERT INTO alumno (nombre, apellido,DNI, edad, direccion ,telefono,email) VALUES ( @nom, @ape,@dni, @ed,@dir,@tel,@em)"
                     FormInicial.alumnoDataAdapter.InsertCommand = New MySqlCommand(consulta, conexion)
                     FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 45, "nombre")
                     FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@ape", MySqlDbType.VarChar, 45, "apellido")
@@ -187,7 +187,7 @@ Public Class FormRegistro
                     FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@dir", MySqlDbType.VarChar, 100, "direccion")
                     FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@tel", MySqlDbType.Int32, 11, "telefono")
                     FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@em", MySqlDbType.VarChar, 45, "email")
-                    FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@fot", MySqlDbType.Blob, "foto")
+                    'FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@fot", MySqlDbType.Blob, "foto")
                     '5. Guardar los cambios en la base de datos
                     FormInicial.alumnoDataAdapter.Update(FormInicial.erbpilatesDataSet.Tables("alumno"))
 
@@ -222,11 +222,11 @@ Public Class FormRegistro
                 fila("direccion") = tbDireccion.Text
                 fila("telefono") = tbTelefono.Text
                 fila("email") = tbEmail.Text
-                fila("foto") = pbFoto1.Image
+                'fila("foto") = pbFoto1.Image
 
                 '3. Crear Comando para modificar la fila en la BD
 
-                consulta = "UPDATE alumno SET nombre=@nom, apellido=@ape, DNI=@dni ,edad=@ed, direccion =@dir, telefono=@tel, email =@em , foto =@fot WHERE id_alumno=@id"
+                consulta = "UPDATE alumno SET nombre=@nom, apellido=@ape, DNI=@dni ,edad=@ed, direccion =@dir, telefono=@tel, email =@em  WHERE id_alumno=@id"
                 FormInicial.alumnoDataAdapter.UpdateCommand = New MySqlCommand(consulta, conexion)
                 FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@nom", MySqlDbType.VarChar, 45, "nombre")
                 FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@ape", MySqlDbType.VarChar, 45, "apellido")
@@ -235,7 +235,7 @@ Public Class FormRegistro
                 FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@dir", MySqlDbType.VarChar, 100, "direccion")
                 FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@tel", MySqlDbType.Int32, 11, "telefono")
                 FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@em", MySqlDbType.VarChar, 45, "email")
-                FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@fot", MySqlDbType.Blob, "foto")
+                'FormInicial.alumnoDataAdapter.InsertCommand.Parameters.Add("@fot", MySqlDbType.Blob, "foto")
 
                 FormInicial.alumnoDataAdapter.UpdateCommand.Parameters.Add("@id", MySqlDbType.Int32, 0, "id_alumno")
 
@@ -270,7 +270,7 @@ Public Class FormRegistro
         idFila = dgvListado.CurrentRow.Cells(0).Value
         cancelar()
     End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         FormEjercicio.ShowDialog()
     End Sub
 

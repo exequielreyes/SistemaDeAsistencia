@@ -30,8 +30,7 @@ Public Class FormFoto
         FormRegistro.Visible = False
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-    End Sub
+
     Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
