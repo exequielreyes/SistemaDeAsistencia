@@ -36,7 +36,6 @@ Partial Class FormAsistencia
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.btnMin = New System.Windows.Forms.Button()
         Me.dgvAsistencia = New System.Windows.Forms.DataGridView()
-        Me.TimerActualizar = New System.Windows.Forms.Timer(Me.components)
         Me.Panel2.SuspendLayout()
         CType(Me.dgvAsistencia, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -178,11 +177,6 @@ Partial Class FormAsistencia
         Me.dgvAsistencia.Size = New System.Drawing.Size(664, 150)
         Me.dgvAsistencia.TabIndex = 43
         '
-        'TimerActualizar
-        '
-        Me.TimerActualizar.Enabled = True
-        Me.TimerActualizar.Interval = 1000
-        '
         'FormAsistencia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -219,5 +213,4 @@ Partial Class FormAsistencia
     Friend WithEvents btnCerrar As Button
     Friend WithEvents btnMin As Button
     Friend WithEvents dgvAsistencia As DataGridView
-    Friend WithEvents TimerActualizar As Timer
 End Class

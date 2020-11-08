@@ -26,14 +26,14 @@ Public Class FormRegistro
         '-------Alumno----------'
         conectarse()
         FormInicial.erbpilatesDataSet.Tables("Alumno").Clear()
-        FormInicial.alumnoDataAdapter.SelectCommand = New MySqlCommand("SELECT alumno.nombre as 'Nombre', alumno.apellido as 'Apellido', alumno.DNI as 'Dni', alumno.edad as 'Edad',alumno.direccion as 'Direccion',alumno.telefono as 'Telefono',alumno.email as 'Email',alumno.nombreqr as 'QR',alumno.foto as 'Foto' FROM alumno", conexion)
+        FormInicial.alumnoDataAdapter.SelectCommand = New MySqlCommand("SELECT *FROM alumno", conexion)
         FormInicial.alumnoDataAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey
         FormInicial.alumnoDataAdapter.Fill(FormInicial.erbpilatesDataSet.Tables("Alumno"))
         vista = FormInicial.erbpilatesDataSet.Tables("Alumno").DefaultView
         dgvListado.DataSource = vista
-        'dgvListado.Columns(0).Visible = False
-        'dgvListado.Columns(8).Visible = False
-        'dgvListado.Columns(9).Visible = False
+        dgvListado.Columns(0).Visible = False
+        dgvListado.Columns(8).Visible = False
+        dgvListado.Columns(9).Visible = False
         dgvListado.ClearSelection()
         desconectarse()
     End Sub

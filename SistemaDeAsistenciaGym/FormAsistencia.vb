@@ -83,7 +83,7 @@ Public Class FormAsistencia
     End Sub
 
     Public Function comparar()
-        Dim id As Integer
+        'Dim id As Integer
         Dim qr As Integer
 
         qr = BarcodeReader.QRCODE
