@@ -25,17 +25,6 @@
         Dim image As Image = PictureBox1.Image
         image.Save("C:\Users\Doble G\Desktop\FOTO\qr\image.jpg", System.Drawing.Imaging.ImageFormat.Jpeg)
 
-
-
-
-
-
-
-
-
-
-
-
     End Sub
 
     Private Sub btnEmail_Click(sender As Object, e As EventArgs) Handles btnEmail.Click

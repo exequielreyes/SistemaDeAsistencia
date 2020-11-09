@@ -523,4 +523,24 @@ Public Class FormDatos
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         cancelar()
     End Sub
+
+    Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
+        ComboBox1.Enabled = False
+        ComboBox2.Enabled = True
+        ComboBox3.Enabled = False
+
+    End Sub
+
+    Private Sub btnAceptar2_Click(sender As Object, e As EventArgs) Handles btnAceptar2.Click
+        ComboBox1.Enabled = False
+        ComboBox2.Enabled = False
+        ComboBox3.Enabled = True
+
+    End Sub
+
+    Private Sub btnAceptar3_Click(sender As Object, e As EventArgs) Handles btnAceptar3.Click
+        ComboBox1.Enabled = False
+        ComboBox2.Enabled = False
+        ComboBox3.Enabled = False
+    End Sub
 End Class
